@@ -60,13 +60,27 @@
             border-radius: 8px;
         }
 
-        /* HEADER & NAVIGATION STYLES */
+        /* --- Hero Banner Wrapper with Overlay Navigation --- */
+        .faq-hero-wrapper {
+            position: relative;
+            width: 100%;
+            background-color: var(--bg-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* HEADER & NAVIGATION STYLES OVERLAY */
         .main-header {
-            background-color: #050505;
-            border-bottom: 1px solid #1f1f1f;
-            position: sticky;
+            position: absolute;
             top: 0;
+            left: 0;
+            width: 100%;
             z-index: 1000;
+            background: linear-gradient(180deg, rgba(11, 11, 11, 0.95) 0%, rgba(11, 11, 11, 0.6) 60%, transparent 100%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
             padding: 0.75rem 1rem;
         }
 
@@ -102,6 +116,7 @@
             letter-spacing: 1px;
             display: block;
             white-space: nowrap;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9);
         }
 
         .brand-subtitle {
@@ -111,6 +126,7 @@
             letter-spacing: 1.5px;
             display: block;
             white-space: nowrap;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9);
         }
 
         .nav-links {
@@ -128,14 +144,42 @@
             color: var(--text-muted);
             text-decoration: none;
             font-size: 0.85rem;
-            font-weight: 400;
+            font-weight: 500;
             transition: color 0.2s ease;
             white-space: nowrap;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9);
         }
 
         .nav-links a:hover, 
         .nav-links a.active {
             color: var(--text-gold);
+        }
+
+        /* Banner Container & Image */
+        .faq-hero-banner-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .faq-hero-banner-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+        }
+
+        @media (max-width: 850px) {
+            .main-header {
+                position: relative;
+                background: rgba(11, 11, 11, 0.98);
+            }
+            .faq-hero-banner-container {
+                padding: 10px 15px 0;
+            }
         }
 
         /* Dropdown Menu */
@@ -779,33 +823,40 @@
 </head>
 <body>
 
-    <!-- SINGLE MAIN HEADER NAVIGATION -->
-    <header class="main-header">
-        <div class="nav-container">
-            <a href="index.html" class="brand-logo">
-                <img src="my-one-cent-worth-logo.webp" alt="My One Cent Worth Logo" class="coin-logo">
-                <div class="logo-text">
-                    <span class="brand-title">MY ONE CENT WORTH</span>
-                    <span class="brand-subtitle">BY TASHI KHOO</span>
-                </div>
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li class="dropdown">
-                    <a href="services.html">Services ▾</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="services.html">All Services</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                    </ul>
-                </li>
-                <li><a href="faq.html" class="active">FAQ</a></li>
-                <li><a href="/blog">All MOCW</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><button id="pwa-install-btn" class="btn-pwa-install">Install App</button></li>
-            </ul>
+    <!-- HERO BANNER WRAPPER WITH OVERLAY NAVIGATION -->
+    <div class="faq-hero-wrapper">
+        <header class="main-header">
+            <div class="nav-container">
+                <a href="index.html" class="brand-logo">
+                    <img src="my-one-cent-worth-logo.webp" alt="My One Cent Worth Logo" class="coin-logo">
+                    <div class="logo-text">
+                        <span class="brand-title">MY ONE CENT WORTH</span>
+                        <span class="brand-subtitle">BY TASHI KHOO</span>
+                    </div>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Services ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="services.html">All Services</a></li>
+                            <li><a href="pricing.html">Pricing</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="faq.html" class="active">FAQ</a></li>
+                    <li><a href="/blog">All MOCW</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><button id="pwa-install-btn" class="btn-pwa-install">Install App</button></li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- FAQ Hero Banner Image -->
+        <div class="faq-hero-banner-container">
+            <img src="my-one-cent-worth-faq.webp" alt="My One Cent Worth - Frequently Asked Questions Banner" class="faq-hero-banner-img">
         </div>
-    </header>
+    </div>
 
     <main class="container">
 
