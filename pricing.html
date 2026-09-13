@@ -447,9 +447,9 @@
 
         .payment-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 24px;
-            margin-top: 30px;
+            margin-top: 40px;
         }
 
         .payment-card {
@@ -461,12 +461,13 @@
         }
 
         .payment-card img {
+            width: 300px;
+            height: 300px;
             max-width: 100%;
-            height: auto;
-            max-height: 150px;
-            margin-bottom: 20px;
+            margin: 0 auto 24px auto;
             object-fit: contain;
-            border-radius: 6px;
+            display: block;
+            border-radius: 12px;
         }
 
         .payment-card h3 {
@@ -484,6 +485,29 @@
             line-height: 1.5;
         }
 
+        .payment-card ul {
+            text-align: left;
+            list-style: none;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            max-width: 280px;
+            margin: 0 auto;
+        }
+
+        .payment-card ul li {
+            margin-bottom: 6px;
+            position: relative;
+            padding-left: 14px;
+        }
+
+        .payment-card ul li::before {
+            content: "•";
+            color: var(--gold-primary);
+            position: absolute;
+            left: 0;
+        }
+
+        /* CTA Bottom Section */
         .cta-box {
             background: #111;
             border: 1px solid var(--card-border);
@@ -518,97 +542,163 @@
             min-width: 160px;
         }
 
-        /* --- Master Footer --- */
+        /* STANDARDIZED FOOTER STYLES */
         .main-footer {
-            margin-top: 80px;
-            background: #080808;
+            background-color: #050505;
             border-top: 1px solid var(--card-border);
-            padding: 60px 0 30px;
-            color: var(--text-muted);
-            font-size: 0.85rem;
+            padding: 3.5rem 1.5rem 2rem;
+            text-align: center;
+            margin-top: 5rem;
+            width: 100%;
         }
 
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
+        .footer-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
         }
 
-        .footer-brand-story h4 {
+        .footer-brand-story {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            align-items: center;
+            width: 100%;
+        }
+
+        .footer-brand-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .brand-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+            flex: 1;
+            text-align: center;
+        }
+
+        .brand-item-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+
+        .footer-logo-img {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .brand-item-title {
             font-family: var(--font-heading);
             color: var(--gold-primary);
             font-size: 1.1rem;
-            margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
         }
 
-        .footer-summary {
-            font-size: 0.85rem;
-            line-height: 1.6;
-            margin-top: 15px;
-            border-left: 2px solid var(--gold-primary);
-            padding-left: 12px;
-            color: #ccc;
-        }
-
-        .footer-links h5 {
-            color: #fff;
-            margin-bottom: 15px;
+        .brand-item-desc {
+            color: var(--text-muted);
             font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            line-height: 1.6;
+            margin: 0;
+            max-width: 500px;
         }
 
-        .footer-links ul {
+        .brand-summary-text {
+            border-top: 1px solid #1a1a1a;
+            padding-top: 1.25rem;
+            margin-top: 0.5rem;
+            width: 100%;
+        }
+
+        .brand-summary-text p {
+            color: var(--text-main);
+            font-size: 0.95rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .brand-tagline {
+            color: var(--gold-primary) !important;
+            font-weight: 600;
+            font-family: var(--font-heading);
+            letter-spacing: 0.5px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
             list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 8px;
+            padding: 0;
+            margin: 0;
         }
 
         .footer-links a {
             color: var(--text-muted);
+            font-size: 0.85rem;
+            text-decoration: none;
+            transition: color 0.2s ease;
         }
 
         .footer-links a:hover {
             color: var(--gold-primary);
         }
 
-        .footer-bottom {
-            text-align: center;
-            border-top: 1px solid #1a1a1a;
-            padding-top: 25px;
+        .copyright-text {
+            color: #666666;
             font-size: 0.8rem;
-            color: #666;
+            margin-top: 0.5rem;
         }
 
-        /* --- Floating WhatsApp Button --- */
         #my-one-cent-chat {
             position: fixed;
             bottom: 25px;
             right: 25px;
-            width: 55px;
-            height: 55px;
+            z-index: 9999;
+            width: 60px;
+            height: 60px;
             background: var(--gold-primary);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-            z-index: 9999;
-            transition: transform 0.3s, background 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease;
         }
 
         #my-one-cent-chat:hover {
             transform: scale(1.1);
-            background: var(--gold-hover);
         }
 
-        #my-one-cent-chat svg {
-            width: 26px;
-            height: 26px;
-            fill: #000;
+        #my-one-cent-chat .bubble {
+            width: 28px;
+            height: 28px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23000' d='M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3 18.6-68.1-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.9-186.6 184.9zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        @media (min-width: 768px) {
+            .footer-brand-grid {
+                flex-direction: row;
+                align-items: flex-start;
+                gap: 3rem;
+            }
         }
     </style>
 
@@ -853,84 +943,104 @@
         <!-- Section 3: Payment Section -->
         <section>
             <div class="section-header">
-                <span class="tagline">Payment Options</span>
-                <h2>Simple & Secure Ways to Pay</h2>
-                <p>Select your preferred method at checkout or booking confirmation.</p>
+                <span class="tagline">Payment</span>
+                <h2>Simple Ways to Pay</h2>
+                <p>Choose the payment method offered when you arrange your session or visit.</p>
             </div>
 
             <div class="payment-grid">
+                <!-- Card Payment -->
                 <div class="payment-card">
-                    <img src="secure-card-payment.webp" alt="Secure Card Payment Visa Mastercard Maestro Amex Stripe">
+                    <img src="secure-card-payment.webp" alt="Visa Mastercard Maestro American Express" width="300" height="300">
                     <h3>Secure Card Payment</h3>
-                    <p>Card payment is available for online consultations via Stripe.</p>
+                    <p>For online services and other sessions where card payment is available, payment can be made securely by card.</p>
+                    <ul>
+                        <li>Convenient online payment</li>
+                        <li>No subscription required</li>
+                        <li>Payment is tied to the service you select</li>
+                    </ul>
                 </div>
 
+                <!-- PayNow Option -->
                 <div class="payment-card">
-                    <img src="paynow-mocw.webp" alt="PayNow Singapore Payment Options">
-                    <h3>Singapore PayNow</h3>
-                    <p>Instant, seamless transfers via local Singapore banks.</p>
+                    <img src="paynow-mocw.webp" alt="PayNow Singapore Payment Options" width="300" height="300">
+                    <h3>Singapore Payment Options</h3>
+                    <p>Singapore clients may also be offered local payment options when arranging in-person companion services.</p>
+                    <ul>
+                        <li>Choose the method most convenient for you</li>
+                        <li>Send your payment confirmation when requested</li>
+                        <li>Arrange your preferred date and time</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
         <!-- Section 4: Help / Bottom CTA -->
         <section class="cta-box">
-            <h2>Need Help Deciding?</h2>
-            <p>Tell me what you are looking for and we can figure out what works best together.</p>
+            <h2>Not Sure Which One Is Right for You?</h2>
+            <p>You don't have to figure everything out before reaching out. Tell me what you need, and we can work out which conversation or companion service makes the most sense.</p>
             <div class="cta-buttons">
                 <a href="contact.html" class="btn">Contact Tashi →</a>
-                <a href="faq.html" class="btn btn-outline">Read the FAQ →</a>
+                <a href="faq.html" class="btn btn-outline">Read The FAQ →</a>
             </div>
         </section>
     </div>
 
     <!-- Master Component: Standardized Footer -->
     <footer class="main-footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand-story">
-                    <h4>MY ONE CENT WORTH</h4>
-                    <p style="color: #fff; font-weight: bold; font-size: 0.9rem;">MOCW</p>
-                    <div class="footer-summary">
-                        One name. Two expressions. One philosophy. MY ONE CENT WORTH (MOCW) — SOMEONE WHO LISTENS.
+        <div class="footer-container">
+            <div class="footer-brand-story">
+                <div class="footer-brand-grid">
+                    <!-- Left Side: Full Brand -->
+                    <div class="brand-item">
+                        <div class="brand-item-header">
+                            <img src="my-one-cent-worth-logo.webp" alt="My One Cent Worth Logo" class="footer-logo-img">
+                            <span class="brand-item-title">MY ONE CENT WORTH</span>
+                        </div>
+                        <p class="brand-item-desc">
+                            My One Cent Worth is the full name behind everything we do — a place for perspectives, meaningful conversations, thoughtful questions, and a willingness to see things from different angles.
+                        </p>
+                    </div>
+
+                    <!-- Right Side: MOCW Short-Form -->
+                    <div class="brand-item">
+                        <div class="brand-item-header">
+                            <img src="mocw-monogram-logo.webp" alt="MOCW Monogram Logo" class="footer-logo-img">
+                            <span class="brand-item-title">MOCW</span>
+                        </div>
+                        <p class="brand-item-desc">
+                            MOCW is simply the short-form expression of My One Cent Worth — the name you may see across our logo, website, content, and future community.
+                        </p>
                     </div>
                 </div>
 
-                <div class="footer-links">
-                    <h5>Navigation</h5>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Tashi</a></li>
-                        <li><a href="services.html">Services Overview</a></li>
-                        <li><a href="pricing.html">Pricing & Packages</a></li>
-                        <li><a href="faq.html">Frequently Asked Questions</a></li>
-                        <li><a href="/blog">All MOCW</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-links">
-                    <h5>Site Links & Legal</h5>
-                    <ul>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms of Service</a></li>
-                        <li><a href="sitemap.html">HTML Sitemap</a></li>
-                        <li><a href="sitemap.xml">XML Sitemap</a></li>
-                    </ul>
+                <!-- Summary Line -->
+                <div class="brand-summary-text">
+                    <p>One name. Two expressions. One philosophy.</p>
+                    <p class="brand-tagline">MY ONE CENT WORTH (MOCW) — SOMEONE WHO LISTENS.</p>
                 </div>
             </div>
 
-            <div class="footer-bottom">
-                © 2026 My One Cent Worth by Tashi Khoo. All rights reserved.
-            </div>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="pricing.html" class="active">Pricing</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="/blog">All MOCW</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="/quiz.html">Quiz</a></li>
+                <li><a href="sitemap.html">HTML Sitemap</a></li>
+                <li><a href="sitemap.xml" target="_blank">XML Sitemap</a></li>
+            </ul>
+
+            <p class="copyright-text">&copy; 2026 My One Cent Worth by Tashi Khoo. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Master Component: WhatsApp Floating Button -->
-    <a href="https://wa.me/6583186776?text=Hello%2C%20Tashi.%20I%20want%20more%20info%20about%20the%20services" id="my-one-cent-chat" target="_blank" rel="noopener noreferrer" aria-label="Chat with Tashi on WhatsApp">
-        <svg viewBox="0 0 32 32">
-            <path d="M16 2C8.269 2 2 8.269 2 16c0 2.77.807 5.352 2.197 7.525L2.11 29.382l6.057-1.986C10.287 28.625 13.04 29.5 16 29.5c7.731 0 14-6.269 14-13.5S23.731 2 16 2zm0 25c-2.61 0-5.04-.775-7.078-2.112l-.508-.333-3.585 1.175 1.187-3.486-.363-.538C4.24 19.645 3.5 17.886 3.5 16c0-6.893 5.607-12.5 12.5-12.5s12.5 5.607 12.5 12.5S22.893 27 16 27z"/>
-        </svg>
+    <!-- WHATSAPP FLOATING BUTTON -->
+    <a id="my-one-cent-chat" href="https://wa.me/6583186776?text=Hello%2C%20Tashi.%20I%20want%20more%20info%20about%20the%20services." target="_blank" rel="noopener" title="WhatsApp Tashi" aria-label="WhatsApp Tashi">
+        <div class="bubble"></div>
     </a>
 
     <!-- Currency Switcher Script -->
