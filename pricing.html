@@ -56,14 +56,27 @@
             padding: 0 20px;
         }
 
-        /* --- Master Navigation --- */
+        /* --- Hero Banner Wrapper with Overlay Navigation --- */
+        .pricing-hero-wrapper {
+            position: relative;
+            width: 100%;
+            background-color: var(--bg-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Master Navigation (Overlaying the Banner) */
         .main-header {
-            background-color: rgba(11, 11, 11, 0.95);
-            border-bottom: 1px solid var(--card-border);
-            position: sticky;
+            position: absolute;
             top: 0;
+            left: 0;
+            width: 100%;
             z-index: 1000;
-            backdrop-filter: blur(10px);
+            background: linear-gradient(180deg, rgba(11, 11, 11, 0.95) 0%, rgba(11, 11, 11, 0.6) 60%, transparent 100%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
         }
 
         .nav-container {
@@ -91,6 +104,7 @@
             font-size: 1.1rem;
             letter-spacing: 1px;
             line-height: 1.1;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9);
         }
 
         .brand-subtitle {
@@ -98,6 +112,7 @@
             color: var(--gold-primary);
             letter-spacing: 1.5px;
             text-transform: uppercase;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9);
         }
 
         nav ul {
@@ -112,6 +127,8 @@
             font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9);
+            font-weight: 500;
         }
 
         nav a:hover, nav a.active {
@@ -159,12 +176,51 @@
             color: var(--gold-primary) !important;
             background: transparent;
             cursor: pointer;
+            backdrop-filter: blur(4px);
+        }
+
+        /* Banner Container & Image */
+        .pricing-banner-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .pricing-banner-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+        }
+
+        @media (max-width: 850px) {
+            .main-header {
+                position: relative;
+                background: rgba(11, 11, 11, 0.98);
+            }
+            .nav-container {
+                height: auto;
+                padding: 14px 0;
+                flex-direction: column;
+                gap: 12px;
+            }
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px 16px;
+            }
+            .pricing-banner-container {
+                padding: 10px 15px 0;
+            }
         }
 
         /* --- Hero --- */
         .hero {
             text-align: center;
-            padding: 60px 20px 40px;
+            padding: 50px 20px 40px;
         }
 
         .tagline {
@@ -576,35 +632,42 @@
 </head>
 <body>
 
-    <!-- Master Component: Main Navigation -->
-    <header class="main-header">
-        <div class="container nav-container">
-            <a href="index.html" class="brand-header">
-                <img src="my-one-cent-worth-logo.webp" alt="My One Cent Worth Logo">
-                <div>
-                    <div class="brand-title">MY ONE CENT WORTH</div>
-                    <div class="brand-subtitle">BY TASHI KHOO</div>
-                </div>
-            </a>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li class="dropdown">
-                        <a href="services.html">Services <i class="fa-solid fa-chevron-down" style="font-size:0.7rem;"></i></a>
-                        <div class="dropdown-menu">
-                            <a href="services.html">All Services</a>
-                            <a href="pricing.html" class="active">Pricing & Packages</a>
-                        </div>
-                    </li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="all-mocw.html">All MOCW</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><button id="pwa-install-btn" class="btn-install">Install App</button></li>
-                </ul>
-            </nav>
+    <!-- HERO BANNER WRAPPER WITH OVERLAY NAVIGATION -->
+    <div class="pricing-hero-wrapper">
+        <header class="main-header">
+            <div class="container nav-container">
+                <a href="index.html" class="brand-header">
+                    <img src="my-one-cent-worth-logo.webp" alt="My One Cent Worth Logo">
+                    <div>
+                        <div class="brand-title">MY ONE CENT WORTH</div>
+                        <div class="brand-subtitle">BY TASHI KHOO</div>
+                    </div>
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li class="dropdown">
+                            <a href="services.html">Services <i class="fa-solid fa-chevron-down" style="font-size:0.7rem;"></i></a>
+                            <div class="dropdown-menu">
+                                <a href="services.html">All Services</a>
+                                <a href="pricing.html" class="active">Pricing & Packages</a>
+                            </div>
+                        </li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="/blog">All MOCW</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><button id="pwa-install-btn" class="btn-install">Install App</button></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Pricing Banner Image -->
+        <div class="pricing-banner-container">
+            <img src="mocw-pricing.webp" alt="My One Cent Worth - Pricing & Packages Banner" class="pricing-banner-img">
         </div>
-    </header>
+    </div>
 
     <div class="container">
         <!-- Hero Section -->
@@ -841,7 +904,7 @@
                         <li><a href="services.html">Services Overview</a></li>
                         <li><a href="pricing.html">Pricing & Packages</a></li>
                         <li><a href="faq.html">Frequently Asked Questions</a></li>
-                        <li><a href="all-mocw.html">All MOCW</a></li>
+                        <li><a href="/blog">All MOCW</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
