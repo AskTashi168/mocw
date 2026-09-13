@@ -1,4 +1,4 @@
-const CACHE_NAME = 'mocw-v13';
+const CACHE_NAME = 'mocw-v14';
 const ASSETS_TO_CACHE = [
   '/',
   '/index.html',
