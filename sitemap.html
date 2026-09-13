@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sitemap - My One Cent Worth</title>
-    <link rel="icon" type="image/png" href="images/my-one-cent-worth-logo.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/favicon-180x180.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="mocw.css">
     <style>
         * {
@@ -159,7 +162,7 @@
     <header class="main-header">
         <div class="nav-container">
             <a href="index.html" class="brand-logo-container">
-                <img src="images/my-one-cent-worth-logo.webp" alt="My One Cent Worth Logo">
+                <img src="my-one-cent-worth-logo.webp" alt="My One Cent Worth Logo">
                 <div class="brand-text-block">
                     <span class="brand-title">MY ONE CENT WORTH</span>
                     <span class="brand-subtitle">BY TASHI KHOO</span>
@@ -229,9 +232,9 @@
 
     <!-- SERVICE WORKER REGISTRATION -->
     <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js')
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', () => {
+            navigator.serviceWorker.register('sw.js')
             .then(reg => console.log('MOCW Service Worker registered successfully.'))
             .catch(err => console.error('Service Worker registration failed:', err));
         });

@@ -8,11 +8,10 @@
     <link rel="canonical" href="https://myonecentworth.com/terms-and-conditions.html">
     
     <!-- Favicon Links -->
-    <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-    <link rel="manifest" href="/favicon/site.webmanifest">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/favicon-180x180.png">
+    <link rel="manifest" href="manifest.webmanifest">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -519,7 +518,7 @@
     <header class="main-header">
         <div class="nav-container">
             <a href="index.html" class="brand-logo">
-                <img src="images/one-cent-worth-logo.webp" alt="My One Cent Worth Logo" class="coin-logo">
+                <img src="my-one-cent-worth-logo.webp" alt="My One Cent Worth Logo" class="coin-logo">
                 <div class="logo-text">
                     <span class="brand-title">MY ONE CENT WORTH</span>
                     <span class="brand-subtitle">BY TASHI KHOO</span>
@@ -558,7 +557,7 @@
 
         <!-- BANNER IMAGE -->
         <div class="banner-wrapper">
-            <img src="images/my-one-cent-worth-mocw.webp" alt="My One Cent Worth Terms and Conditions Banner">
+            <img src="my-one-cent-worth-mocw.webp" alt="My One Cent Worth Terms and Conditions Banner">
         </div>
 
         <!-- MAIN TERMS CONTENT CARD -->
@@ -1038,7 +1037,7 @@
 
                 <div class="brand-item">
                     <div class="brand-item-header">
-                        <img src="images/my-one-cent-worth-logo.webp" alt="My One Cent Worth Logo" class="footer-logo-img">
+                        <img src="my-one-cent-worth-logo.webp" alt="My One Cent Worth Logo" class="footer-logo-img">
                         <span class="brand-item-title">MY ONE CENT WORTH</span>
                     </div>
                     <p class="brand-item-desc">
@@ -1048,7 +1047,7 @@
 
                 <div class="brand-item">
                     <div class="brand-item-header">
-                        <img src="images/mocw-monogram-logo.webp" alt="MOCW Monogram Logo" class="footer-logo-img">
+                        <img src="mocw-monogram-logo.webp" alt="MOCW Monogram Logo" class="footer-logo-img">
                         <span class="brand-item-title">MOCW</span>
                     </div>
                     <p class="brand-item-desc">
@@ -1090,7 +1089,7 @@
 
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js')
+                navigator.serviceWorker.register('sw.js')
                     .then(reg => console.log('MOCW Service Worker registered successfully.'))
                     .catch(err => console.error('Service Worker registration failed:', err));
             });

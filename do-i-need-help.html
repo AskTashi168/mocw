@@ -9,13 +9,14 @@
   <meta name="description" content="A simple, private self-reflection quiz to help you consider whether talking with someone or gaining another perspective may be useful.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta http-equiv="refresh" content="0; url=/quiz.html">
+  <meta http-equiv="refresh" content="0; url=quiz.html">
   <link rel="canonical" href="https://myonecentworth.com/quiz.html">
-  <script>window.location.replace('/quiz.html');</script>
+  <script>window.location.replace('quiz.html');</script>
 
-  <link rel="icon" href="/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-  <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/favicon-180x180.png">
+  <link rel="manifest" href="manifest.webmanifest">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -499,7 +500,7 @@
     <div class="container header-inner">
 
       <a href="index.html" class="brand">
-        <img src="images/my-one-cent-worth-logo.webp" alt="My One Cent Worth logo">
+        <img src="my-one-cent-worth-logo.webp" alt="My One Cent Worth logo">
         <div>
           <div class="brand-title">MY ONE CENT WORTH</div>
           <div class="brand-subtitle">BY TASHI KHOO</div>
@@ -635,7 +636,7 @@
 
         <div>
           <div class="footer-brand">
-            <img src="images/my-one-cent-worth-logo.webp" alt="My One Cent Worth logo">
+            <img src="my-one-cent-worth-logo.webp" alt="My One Cent Worth logo">
             <h3>MY ONE CENT WORTH</h3>
           </div>
 
@@ -648,7 +649,7 @@
 
         <div>
           <div class="footer-brand">
-            <img src="images/mocw-monogram-logo.webp" alt="MOCW monogram logo">
+            <img src="mocw-monogram-logo.webp" alt="MOCW monogram logo">
             <h3>MOCW</h3>
           </div>
 
@@ -922,9 +923,9 @@
 
     renderQuestion();
 
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js')
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('sw.js')
           .then(reg => console.log('MOCW Service Worker registered successfully.'))
           .catch(err => console.error('Service Worker registration failed:', err));
       });
