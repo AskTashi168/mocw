@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing & Packages - My One Cent Worth</title>
+    <meta name="description" content="Simple, fair, transparent pricing for online consultations and in-person companion services.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-color: #0b0b0b;
+            --card-bg: #141414;
+            --card-border: #222222;
+            --gold-primary: #d4af37;
+            --gold-hover: #f1c40f;
+            --gold-subtle: rgba(212, 175, 55, 0.15);
+            --text-main: #f0f0f0;
+            --text-muted: #a0a0a0;
+            --font-heading: 'Georgia', serif;
+            --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            padding-bottom: 60px;
+        }
+
+        a {
+            color: var(--gold-primary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: var(--gold-hover);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation Header */
+        header {
+            background-color: rgba(11, 11, 11, 0.95);
+            border-bottom: 1px solid var(--card-border);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: var(--font-heading);
+            font-weight: bold;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            color: #fff;
+        }
+
+        .logo img {
+            width: 32px;
+            height: 32px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 24px;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--gold-primary);
+        }
+
+        .btn-install {
+            border: 1px solid var(--gold-primary);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem !important;
+            color: var(--gold-primary) !important;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 60px 20px 40px;
+        }
+
+        .tagline {
+            color: var(--gold-primary);
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .hero h1 {
+            font-family: var(--font-heading);
+            font-size: 2.8rem;
+            margin-bottom: 16px;
+            font-weight: normal;
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            max-width: 650px;
+            margin: 0 auto 30px;
+            font-size: 1rem;
+        }
+
+        /* Toggle Buttons */
+        .currency-toggle {
+            display: inline-flex;
+            background: #1a1a1a;
+            border: 1px solid var(--card-border);
+            border-radius: 25px;
+            padding: 4px;
+            margin-bottom: 20px;
+        }
+
+        .toggle-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+        }
+
+        .toggle-btn.active {
+            background: var(--gold-primary);
+            color: #000;
+            font-weight: bold;
+        }
+
+        /* Section Title Styling */
+        .section-header {
+            text-align: center;
+            margin: 60px 0 40px;
+        }
+
+        .section-header h2 {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Cards Grid */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 992px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Card System */
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            transition: border-color 0.3s;
+        }
+
+        .card:hover {
+            border-color: rgba(212, 175, 55, 0.4);
+        }
+
+        .card.featured {
+            border-color: var(--gold-primary);
+        }
+
+        .badge-popular {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gold-primary);
+            color: #000;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding: 4px 12px;
+            border-bottom-left-radius: 6px;
+            border-bottom-right-radius: 6px;
+            letter-spacing: 1px;
+        }
+
+        .card-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .card-body {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .card-title {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            margin-bottom: 6px;
+            font-weight: normal;
+        }
+
+        .card-subtitle {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-bottom: 16px;
+        }
+
+        .card-price {
+            font-size: 1.5rem;
+            color: #fff;
+            font-weight: bold;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+        }
+
+        .card-price span {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-weight: normal;
+        }
+
+        .card-desc {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .card-features {
+            list-style: none;
+            margin-bottom: 24px;
+            border-top: 1px solid #1f1f1f;
+            padding-top: 16px;
+        }
+
+        .card-features li {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .card-features li i {
+            color: var(--gold-primary);
+            margin-top: 4px;
+        }
+
+        /* Buttons */
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 12px 20px;
+            background: var(--gold-primary);
+            color: #000;
+            text-align: center;
+            font-weight: bold;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-transform: capitalize;
+            transition: background 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .btn:hover {
+            background: var(--gold-hover);
+            color: #000;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--card-border);
+            color: var(--text-main);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--gold-primary);
+            color: var(--gold-primary);
+            background: transparent;
+        }
+
+        /* Note Banner */
+        .banner-note {
+            background: rgba(212, 175, 55, 0.05);
+            border: 1px solid var(--gold-subtle);
+            padding: 16px;
+            border-radius: 6px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin: 30px 0;
+        }
+
+        .banner-note strong {
+            color: var(--gold-primary);
+        }
+
+        /* Companion Grid layout (2x2) */
+        .companion-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .companion-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .companion-content {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .companion-price-tag {
+            color: var(--gold-primary);
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin: 12px 0 16px;
+        }
+
+        /* Payment Section Specifics */
+        .payment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 24px;
+            margin-top: 30px;
+        }
+
+        .payment-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .payment-card img {
+            max-width: 100%;
+            height: auto;
+            max-height: 120px;
+            margin-bottom: 20px;
+            object-fit: contain;
+        }
+
+        .payment-card h3 {
+            font-family: var(--font-heading);
+            color: var(--gold-primary);
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+            font-weight: normal;
+        }
+
+        .payment-card p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            line-height: 1.5;
+        }
+
+        .payment-card ul {
+            text-align: left;
+            list-style: none;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            max-width: 280px;
+            margin: 0 auto;
+        }
+
+        .payment-card ul li {
+            margin-bottom: 6px;
+            position: relative;
+            padding-left: 14px;
+        }
+
+        .payment-card ul li::before {
+            content: "•";
+            color: var(--gold-primary);
+            position: absolute;
+            left: 0;
+        }
+
+        /* CTA Bottom Section */
+        .cta-box {
+            background: #111;
+            border: 1px solid var(--card-border);
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-top: 60px;
+        }
+
+        .cta-box h2 {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            font-weight: normal;
+            margin-bottom: 12px;
+        }
+
+        .cta-box p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 24px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .cta-buttons .btn {
+            width: auto;
+            min-width: 160px;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            border-top: 1px solid var(--card-border);
+            padding-top: 30px;
+        }
+    </style>
+
+    <!-- Cal.com embed initialization script -->
+    <script type="text/javascript">
+      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+      
+      // Initialize Namespaces[cite: 1]
+      Cal("init", "30-min-chat-usd", {origin:"https://app.cal.com"});
+      Cal("init", "30-min-chat-sgd", {origin:"https://app.cal.com"});
+      Cal("init", "60-min-chat-usd", {origin:"https://app.cal.com"});
+      Cal("init", "60-min-chat-sgd", {origin:"https://app.cal.com"});
+      Cal("init", "90-min-chat-usd", {origin:"https://app.cal.com"});
+      Cal("init", "90-min-chat-sgd", {origin:"https://app.cal.com"});
+      Cal("init", "60-companionship-services-sgd", {origin:"https://app.cal.com"});
+      Cal("init", "120-companionship-services-sgd", {origin:"https://app.cal.com"});
+      Cal("init", "180-companionship-services-sgd", {origin:"https://app.cal.com"});
+
+      Cal.config = Cal.config || {};
+      Cal.config.forwardQueryParams = true;
+
+      // Configure UI
+      Cal.ns["30-min-chat-usd"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+      Cal.ns["30-min-chat-sgd"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+      Cal.ns["60-min-chat-usd"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+      Cal.ns["60-min-chat-sgd"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+      Cal.ns["90-min-chat-usd"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+      Cal.ns["90-min-chat-sgd"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+      Cal.ns["60-companionship-services-sgd"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+      Cal.ns["120-companionship-services-sgd"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+      Cal.ns["180-companionship-services-sgd"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+    </script>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/mocw-pricing.webp" alt="My One Cent Worth Logo"> <!--[cite: 1] -->
+                MY ONE CENT WORTH
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="pricing.html" class="active">Pricing</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="#" class="btn-install">Install App</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Hero Title -->
+        <section class="hero">
+            <span class="tagline">Pricing & Packages</span>
+            <h1>Simple. Fair. Transparent.</h1>
+            <p>Choose the conversation or companionship that feels right for you. No subscriptions. No complicated packages. Just meaningful time, clear pricing and a human conversation.</p>
+            
+            <div class="currency-toggle">
+                <button class="toggle-btn" id="btn-worldwide" onclick="setCurrency('usd')">Worldwide</button>
+                <button class="toggle-btn active" id="btn-singapore" onclick="setCurrency('sgd')">Singapore</button>
+            </div>
+            <div style="font-size:0.75rem; color:var(--text-muted);" id="pricing-selected-text">Singapore pricing selected.</div>
+        </section>
+
+        <!-- Section 1: Online Conversations -->
+        <section>
+            <div class="section-header">
+                <span class="tagline">Online Conversations</span>
+                <h2>Choose Your Conversation</h2>
+                <p>Private voice or video conversations with Tashi. Choose the amount of time you need — from a short fresh perspective to a deeper conversation.</p>
+            </div>
+
+            <div class="grid-3">
+                <!-- 30 Minute Option -->
+                <div class="card">
+                    <img src="images/mocw-30-minute-consultation.webp" alt="30-Minute Consultation" class="card-image"> <!--[cite: 1] -->
+                    <div class="card-body">
+                        <h3 class="card-title">A Fresh Perspective</h3>
+                        <div class="card-subtitle">30 minutes</div>
+                        
+                        <div class="card-price price-sgd">SGD $48</div>
+                        <div class="card-price price-usd" style="display:none;">USD $36</div> <!--[cite: 1] -->
+
+                        <div class="card-desc">
+                            For one question, one challenge, or one important conversation. Sometimes, it simply helps to talk to someone willing to listen and offer another perspective.
+                        </div>
+                        <ul class="card-features">
+                            <li><i class="fa-solid fa-check"></i> 30-minute private voice or video conversation</li>
+                            <li><i class="fa-solid fa-check"></i> Honest, independent perspective</li>
+                            <li><i class="fa-solid fa-check"></i> Clear action points to take away</li>
+                            <li><i class="fa-solid fa-check"></i> WhatsApp follow-up within 24 hours</li>
+                        </ul>
+
+                        <!-- Dynamic Cal.com Trigger Button -->
+                        <button class="btn btn-cal-30"
+                                data-cal-link="myonecentworth/30-min-chat-sgd"
+                                data-cal-namespace="30-min-chat-sgd"
+                                data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'> <!--[cite: 1] -->
+                            Book This Conversation →
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 60 Minute Option (Featured) -->
+                <div class="card featured">
+                    <div class="badge-popular">Most Popular</div>
+                    <img src="images/mocw-60-minute-consultation.webp" alt="60-Minute Consultation" class="card-image"> <!--[cite: 1] -->
+                    <div class="card-body">
+                        <h3 class="card-title">A Meaningful Conversation</h3>
+                        <div class="card-subtitle">60 minutes</div>
+                        
+                        <div class="card-price price-sgd">SGD $88</div> <!--[cite: 1] -->
+                        <div class="card-price price-usd" style="display:none;">USD $66</div> <!--[cite: 1] -->
+
+                        <div class="card-desc">
+                            When life needs more time, more listening, and greater clarity. A full hour gives us room to explore what is really on your mind without rushing.
+                        </div>
+                        <ul class="card-features">
+                            <li><i class="fa-solid fa-check"></i> 60-minute private voice or video conversation</li>
+                            <li><i class="fa-solid fa-check"></i> Plenty of time to explore topics deeply</li>
+                            <li><i class="fa-solid fa-check"></i> Honest perspectives and practical insights</li>
+                            <li><i class="fa-solid fa-check"></i> Clear takeaways and practical next steps</li>
+                            <li><i class="fa-solid fa-check"></i> WhatsApp follow-up within 48 hours</li>
+                        </ul>
+
+                        <button class="btn btn-cal-60"
+                                data-cal-link="myonecentworth/60-min-chat-sgd"
+                                data-cal-namespace="60-min-chat-sgd"
+                                data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'> <!--[cite: 1] -->
+                            Book This Conversation →
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 90 Minute Option -->
+                <div class="card">
+                    <img src="images/mocw-90-minute-consultation.webp" alt="90-Minute Consultation" class="card-image"> <!--[cite: 1] -->
+                    <div class="card-body">
+                        <h3 class="card-title">A Deeper Conversation</h3>
+                        <div class="card-subtitle">90 minutes</div>
+                        
+                        <div class="card-price price-sgd">SGD $118</div>
+                        <div class="card-price price-usd" style="display:none;">USD $96</div> <!--[cite: 1] -->
+
+                        <div class="card-desc">
+                            For life's bigger choices, multiple decisions, and conversations that shouldn't be rushed. More time means more space to think, explore, and look at the situation from different angles.
+                        </div>
+                        <ul class="card-features">
+                            <li><i class="fa-solid fa-check"></i> 90-minute private voice or video conversation</li>
+                            <li><i class="fa-solid fa-check"></i> Plenty of time to explore several topics</li>
+                            <li><i class="fa-solid fa-check"></i> Honest perspectives and practical insights</li>
+                            <li><i class="fa-solid fa-check"></i> Personalized reflections and next steps</li>
+                            <li><i class="fa-solid fa-check"></i> WhatsApp follow-up within one week</li>
+                        </ul>
+
+                        <button class="btn btn-cal-90"
+                                data-cal-link="myonecentworth/90-min-chat-sgd"
+                                data-cal-namespace="90-min-chat-sgd"
+                                data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'> <!--[cite: 1] -->
+                            Book This Conversation →
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="banner-note">
+                Nothing is absolute. These conversations are about listening, thinking things through, and seeing possibilities from different angles. I don't tell you what you must do.
+            </div>
+        </section>
+
+        <!-- Section 2: In-Person Companion Services -->
+        <section>
+            <div class="section-header">
+                <span class="tagline">In-Person Companion Services - Singapore Only</span>
+                <h2>Companionship When You Need It</h2>
+                <p>Sometimes a conversation is better face-to-face. These services are for genuine human companionship, conversation and a reassuring presence.</p>
+            </div>
+
+            <div class="grid-2">
+                <!-- 1. Hospital Companion Services -->
+                <div class="companion-card">
+                    <img src="images/companionship-services-singapore.webp" alt="Hospital Companion Services"> <!--[cite: 1] -->
+                    <div class="companion-content">
+                        <h3 class="card-title">Hospital Companion Services</h3>
+                        <div class="card-subtitle">Support during a difficult time</div>
+                        <div class="card-desc">
+                            A hospital stay can be physically and emotionally exhausting. I provide calm, respectful companionship for patients and their families during hospital stays in Singapore.
+                            <br><br>
+                            Sometimes the greatest comfort is simply knowing that someone is there to listen, talk with you, or keep you company.
+                        </div>
+                        <div class="companion-price-tag">Same companion pricing: S$88 · S$168 · S$238</div>
+                        <button class="btn btn-outline" 
+                                data-cal-link="myonecentworth/60-companionship-services-sgd"
+                                data-cal-namespace="60-companionship-services-sgd"
+                                data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'> <!--[cite: 1] -->
+                            Arrange a Hospital Visit →
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 2. Nursing Home Companion Services -->
+                <div class="companion-card">
+                    <img src="images/companionship-services-singapore.webp" alt="Nursing Home Companion Services"> <!--[cite: 1] -->
+                    <div class="companion-content">
+                        <h3 class="card-title">Nursing Home Companion Services</h3>
+                        <div class="card-subtitle">Regular visits, human connection, and genuine presence</div>
+                        <div class="card-desc">
+                            Moving into a nursing home can bring major changes. Even when practical and medical needs are well looked after, loneliness and the need for meaningful connection can remain.
+                            <br><br>
+                            I provide dedicated one-to-one companionship, conversation, shared memories and genuine human presence.
+                        </div>
+                        <div class="companion-price-tag">Same companion pricing: S$88 · S$168 · S$238</div>
+                        <button class="btn btn-outline" 
+                                data-cal-link="myonecentworth/60-companionship-services-sgd"
+                                data-cal-namespace="60-companionship-services-sgd"
+                                data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'> <!--[cite: 1] -->
+                            Arrange a Nursing Home Visit →
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 3. Retirement Companion Services -->
+                <div class="companion-card">
+                    <img src="images/companionship-services-singapore.webp" alt="Retirement Companion Services"> <!--[cite: 1] -->
+                    <div class="companion-content">
+                        <h3 class="card-title">Retirement Companion Services</h3>
+                        <div class="card-subtitle">A thoughtful companion for this next chapter</div>
+                        <div class="card-desc">
+                            Retirement brings new freedom, but it can also bring cellular changes, fewer daily routines and questions about what comes next.
+                            <br><br>
+                            Talk about life experiences, interests, plans, memories — or simply enjoy meaningful company with someone who is willing to listen.
+                        </div>
+                        <div class="companion-price-tag">Same companion pricing: S$88 · S$168 · S$238</div>
+                        <button class="btn btn-outline" 
+                                data-cal-link="myonecentworth/60-companionship-services-sgd"
+                                data-cal-namespace="60-companionship-services-sgd"
+                                data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'> <!--[cite: 1] -->
+                            Arrange a Retirement Visit →
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 4. Conversation Companion Services -->
+                <div class="companion-card">
+                    <img src="images/companionship-services-singapore.webp" alt="Conversation Companion Services"> <!--[cite: 1] -->
+                    <div class="companion-content">
+                        <h3 class="card-title">Conversation Companion Services</h3>
+                        <div class="card-subtitle">Sometimes, you simply need someone to talk to</div>
+                        <div class="card-desc">
+                            Not every conversation needs a problem to solve. You may simply want to talk, share what is on your mind, tell a story, laugh, or have someone listen without judgement or pressure.
+                            <br><br>
+                            A calm, respectful space for meaningful human connection — whether you have something important to discuss or simply don't want to spend the day alone.
+                        </div>
+                        <div class="companion-price-tag">Same companion pricing: S$88 · S$168 · S$238</div>
+                        <button class="btn btn-outline" 
+                                data-cal-link="myonecentworth/60-companionship-services-sgd"
+                                data-cal-namespace="60-companionship-services-sgd"
+                                data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'> <!--[cite: 1] -->
+                            Arrange a Conversation Visit →
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Companion Rate Duration Pricing Cards -->
+            <div class="section-header" style="margin-top:40px;">
+                <h3>Singapore Companion Service Pricing</h3>
+            </div>
+
+            <div class="grid-3">
+                <div class="card" style="text-align: center; padding: 24px;">
+                    <img src="images/mocw-60-minute-companion-services.webp" alt="60 Min Companion Service" style="max-width: 100%; border-radius: 4px; margin-bottom:15px;"> <!--[cite: 1] -->
+                    <h3 class="card-title">S$88</h3>
+                    <div class="card-subtitle">Up to 1 hour</div>
+                    <button class="btn btn-outline" 
+                            data-cal-link="myonecentworth/60-companionship-services-sgd" 
+                            data-cal-namespace="60-companionship-services-sgd"
+                            data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'> <!--[cite: 1] -->
+                        Book 1 Hour Visit
+                    </button>
+                </div>
+
+                <div class="card" style="text-align: center; padding: 24px;">
+                    <img src="images/mocw-120-minute-companion-services.webp" alt="120 Min Companion Service" style="max-width: 100%; border-radius: 4px; margin-bottom:15px;"> <!--[cite: 1] -->
+                    <h3 class="card-title">S$168</h3>
+                    <div class="card-subtitle">Up to 2 hours · Save S$8</div>
+                    <button class="btn btn-outline" 
+                            data-cal-link="myonecentworth/120-companionship-services-sgd" 
+                            data-cal-namespace="120-companionship-services-sgd"
+                            data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'> <!--[cite: 1] -->
+                        Book 2 Hours Visit
+                    </button>
+                </div>
+
+                <div class="card" style="text-align: center; padding: 24px;">
+                    <img src="images/mocw-180-minute-companion-services.webp" alt="180 Min Companion Service" style="max-width: 100%; border-radius: 4px; margin-bottom:15px;"> <!--[cite: 1] -->
+                    <h3 class="card-title">S$238</h3>
+                    <div class="card-subtitle">Up to 3 hours · Save S$26</div>
+                    <button class="btn btn-outline" 
+                            data-cal-link="myonecentworth/180-companionship-services-sgd" 
+                            data-cal-namespace="180-companionship-services-sgd"
+                            data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'> <!--[cite: 1] -->
+                        Book 3 Hours Visit
+                    </button>
+                </div>
+            </div>
+
+            <div class="banner-note">
+                <strong>Important:</strong> All companion services are genuine companionship and conversation services. They are <strong>NOT</strong> social escort, dating, intimate or sexual services.
+            </div>
+        </section>
+
+        <!-- Section 3: Payment Section -->
+        <section>
+            <div class="section-header">
+                <span class="tagline">Payment</span>
+                <h2>Simple Ways to Pay</h2>
+                <p>Choose the payment method offered when you arrange your session or visit.</p>
+            </div>
+
+            <div class="payment-grid">
+                <!-- Card Payment -->
+                <div class="payment-card">
+                    <img src="images/secure-card-payment.webp" alt="Visa Mastercard Maestro American Express"> <!--[cite: 1] -->
+                    <h3>Secure Card Payment</h3>
+                    <p>For online services and other sessions where card payment is available, payment can be made securely by card.</p>
+                    <ul>
+                        <li>Convenient online payment</li>
+                        <li>No subscription required</li>
+                        <li>Payment is tied to the service you select</li>
+                    </ul>
+                </div>
+
+                <!-- PayNow Option -->
+                <div class="payment-card">
+                    <img src="images/paynow-mocw.webp" alt="PayNow Singapore Payment Options"> <!--[cite: 1] -->
+                    <h3>Singapore Payment Options</h3>
+                    <p>Singapore clients may also be offered local payment options when arranging in-person companion services.</p>
+                    <ul>
+                        <li>Choose the method most convenient for you</li>
+                        <li>Send your payment confirmation when requested</li>
+                        <li>Arrange your preferred date and time</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Help / Bottom CTA -->
+        <section class="cta-box">
+            <h2>Not Sure Which One Is Right for You?</h2>
+            <p>You don't have to figure everything out before reaching out. Tell me what you need, and we can work out which conversation or companion service makes the most sense.</p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="btn">Contact Tashi →</a>
+                <a href="faq.html" class="btn btn-outline">Read the FAQ →</a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>© My One Cent Worth. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Toggle Script for Currency Switcher -->
+    <script>
+        function setCurrency(currency) {
+            const btnWorldwide = document.getElementById('btn-worldwide');
+            const btnSingapore = document.getElementById('btn-singapore');
+            const sgdPrices = document.querySelectorAll('.price-sgd');
+            const usdPrices = document.querySelectorAll('.price-usd');
+            const statusText = document.getElementById('pricing-selected-text');
+
+            const btn30 = document.querySelector('.btn-cal-30');
+            const btn60 = document.querySelector('.btn-cal-60');
+            const btn90 = document.querySelector('.btn-cal-90');
+
+            if (currency === 'usd') {
+                btnWorldwide.classList.add('active');
+                btnSingapore.classList.remove('active');
+                
+                sgdPrices.forEach(el => el.style.display = 'none');
+                usdPrices.forEach(el => el.style.display = 'block');
+                statusText.innerText = 'Worldwide pricing selected.';
+
+                // Update Cal attributes to USD[cite: 1]
+                btn30.setAttribute('data-cal-link', 'myonecentworth/30-min-chat-usd');
+                btn30.setAttribute('data-cal-namespace', '30-min-chat-usd');
+
+                btn60.setAttribute('data-cal-link', 'myonecentworth/60-min-chat-usd');
+                btn60.setAttribute('data-cal-namespace', '60-min-chat-usd');
+
+                btn90.setAttribute('data-cal-link', 'myonecentworth/90-min-chat-usd');
+                btn90.setAttribute('data-cal-namespace', '90-min-chat-usd');
+            } else {
+                btnSingapore.classList.add('active');
+                btnWorldwide.classList.remove('active');
+                
+                usdPrices.forEach(el => el.style.display = 'none');
+                sgdPrices.forEach(el => el.style.display = 'block');
+                statusText.innerText = 'Singapore pricing selected.';
+
+                // Update Cal attributes to SGD[cite: 1]
+                btn30.setAttribute('data-cal-link', 'myonecentworth/30-min-chat-sgd');
+                btn30.setAttribute('data-cal-namespace', '30-min-chat-sgd');
+
+                btn60.setAttribute('data-cal-link', 'myonecentworth/60-min-chat-sgd');
+                btn60.setAttribute('data-cal-namespace', '60-min-chat-sgd');
+
+                btn90.setAttribute('data-cal-link', 'myonecentworth/90-min-chat-sgd');
+                btn90.setAttribute('data-cal-namespace', '90-min-chat-sgd');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Do I Need Help? | A Simple Self-Reflection Quiz | My One Cent Worth</title>
+  <meta name="description" content="A simple, private self-reflection quiz to help you consider whether talking with someone or gaining another perspective may be useful right now.">
+  <link rel="canonical" href="https://myonecentworth.com/quiz/do-i-need-help.html">
+  <link rel="icon" type="image/png" sizes="32x32" href="../icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../icons/favicon-180x180.png">
+  <link rel="manifest" href="../manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #0A0A0A;
+      --card-bg: #121212;
+      --card-border: #292929;
+      --text-gold: #D4AF37;
+      --text-gold-light: #F3E5AB;
+      --text-main: #E0E0E0;
+      --text-muted: #A0A0A0;
+      --accent-glow: rgba(212, 175, 55, 0.15);
+      --font-heading: "Cinzel", serif;
+      --font-body: "Inter", sans-serif;
+      --max-width: 1200px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--bg-color); color: var(--text-main); font-family: var(--font-body); line-height: 1.7; }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(92%, var(--max-width)); margin: 0 auto; }
+    /* HEADER */,
+    .main-header { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; height: 80px; padding: 0 1.5rem; background: linear-gradient(180deg, rgba(10,10,10,0.9) 0%, rgba(10,10,10,0.35) 70%, transparent 100%); transition: background 0.3s ease, height 0.3s ease, box-shadow 0.3s ease; }
+    .main-header.scrolled { background: rgba(10,10,10,0.97); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--card-border); box-shadow: 0 4px 28px rgba(0,0,0,0.7); height: 70px; }
+    .nav-container { max-width: 1200px; margin: 0 auto; height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .brand-logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; flex-shrink: 0; }
+    .coin-logo { object-fit: contain; max-height: 48px; width: auto; flex-shrink: 0; border-radius: 50%; }
+    .brand-title { font-family: var(--font-heading); color: #ffffff; font-weight: 700; font-size: 1rem; letter-spacing: 1px; display: block; white-space: nowrap; text-shadow: 0 2px 4px rgba(0,0,0,0.8); }
+    .brand-subtitle { font-family: var(--font-body); color: var(--text-gold); font-size: 0.6rem; letter-spacing: 1.5px; display: block; white-space: nowrap; text-shadow: 0 2px 4px rgba(0,0,0,0.8); }
+    .nav-links { display: flex; list-style: none; gap: 1.25rem; align-items: center; margin: 0; padding: 0; flex-wrap: wrap; justify-content: center; }
+    .nav-links a { color: #ffffff; text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: color 0.2s ease; white-space: nowrap; text-shadow: 0 2px 4px rgba(0,0,0,0.8); }
+    .nav-links a:hover, .nav-links a.active { color: var(--text-gold); }
+    .dropdown { position: relative; }
+    .dropdown-menu { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background-color: var(--card-bg); border: 1px solid var(--card-border); list-style: none; padding: 0.5rem 0; min-width: 160px; border-radius: 6px; box-shadow: 0 8px 20px rgba(0,0,0,0.6); z-index: 1001; }
+    .dropdown:hover .dropdown-menu { display: block; }
+    .dropdown-menu a { padding: 0.6rem 1rem; display: block; color: var(--text-main); text-align: center; text-shadow: none; }
+    .btn-pwa-install { background: rgba(0,0,0,0.45); border: 1px solid var(--text-gold); color: var(--text-gold); padding: 0.32rem 0.85rem; border-radius: 20px; font-family: var(--font-body); font-size: 0.75rem; letter-spacing: 0.5px; display: none; align-items: center; gap: 0.35rem; cursor: pointer; transition: all 0.2s ease; backdrop-filter: blur(4px); white-space: nowrap; }
+    .btn-pwa-install:hover { background: var(--text-gold); color: #000; }
+    /* MOBILE */,
+    .mobile-nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 6px; z-index: 1100; flex-direction: column; gap: 5px; }
+    .hamburger-icon { width: 24px; height: 18px; display: flex; flex-direction: column; justify-content: space-between; }
+    .hamburger-icon span { display: block; width: 100%; height: 2px; background: var(--text-gold-light); border-radius: 2px; transition: all 0.3s; }
+    .mobile-nav-toggle.open .hamburger-icon span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .mobile-nav-toggle.open .hamburger-icon span:nth-child(2) { opacity: 0; }
+    .mobile-nav-toggle.open .hamburger-icon span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+    .mobile-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.7); z-index: 1050; opacity: 0; visibility: hidden; transition: all 0.25s; }
+    .mobile-overlay.open { opacity: 1; visibility: visible; }
+    .mobile-drawer { position: fixed; top: 0; right: -100%; width: min(85%, 380px); height: 100vh; background: rgba(12,12,12,0.99); backdrop-filter: blur(20px); border-left: 1px solid var(--card-border); z-index: 1060; padding: 90px 32px 40px; display: flex; flex-direction: column; justify-content: space-between; transition: right 0.38s cubic-bezier(0.16,1,0.3,1); }
+    .mobile-drawer.open { right: 0; box-shadow: -20px 0 60px rgba(0,0,0,0.9); }
+    .mobile-nav-links { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+    .mobile-nav-links a { font-family: var(--font-heading); font-size: 1.45rem; color: var(--text-muted); display: block; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.05); transition: all 0.2s; }
+    .mobile-nav-links a:hover, .mobile-nav-links a.active { color: var(--text-gold); padding-left: 8px; border-bottom-color: rgba(212,175,55,0.25); }
+    .mobile-drawer-footer { border-top: 1px solid var(--card-border); padding-top: 24px; }
+    .drawer-tagline { font-size: 0.72rem; letter-spacing: 2.5px; color: var(--text-gold); text-transform: uppercase; margin-bottom: 4px; }
+    .drawer-aphorism { font-family: var(--font-heading); font-style: italic; color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px; }
+    .btn-wa-drawer { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; padding: 15px; background: linear-gradient(135deg, #25D366, #128C7E); color: #fff; font-family: var(--font-body); font-weight: 600; font-size: 0.88rem; border-radius: 4px; box-shadow: 0 4px 18px rgba(37,211,102,0.35); transition: filter 0.2s; }
+    .btn-wa-drawer:hover { filter: brightness(1.1); }
+    /* HERO */,
+    .hero { position: relative; display: flex; flex-direction: column; justify-content: space-between; align-items: stretch; text-align: center; min-height: 72vh; background: url('../do-i-need-help.webp') center center / cover no-repeat; }
+    .hero-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.55); z-index: 0; }
+    .hero-top { position: relative; z-index: 1; padding: calc(80px + 3rem) 1.5rem 1.5rem; text-align: center; }
+    .hero-bottom { position: relative; z-index: 1; width: 100%; max-width: 700px; margin: 0 auto; padding: 1.5rem 1.5rem 3rem; text-align: center; }
+    .hero-bottom p { color: var(--text-main); text-shadow: 0 1px 4px rgba(0,0,0,0.9); }
+    .eyebrow { color: var(--text-gold); font-size: 0.75rem; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 18px; text-shadow: 0 2px 4px rgba(0,0,0,0.8); }
+    h1, h2, h3 { font-family: var(--font-heading); font-weight: 600; line-height: 1.35; }
+    h1 { color: var(--text-gold-light); font-size: clamp(2rem, 5vw, 3.5rem); margin: 0 auto 22px; max-width: 850px; }
+    .hero p { color: var(--text-muted); max-width: 720px; margin: 0 auto; font-size: 1rem; }
+    /* QUIZ */,
+    .quiz-section { padding: 3rem 0 5.5rem; min-height: 65vh; }
+    .quiz-card { width: min(100%, 760px); margin: 0 auto; background: linear-gradient(145deg, #151515, #101010); border: 1px solid var(--card-border); border-radius: 8px; padding: clamp(24px, 5vw, 48px); box-shadow: 0 0 45px rgba(0,0,0,0.35); }
+    .progress-top { display: flex; justify-content: space-between; gap: 20px; color: var(--text-muted); font-size: 0.8rem; margin-bottom: 12px; }
+    .progress-track { width: 100%; height: 5px; background: #292929; border-radius: 10px; overflow: hidden; margin-bottom: 38px; }
+    .progress-fill { width: 11.11%; height: 100%; background: var(--text-gold); transition: width 0.3s ease; }
+    .question-number { color: var(--text-gold); font-size: 0.78rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; }
+    .question-title { color: var(--text-gold-light); font-size: clamp(1.35rem, 3vw, 2rem); margin: 0 0 28px; }
+    .answers { display: grid; gap: 12px; }
+    .answer-option { position: relative; display: block; border: 1px solid #333; border-radius: 5px; padding: 15px 18px; cursor: pointer; color: var(--text-main); transition: border-color 0.2s ease, background 0.2s ease; }
+    .answer-option:hover { border-color: var(--text-gold); background: rgba(212,175,55,0.05); }
+    .answer-option input { position: absolute; opacity: 0; pointer-events: none; }
+    .answer-option.selected { border-color: var(--text-gold); background: var(--accent-glow); color: var(--text-gold-light); }
+    .answer-option:focus-within { outline: 2px solid var(--text-gold); outline-offset: 3px; }
+    .quiz-actions { display: flex; justify-content: space-between; gap: 15px; margin-top: 35px; }
+    button, .btn { border: 1px solid var(--text-gold); border-radius: 3px; padding: 13px 24px; font-family: var(--font-body); font-size: 0.8rem; letter-spacing: 1.5px; text-transform: uppercase; cursor: pointer; transition: all 0.2s ease; }
+    .btn-gold { background: linear-gradient(135deg, #D4AF37, #AA7C11); color: #000; font-weight: 600; }
+    .btn-gold:hover { filter: brightness(1.12); }
+    .btn-outline { background: transparent; color: var(--text-gold); }
+    .btn-outline:hover { background: var(--accent-glow); }
+    button:disabled { opacity: 0.35; cursor: not-allowed; }
+    .hidden { display: none !important; }
+    .intro-note { margin-top: 28px; color: var(--text-muted); font-size: 0.82rem; text-align: center; }
+    .result-card { text-align: center; }
+    .result-label { color: var(--text-gold); letter-spacing: 3px; font-size: 0.78rem; text-transform: uppercase; margin-bottom: 18px; }
+    .result-title { color: var(--text-gold-light); font-size: clamp(1.7rem, 4vw, 2.5rem); margin: 0 0 22px; }
+    .result-text { color: var(--text-main); max-width: 610px; margin: 0 auto 24px; }
+    .result-guidance { color: var(--text-muted); font-size: 0.9rem; max-width: 610px; margin: 0 auto 30px; }
+    .result-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 14px; }
+    .disclaimer { margin-top: 35px; padding-top: 25px; border-top: 1px solid var(--card-border); color: var(--text-muted); font-size: 0.78rem; text-align: left; }
+    /* FOOTER */,
+    .main-footer { background-color: #050505; border-top: 1px solid #292929; padding: 4rem 1.5rem 2.5rem; margin-top: 0; }
+    .footer-container { max-width: var(--max-width); margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 2rem; }
+    .footer-brand-story { max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 2rem; align-items: center; width: 100%; }
+    .footer-brand-grid { display: flex; flex-direction: column; gap: 2rem; width: 100%; justify-content: center; }
+    .brand-item { display: flex; flex-direction: column; align-items: center; gap: 0.75rem; flex: 1; text-align: center; }
+    .brand-item-header { display: flex; align-items: center; justify-content: center; gap: 0.75rem; }
+    .footer-logo-img { width: 42px; height: 42px; object-fit: contain; flex-shrink: 0; border-radius: 50%; }
+    .brand-item-title { font-family: var(--font-heading); color: var(--text-gold); font-size: 1.1rem; font-weight: 700; letter-spacing: 0.5px; }
+    .brand-item-desc { color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; margin: 0; max-width: 500px; }
+    .brand-summary-text { border-top: 1px solid #1a1a1a; padding-top: 1.25rem; margin-top: 0.5rem; width: 100%; }
+    .brand-summary-text p { color: var(--text-main); font-size: 0.95rem; margin-bottom: 0.4rem; }
+    .brand-tagline { color: var(--text-gold) !important; font-weight: 600; font-family: var(--font-heading); letter-spacing: 0.5px; }
+    .footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; list-style: none; padding: 0; margin: 0; }
+    .footer-links a { color: var(--text-muted); font-size: 0.85rem; transition: color 0.2s ease; }
+    .footer-links a:hover { color: var(--text-gold); }
+    .copyright-text { color: #666666; font-size: 0.8rem; margin-top: 0.5rem; }
+    /* WHATSAPP FAB */,
+    .whatsapp-fab { position: fixed; bottom: 26px; right: 26px; z-index: 9000; display: flex; align-items: center; gap: 10px; }
+    .whatsapp-tooltip { background: var(--card-bg); border: 1px solid rgba(212,175,55,0.4); color: var(--text-main); font-size: 0.8rem; padding: 7px 13px; border-radius: 20px; white-space: nowrap; opacity: 0; transform: translateX(8px); pointer-events: none; transition: all 0.3s; box-shadow: 0 8px 22px rgba(0,0,0,0.5); }
+    .whatsapp-fab:hover .whatsapp-tooltip { opacity: 1; transform: translateX(0); }
+    .whatsapp-fab-btn { width: 58px; height: 58px; border-radius: 50%; background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 22px rgba(37,211,102,0.4), 0 0 0 2px var(--text-gold); transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275); }
+    .whatsapp-fab-btn:hover { transform: scale(1.1); }
+    .whatsapp-fab-btn svg { width: 30px; height: 30px; fill: #fff; }
+    @media (max-width: 900px) { .nav-links, .btn-pwa-install { display: none !important; } .mobile-nav-toggle { display: flex; } }
+    @media (min-width: 901px) { .mobile-nav-toggle { display: none; } }
+    @media (min-width: 680px) { .footer-brand-grid { flex-direction: row !important; align-items: flex-start !important; gap: 3rem !important; } .brand-item { align-items: flex-start !important; text-align: left !important; } .brand-item-header { justify-content: flex-start !important; } }
+    @media (max-width: 520px) { .quiz-actions { flex-direction: column-reverse; } .quiz-actions button { width: 100%; } }
+  </style>
+</head>
+<body>
+  <!-- MAIN HEADER NAVIGATION -->
+  <header class="main-header" id="mainHeader">
+    <div class="nav-container">
+      <a href="../index.html" class="brand-logo" aria-label="My One Cent Worth Home">
+        <img src="../my-one-cent-worth-logo.webp" alt="My One Cent Worth Coin Logo" class="coin-logo">
+        <div class="logo-text">
+          <span class="brand-title">MY ONE CENT WORTH</span>
+          <span class="brand-subtitle">BY TASHI KHOO</span>
+        </div>
+      </a>
+      <ul class="nav-links" role="navigation" aria-label="Main navigation">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li class="dropdown">
+          <a href="../services.html">Services &#9660;</a>
+          <ul class="dropdown-menu">
+            <li><a href="../services.html">All Services</a></li>
+            <li><a href="../pricing.html">Pricing</a></li>
+          </ul>
+        </li>
+        <li><a href="../faq.html">FAQ</a></li>
+        <li><a href="../blog.html">All MOCW</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+        <li><a href="do-i-need-help.html" class="active">Quiz</a></li>
+        <li><button id="pwa-install-btn" class="btn-pwa-install" aria-label="Install MOCW as an app">&#11015; Install App</button></li>
+      </ul>
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <div class="hamburger-icon"><span></span><span></span><span></span></div>
+      </button>
+    </div>
+  </header>
+  <!-- MOBILE DRAWER -->
+  <div class="mobile-overlay" id="mobileOverlay" aria-hidden="true"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile navigation">
+    <div>
+      <div class="logo-text" style="margin-bottom:32px;">
+        <span class="brand-title" style="font-size:1.2rem;">MY ONE CENT WORTH</span>
+        <span class="brand-subtitle" style="margin-top:3px;">MOCW &#8226; Someone Who Listens</span>
+      </div>
+      <ul class="mobile-nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../services.html">Services</a></li>
+        <li><a href="../pricing.html">Pricing</a></li>
+        <li><a href="../faq.html">FAQ</a></li>
+        <li><a href="../blog.html">All MOCW</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+        <li><a href="do-i-need-help.html" class="active">Quiz</a></li>
+      </ul>
+    </div>
+    <div class="mobile-drawer-footer">
+      <p class="drawer-tagline">LISTEN &#8226; THINK &#8226; GROW</p>
+      <p class="drawer-aphorism">"Nothing is absolute."</p>
+      <a href="https://wa.me/6583186776?text=Hello%2C%20Tashi.%20I%20want%20more%20info%20about%20the%20services." target="_blank" rel="noopener noreferrer" class="btn-wa-drawer">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.964 9.964 0 001.333 4.993L2 22l5.233-1.237a9.96 9.96 0 004.779 1.221h.004c5.505 0 9.988-4.478 9.989-9.984 0-2.669-1.038-5.176-2.925-7.062A9.925 9.925 0 0012.012 2zm5.834 14.164c-.247.692-1.246 1.34-1.722 1.408-.475.067-1.077.106-3.483-.889-2.946-1.218-4.836-4.225-4.984-4.423-.148-.198-1.201-1.6-1.201-3.05 0-1.45.762-2.164 1.033-2.457.271-.293.593-.367.791-.367.198 0 .396.002.569.01.184.009.432-.07.676.516.247.593.841 2.054.915 2.203.074.148.124.321.025.516-.099.198-.148.321-.297.495-.148.173-.312.387-.446.521-.148.148-.302.309-.13.605.173.296.767 1.267 1.648 2.05 1.134 1.008 2.091 1.32 2.388 1.468.297.148.47.124.643-.074.173-.198.742-.865.94-1.162.198-.297.396-.247.668-.148.272.099 1.73.816 2.027.964.297.148.495.222.569.346.074.124.074.717-.173 1.409z"/></svg>
+        WhatsApp Tashi (+65 8318 6776)
+      </a>
+    </div>
+  </aside>
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-top">
+        <div class="eyebrow">A Moment To Reflect</div>
+        <h1 style="font-size: clamp(1.8rem, 5vw, 3rem); color: var(--text-gold-light); text-shadow: 0 2px 10px rgba(0,0,0,0.8); margin-bottom: 0;">Do I Need Help?</h1>
+      </div>
+      <div class="hero-bottom">
+        <p>A simple self-reflection quiz to help you consider whether talking with someone, thinking things through, or gaining another perspective may be useful right now.</p>
+      </div>
+    </section>
+    <section class="quiz-section">
+      <div class="container">
+        <div class="quiz-card">
+          <div id="quiz-panel">
+            <div class="progress-top">
+              <span id="progress-text">Question 1 of 9</span>
+              <span id="progress-percent">11%</span>
+            </div>
+            <div class="progress-track" aria-hidden="true">
+              <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <div class="question-number" id="question-number">Question 1</div>
+            <h2 class="question-title" id="question-title">How have you been feeling lately?</h2>
+            <div class="answers" id="answers"></div>
+            <div class="quiz-actions">
+              <button type="button" class="btn btn-outline" id="back-button">Back</button>
+              <button type="button" class="btn btn-gold" id="next-button" disabled>Next</button>
+            </div>
+            <p class="intro-note">There are no right or wrong answers. Choose the response that feels closest to your situation.</p>
+          </div>
+          <div id="result-panel" class="result-card hidden">
+            <div class="result-label">Your Reflection</div>
+            <h2 class="result-title" id="result-title"></h2>
+            <p class="result-text" id="result-text"></p>
+            <p class="result-guidance" id="result-guidance"></p>
+            <div class="result-actions">
+              <a href="../services.html" class="btn btn-gold">Explore MOCW Services</a>
+              <a href="https://wa.me/6583186776?text=Hello%2C%20Tashi.%20I%20would%20like%20to%20know%20more%20about%20MOCW." class="btn btn-outline" target="_blank" rel="noopener">Speak With Tashi</a>
+            </div>
+            <div class="disclaimer">
+              <strong>Please remember:</strong> This quiz is a personal reflection tool, not a medical, psychological, or diagnostic assessment. MOCW is not therapy, counselling, medical care, crisis support, or emergency assistance. If you are in immediate danger or need urgent help, please contact the appropriate emergency service or qualified professional.
+            </div>
+            <button type="button" class="btn btn-outline" id="restart-button" style="margin-top: 28px;">Start Again</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- FOOTER SECTION -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-brand-story">
+        <div class="footer-brand-grid">
+          <div class="brand-item">
+            <div class="brand-item-header">
+              <img src="../my-one-cent-worth-logo.webp" alt="My One Cent Worth Logo" class="footer-logo-img">
+              <span class="brand-item-title">MY ONE CENT WORTH</span>
+            </div>
+            <p class="brand-item-desc">My One Cent Worth is the full name behind everything we do &mdash; a place for perspectives, meaningful conversations, thoughtful questions, and a willingness to see things from different angles.</p>
+          </div>
+          <div class="brand-item">
+            <div class="brand-item-header">
+              <img src="../mocw-monogram-logo.webp" alt="MOCW Monogram Logo" class="footer-logo-img">
+              <span class="brand-item-title">MOCW</span>
+            </div>
+            <p class="brand-item-desc">MOCW is simply the short-form expression of My One Cent Worth &mdash; the name you may see across our logo, website, content, and future community.</p>
+          </div>
+        </div>
+        <div class="brand-summary-text">
+          <p>One name. Two expressions. One philosophy.</p>
+          <p class="brand-tagline">MY ONE CENT WORTH (MOCW) &mdash; SOMEONE WHO LISTENS.</p>
+        </div>
+      </div>
+      <ul class="footer-links" role="navigation" aria-label="Footer navigation">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../services.html">Services</a></li>
+        <li><a href="../pricing.html">Pricing</a></li>
+        <li><a href="../faq.html">FAQ</a></li>
+        <li><a href="../blog.html">All MOCW</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+        <li><a href="do-i-need-help.html">Quiz</a></li>
+        <li><a href="../sitemap.html">HTML Sitemap</a></li>
+        <li><a href="../sitemap.xml" target="_blank" rel="noopener">XML Sitemap</a></li>
+      </ul>
+      <p class="copyright-text">&copy; 2026 My One Cent Worth by Tashi Khoo. All rights reserved.</p>
+    </div>
+  </footer>
+  <!-- WHATSAPP FAB -->
+  <div class="whatsapp-fab" aria-label="Chat with Tashi on WhatsApp">
+    <div class="whatsapp-tooltip">Chat with Tashi on WhatsApp</div>
+    <a href="https://wa.me/6583186776?text=Hello%2C%20Tashi.%20I%20want%20more%20info%20about%20the%20services." class="whatsapp-fab-btn" target="_blank" rel="noopener noreferrer" aria-label="Open WhatsApp chat with Tashi Khoo">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.964 9.964 0 001.333 4.993L2 22l5.233-1.237a9.96 9.96 0 004.779 1.221h.004c5.505 0 9.988-4.478 9.989-9.984 0-2.669-1.038-5.176-2.925-7.062A9.925 9.925 0 0012.012 2zm5.834 14.164c-.247.692-1.246 1.34-1.722 1.408-.475.067-1.077.106-3.483-.889-2.946-1.218-4.836-4.225-4.984-4.423-.148-.198-1.201-1.6-1.201-3.05 0-1.45.762-2.164 1.033-2.457.271-.293.593-.367.791-.367.198 0 .396.002.569.01.184.009.432-.07.676.516.247.593.841 2.054.915 2.203.074.148.124.321.025.516-.099.198-.148.321-.297.495-.148.173-.312.387-.446.521-.148.148-.302.309-.13.605.173.296.767 1.267 1.648 2.05 1.134 1.008 2.091 1.32 2.388 1.468.297.148.47.124.643-.074.173-.198.742-.865.94-1.162.198-.297.396-.247.668-.148.272.099 1.73.816 2.027.964.297.148.495.222.569.346.074.124.074.717-.173 1.409z"/></svg>
+    </a>
+  </div>
+  <script>
+    var mainHeader = document.getElementById('mainHeader');
+    window.addEventListener('scroll', function() { mainHeader.classList.toggle('scrolled', window.scrollY > 60); }, { passive: true });
+    var mobileNavToggle = document.getElementById('mobileNavToggle');
+    var mobileDrawer    = document.getElementById('mobileDrawer');
+    var mobileOverlay   = document.getElementById('mobileOverlay');
+    function openDrawer() { mobileDrawer.classList.add('open'); mobileOverlay.classList.add('open'); mobileNavToggle.classList.add('open'); mobileNavToggle.setAttribute('aria-expanded', 'true'); document.body.style.overflow = 'hidden'; }
+    function closeDrawer() { mobileDrawer.classList.remove('open'); mobileOverlay.classList.remove('open'); mobileNavToggle.classList.remove('open'); mobileNavToggle.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; }
+    mobileNavToggle.addEventListener('click', function() { mobileDrawer.classList.contains('open') ? closeDrawer() : openDrawer(); });
+    mobileOverlay.addEventListener('click', closeDrawer);
+    document.querySelectorAll('.mobile-nav-links a').forEach(function(a) { a.addEventListener('click', closeDrawer); });
+    const questions = [
+      { question: "How have you been feeling lately?", answers: [{ text: "Generally fine and comfortable", score: 0 }, { text: "A little uncertain or unsettled", score: 1 }, { text: "Stressed, distracted, or emotionally tired", score: 2 }, { text: "Overwhelmed or unsure how to move forward", score: 3 }] },
+      { question: "Is there something you keep thinking about but have not resolved?", answers: [{ text: "No, not really", score: 0 }, { text: "There may be one small thing", score: 1 }, { text: "Yes, it keeps coming back to my mind", score: 2 }, { text: "Yes, it is difficult to switch off from it", score: 3 }] },
+      { question: "Are you facing a difficult decision or situation?", answers: [{ text: "No, I am not facing one currently", score: 0 }, { text: "Possibly, but it is not urgent", score: 1 }, { text: "Yes, and I am unsure what to choose", score: 2 }, { text: "Yes, and I feel stuck or pressured", score: 3 }] },
+      { question: "Would another perspective help you see things more clearly?", answers: [{ text: "Probably not at this time", score: 0 }, { text: "It might be interesting", score: 1 }, { text: "Yes, I think it could help", score: 2 }, { text: "Yes, I really need to see things differently", score: 3 }] },
+      { question: "Do you often keep your thoughts or worries to yourself?", answers: [{ text: "No, I have people I can talk with", score: 0 }, { text: "Sometimes", score: 1 }, { text: "Often, because I do not want to burden others", score: 2 }, { text: "Nearly always, because I do not feel understood", score: 3 }] },
+      { question: "Would it help to talk with someone outside your usual circle?", answers: [{ text: "Not at the moment", score: 0 }, { text: "Perhaps, depending on the situation", score: 1 }, { text: "Yes, an outside viewpoint may be useful", score: 2 }, { text: "Yes, I would appreciate a calm and private conversation", score: 3 }] },
+      { question: "What would be most useful to you right now?", answers: [{ text: "Simply exploring ideas", score: 0 }, { text: "Having someone listen", score: 1 }, { text: "Talking through a situation", score: 2 }, { text: "Receiving another perspective on something important", score: 3 }] },
+      { question: "Are you open to considering a different way of looking at things?", answers: [{ text: "I am comfortable with my current view", score: 0 }, { text: "I am curious about other possibilities", score: 1 }, { text: "Yes, I would like to understand other viewpoints", score: 2 }, { text: "Yes, I am ready to question and reconsider things", score: 3 }] },
+      { question: "After answering these questions, what feels closest to your situation?", answers: [{ text: "I was simply curious", score: 0 }, { text: "I may benefit from reflecting a little more", score: 1 }, { text: "I think talking things through could help", score: 2 }, { text: "I would like someone to listen and help me see things clearly", score: 3 }] }
+    ];
+    let currentQuestion = 0;
+    let answers = new Array(questions.length).fill(null);
+    const progressText    = document.getElementById("progress-text");
+    const progressPercent = document.getElementById("progress-percent");
+    const progressFill    = document.getElementById("progress-fill");
+    const questionNumber  = document.getElementById("question-number");
+    const questionTitle   = document.getElementById("question-title");
+    const answersContainer = document.getElementById("answers");
+    const backButton      = document.getElementById("back-button");
+    const nextButton      = document.getElementById("next-button");
+    const quizPanel       = document.getElementById("quiz-panel");
+    const resultPanel     = document.getElementById("result-panel");
+    const resultTitle     = document.getElementById("result-title");
+    const resultText      = document.getElementById("result-text");
+    const resultGuidance  = document.getElementById("result-guidance");
+    const restartButton   = document.getElementById("restart-button");
+    function renderQuestion() {
+      const question = questions[currentQuestion];
+      const selectedAnswer = answers[currentQuestion];
+      const number = currentQuestion + 1;
+      const percent = Math.round((number / questions.length) * 100);
+      progressText.textContent = `Question ${number} of ${questions.length}`;
+      progressPercent.textContent = `${percent}%`;
+      progressFill.style.width = `${percent}%`;
+      questionNumber.textContent = `Question ${number}`;
+      questionTitle.textContent = question.question;
+      answersContainer.innerHTML = "";
+      question.answers.forEach((answer, index) => {
+        const label = document.createElement("label");
+        label.className = "answer-option";
+        if (selectedAnswer === index) label.classList.add("selected");
+        const input = document.createElement("input");
+        input.type = "radio";
+        input.name = "quiz-answer";
+        input.value = index;
+        input.checked = selectedAnswer === index;
+        input.addEventListener("change", () => {
+          answers[currentQuestion] = index;
+          document.querySelectorAll(".answer-option").forEach(o => o.classList.remove("selected"));
+          label.classList.add("selected");
+          nextButton.disabled = false;
+        });
+        label.appendChild(input);
+        label.appendChild(document.createTextNode(answer.text));
+        answersContainer.appendChild(label);
+      });
+      backButton.disabled = currentQuestion === 0;
+      nextButton.disabled = selectedAnswer === null;
+      nextButton.textContent = currentQuestion === questions.length - 1 ? "See My Result" : "Next";
+    }
+    function showResult() {
+      const totalScore = answers.reduce((total, answerIndex, qi) => total + questions[qi].answers[answerIndex].score, 0);
+      let title, text, guidance;
+      if (totalScore <= 7) {
+        title = "You May Simply Be Checking In";
+        text = "Your answers suggest that you may not need additional support right now. You may simply be curious, reflective, or interested in understanding yourself better.";
+        guidance = "There is nothing you need to do. You are welcome to explore MOCW whenever you feel it may be useful.";
+      } else if (totalScore <= 14) {
+        title = "A Little Reflection May Be Useful";
+        text = "Your answers suggest that there may be something worth giving more attention to. It may help to slow down, put your thoughts into words, or consider another viewpoint.";
+        guidance = "You may wish to write your thoughts down, speak with someone you trust, or explore a conversation with MOCW if that feels appropriate.";
+      } else if (totalScore <= 20) {
+        title = "Another Perspective May Help";
+        text = "Your answers suggest that talking things through could be useful. You may be carrying questions, decisions, or thoughts that would feel clearer with a calm outside perspective.";
+        guidance = "If you would like, you can explore MOCW Services and decide whether a meaningful conversation may be helpful.";
+      } else {
+        title = "It May Be Worth Talking With Someone";
+        text = "Your answers suggest that you may appreciate having someone listen carefully and help you look at your situation from another angle.";
+        guidance = "There is no pressure or obligation to book a service. You may explore MOCW at your own pace and decide what feels right for you.";
+      }
+      resultTitle.textContent = title;
+      resultText.textContent = text;
+      resultGuidance.textContent = guidance;
+      quizPanel.classList.add("hidden");
+      resultPanel.classList.remove("hidden");
+      progressText.textContent = "Reflection complete";
+      progressPercent.textContent = "100%";
+      progressFill.style.width = "100%";
+    }
+    nextButton.addEventListener("click", () => {
+      if (answers[currentQuestion] === null) return;
+      if (currentQuestion === questions.length - 1) { showResult(); return; }
+      currentQuestion++;
+      renderQuestion();
+    });
+    backButton.addEventListener("click", () => {
+      if (currentQuestion === 0) return;
+      currentQuestion--;
+      renderQuestion();
+    });
+    restartButton.addEventListener("click", () => {
+      currentQuestion = 0;
+      answers = new Array(questions.length).fill(null);
+      resultPanel.classList.add("hidden");
+      quizPanel.classList.remove("hidden");
+      renderQuestion();
+    });
+    renderQuestion();
+    let deferredPrompt;
+    const installBtn = document.getElementById('pwa-install-btn');
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('../sw.js')
+          .then(reg => console.log('Service Worker registered successfully.'))
+          .catch(err => console.log('Service Worker registration failed:', err));
+      });
+    }
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      if (installBtn) installBtn.style.display = 'inline-flex';
+    });
+    if (installBtn) {
+      installBtn.addEventListener('click', () => {
+        if (deferredPrompt) {
+          deferredPrompt.prompt();
+          deferredPrompt.userChoice.then((choiceResult) => {
+            if (choiceResult.outcome === 'accepted') installBtn.style.display = 'none';
+            deferredPrompt = null;
+          });
+        }
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | My One Cent Worth</title>
+    <meta name="description" content="Privacy Policy for My One Cent Worth (MOCW). Learn how we handle your personal information, confidentiality, and data privacy with care and respect.">
+    <link rel="canonical" href="https://myonecentworth.com/privacy-policy.html">
+    
+    <!-- Favicon Links -->
+    <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+   
+    <style>
+        :root {
+            --bg-color: #0A0A0A;
+            --card-bg: #121212;
+            --card-border: #222222;
+            --text-gold: #D4AF37;
+            --text-gold-light: #F3E5AB;
+            --text-main: #E0E0E0;
+            --text-muted: #A0A0A0;
+            --accent-glow: rgba(212, 175, 55, 0.15);
+            --font-heading: 'Cinzel', serif;
+            --font-body: 'Inter', sans-serif;
+            --max-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
+
+        /* HEADER & NAVIGATION STYLES */
+        .main-header {
+            background-color: #050505;
+            border-bottom: 1px solid #1f1f1f;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 0.75rem 1rem;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            flex-shrink: 0;
+        }
+
+        .coin-logo {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .brand-title {
+            font-family: var(--font-heading);
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            display: block;
+            white-space: nowrap;
+        }
+
+        .brand-subtitle {
+            font-family: var(--font-body);
+            color: var(--text-gold);
+            font-size: 0.6rem;
+            letter-spacing: 1.5px;
+            display: block;
+            white-space: nowrap;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.25rem;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 400;
+            transition: color 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .nav-links a:hover, 
+        .nav-links a.active {
+            color: var(--text-gold);
+        }
+
+        /* Dropdown Menu */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            list-style: none;
+            padding: 0.5rem 0;
+            min-width: 160px;
+            border-radius: 6px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+            z-index: 1001;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu a {
+            padding: 0.6rem 1rem;
+            display: block;
+            color: var(--text-main);
+            text-align: center;
+        }
+
+        /* PWA Install Button */
+        .btn-pwa-install {
+            background: transparent;
+            border: 1px solid var(--text-gold);
+            color: var(--text-gold);
+            padding: 0.35rem 0.85rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-pwa-install:hover {
+            background: var(--text-gold);
+            color: #000000;
+        }
+
+        /* LAYOUT & SECTIONS */
+        .container {
+            width: 90%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 3rem 0 4rem;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-heading);
+            color: #FFFFFF;
+            letter-spacing: 0.5px;
+        }
+
+        h1 {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            color: var(--text-gold-light);
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .policy-meta {
+            text-align: center;
+            color: var(--text-gold);
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 2.5rem;
+        }
+
+        .policy-hero-img {
+            max-width: 1200px;
+            margin: 0 auto 3rem;
+            border: 1px solid var(--card-border);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+        }
+
+        .policy-content {
+            max-width: 850px;
+            margin: 0 auto;
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            padding: 2.5rem 1.5rem;
+            border-radius: 12px;
+        }
+
+        .policy-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .policy-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .policy-section h2 {
+            font-size: 1.2rem;
+            color: var(--text-gold);
+            text-align: left;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--card-border);
+            padding-bottom: 0.4rem;
+            line-height: 1.4;
+        }
+
+        .policy-section p {
+            color: var(--text-main);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .policy-section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .policy-list {
+            list-style: none;
+            margin: 1rem 0;
+            padding-left: 0.5rem;
+        }
+
+        .policy-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.6rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .policy-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0.2rem;
+            color: var(--text-gold);
+            font-weight: bold;
+        }
+
+        .policy-contact-card {
+            background-color: #0A0A0A;
+            border: 1px solid var(--card-border);
+            padding: 1.25rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .policy-contact-card p {
+            margin-bottom: 0.4rem;
+            color: var(--text-muted);
+        }
+
+        .policy-contact-card a {
+            color: var(--text-gold);
+        }
+
+        .policy-contact-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* FOOTER STYLES */
+        .main-footer {
+            background-color: #050505;
+            border-top: 1px solid var(--card-border);
+            padding: 3.5rem 1.5rem 2rem;
+            text-align: center;
+            margin-top: 5rem;
+        }
+
+        .footer-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        /* Brand Story & Logos Section */
+        .footer-brand-story {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1.75rem;
+            text-align: center;
+        }
+
+        .brand-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .brand-item-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+
+        .footer-logo-img {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .brand-item-title {
+            font-family: var(--font-heading);
+            color: var(--text-gold);
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .brand-item-desc {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .brand-summary-text {
+            border-top: 1px solid #1a1a1a;
+            padding-top: 1.25rem;
+            margin-top: 0.5rem;
+        }
+
+        .brand-summary-text p {
+            color: var(--text-main);
+            font-size: 0.95rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .brand-tagline {
+            color: var(--text-gold) !important;
+            font-weight: 600;
+            font-family: var(--font-heading);
+            letter-spacing: 0.5px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--text-gold);
+        }
+
+        .copyright-text {
+            color: #666666;
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+        }
+
+        #my-one-cent-chat {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 9999;
+            width: 60px;
+            height: 60px;
+            background: #D4AF37;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease;
+        }
+
+        #my-one-cent-chat:hover {
+            transform: scale(1.1);
+        }
+
+        #my-one-cent-chat .bubble {
+            width: 28px;
+            height: 28px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23000' d='M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3 18.6-68.1-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.9-186.6 184.9zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        /* Desktop Media Query Adjustments */
+        @media (min-width: 768px) {
+            .main-header {
+                padding: 0.75rem 2rem;
+            }
+
+            .nav-container {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .brand-title {
+                font-size: 1.1rem;
+            }
+
+            .brand-subtitle {
+                font-size: 0.65rem;
+            }
+
+            .nav-links {
+                gap: 1.75rem;
+            }
+
+            .nav-links a {
+                font-size: 0.9rem;
+            }
+
+            .dropdown-menu {
+                left: 0;
+                transform: none;
+            }
+
+            .dropdown-menu a {
+                text-align: left;
+            }
+
+            .policy-content {
+                padding: 3.5rem 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- SINGLE MAIN HEADER NAVIGATION -->
+    <header class="main-header">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">
+                <img src="images/my-one-cent-worth-logo.webp" alt="My One Cent Worth Logo" class="coin-logo">
+                <div class="logo-text">
+                    <span class="brand-title">MY ONE CENT WORTH</span>
+                    <span class="brand-subtitle">BY TASHI KHOO</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="services.html">Services ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="services.html">All Services</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                    </ul>
+                </li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><button id="pwa-install-btn" class="btn-pwa-install">Install App</button></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <h1>PRIVACY POLICY</h1>
+        <p class="policy-meta">Last Updated: August 2026</p>
+
+        <div class="policy-hero-img">
+            <img src="images/my-one-cent-worth-mocw.webp" alt="My One Cent Worth Privacy Policy Banner">
+        </div>
+
+        <div class="policy-content">
+
+            <!-- SECTION 1 -->
+            <section class="policy-section">
+                <h2>1. OUR COMMITMENT TO PRIVACY</h2>
+                <p>At My One Cent Worth (MOCW), we take your privacy seriously.</p>
+                <p>Whether you contact us for a meaningful conversation, perspective service, business consultation, or one of our in-person companion services, we aim to handle your personal information with care, respect, and discretion.</p>
+                <p>We do not sell, rent, or trade your personal information.</p>
+                <p>We only collect and use information that is reasonably necessary to communicate with you, provide our services, process bookings and payments, coordinate visits, and operate our website and business.</p>
+            </section>
+
+            <!-- SECTION 2 -->
+            <section class="policy-section">
+                <h2>2. INFORMATION WE MAY COLLECT</h2>
+                <p>Depending on how you interact with MOCW, we may collect:</p>
+                <ul class="policy-list">
+                    <li>Your name</li>
+                    <li>Email address</li>
+                    <li>Telephone or mobile number</li>
+                    <li>WhatsApp or WeChat contact details</li>
+                    <li>Booking date and time</li>
+                    <li>Service selected</li>
+                    <li>Information you voluntarily provide when contacting us</li>
+                    <li>Payment or transaction information necessary to confirm a booking</li>
+                    <li>Information necessary to coordinate an in-person companion visit</li>
+                    <li>Basic website information such as device, browser, or usage information where analytics or similar website technologies are used</li>
+                </ul>
+            </section>
+
+            <!-- SECTION 3 -->
+            <section class="policy-section">
+                <h2>3. INFORMATION FOR IN-PERSON COMPANION SERVICES</h2>
+                <p>For hospital, nursing home, retirement, or other in-person companion services, we may need limited information to arrange and coordinate the visit.</p>
+                <p>This may include information such as:</p>
+                <ul class="policy-list">
+                    <li>The name of the person being visited</li>
+                    <li>Hospital, nursing home, or other location</li>
+                    <li>Ward or room information where necessary</li>
+                    <li>Preferred visiting date and time</li>
+                    <li>Relevant coordination or access information</li>
+                </ul>
+                <p>We only use this information for purposes reasonably connected with arranging and providing the requested service.</p>
+                <p>Please do not provide medical information unless it is genuinely necessary for the coordination or safety of the visit.</p>
+            </section>
+
+            <!-- SECTION 4 -->
+            <section class="policy-section">
+                <h2>4. CONVERSATIONS AND CONFIDENTIALITY</h2>
+                <p>MOCW treats conversations and personal information shared during our services as private and confidential.</p>
+                <p>We do not intentionally record consultation or companion conversations, and we do not intentionally create transcripts of those conversations, unless you have been informed and have expressly agreed to such recording or transcription.</p>
+                <p>However, confidentiality cannot be guaranteed in circumstances where disclosure is required by law or where disclosure is reasonably necessary to respond to an immediate and serious threat to a person's life or safety.</p>
+                <p>We also cannot control the privacy practices of third-party communication platforms such as WhatsApp, WeChat, email providers, scheduling services, or other services that you choose to use to communicate with us.</p>
+            </section>
+
+            <!-- SECTION 5 -->
+            <section class="policy-section">
+                <h2>5. HOW WE USE YOUR INFORMATION</h2>
+                <p>We may use your information to:</p>
+                <ul class="policy-list">
+                    <li>Respond to your enquiries</li>
+                    <li>Communicate with you about a requested service</li>
+                    <li>Arrange and manage bookings</li>
+                    <li>Provide consultation or companion services</li>
+                    <li>Coordinate in-person visits</li>
+                    <li>Process or confirm payments</li>
+                    <li>Send important information relating to your booking</li>
+                    <li>Respond to customer service requests</li>
+                    <li>Maintain appropriate business and transaction records</li>
+                    <li>Improve the website and user experience</li>
+                    <li>Meet legal, regulatory, accounting, or administrative requirements</li>
+                    <li>Protect MOCW, our clients, and others from fraud, misuse, or security risks</li>
+                </ul>
+            </section>
+
+            <!-- SECTION 6 -->
+            <section class="policy-section">
+                <h2>6. PAYMENT INFORMATION</h2>
+                <p>Where online payment is available, payments may be processed through third-party payment providers such as Stripe or another payment service used by MOCW.</p>
+                <p>MOCW does not intentionally store your full credit or debit card number or security code on our own website or systems when payment is processed by a third-party payment provider.</p>
+                <p>Payment providers may collect and process payment information according to their own privacy policies and terms.</p>
+                <p>For PayNow or other payment methods, MOCW may retain reasonable transaction information needed to verify and maintain payment records.</p>
+            </section>
+
+            <!-- SECTION 7 -->
+            <section class="policy-section">
+                <h2>7. THIRD-PARTY SERVICES</h2>
+                <p>MOCW may use third-party services to help operate the website and provide our services.</p>
+                <p>These may include:</p>
+                <ul class="policy-list">
+                    <li>Payment providers such as Stripe</li>
+                    <li>Scheduling or booking services such as Calendly</li>
+                    <li>Communication services such as WhatsApp or WeChat</li>
+                    <li>Website hosting providers</li>
+                    <li>Website analytics or security services, where applicable</li>
+                </ul>
+                <p>These third parties may process information according to their own privacy policies and terms.</p>
+                <p>Where practical, we aim to use reputable service providers and only share information that is reasonably necessary for the relevant purpose.</p>
+            </section>
+
+            <!-- SECTION 8 -->
+            <section class="policy-section">
+                <h2>8. COOKIES AND WEBSITE TECHNOLOGIES</h2>
+                <p>Our website may use cookies or similar technologies for basic website functionality, security, analytics, or improving the user experience.</p>
+                <p>Cookies are small files or pieces of information stored on your device by a website.</p>
+                <p>Where cookies or analytics are used, you may be able to control or restrict them through your browser settings.</p>
+                <p>Some website functions may not work properly if certain cookies are disabled.</p>
+            </section>
+
+            <!-- SECTION 9 -->
+            <section class="policy-section">
+                <h2>9. DATA SECURITY</h2>
+                <p>MOCW takes reasonable steps to protect personal information against unauthorised access, collection, use, disclosure, copying, modification, disposal, or similar risks.</p>
+                <p>However, no website, electronic communication, or online storage system can be guaranteed to be completely secure.</p>
+                <p>If we become aware of a data breach that requires notification under applicable law, we will take the appropriate steps required by law.</p>
+            </section>
+
+            <!-- SECTION 10 -->
+            <section class="policy-section">
+                <h2>10. HOW LONG WE KEEP INFORMATION</h2>
+                <p>We keep personal information only for as long as it is reasonably necessary for the purposes for which it was collected, including providing services, maintaining business and transaction records, resolving disputes, meeting legal or accounting requirements, and protecting our legitimate business interests.</p>
+                <p>When personal information is no longer reasonably required, we will take reasonable steps to delete, destroy, or anonymise it where appropriate.</p>
+            </section>
+
+            <!-- SECTION 11 -->
+            <section class="policy-section">
+                <h2>11. DISCLOSURE OF INFORMATION</h2>
+                <p>MOCW does not sell or rent your personal information.</p>
+                <p>We may disclose personal information where reasonably necessary:</p>
+                <ul class="policy-list">
+                    <li>To provide a service you have requested</li>
+                    <li>To process a payment or booking</li>
+                    <li>To coordinate an in-person visit</li>
+                    <li>To service providers assisting us in operating MOCW</li>
+                    <li>Where you have given consent</li>
+                    <li>Where disclosure is required or permitted by applicable law</li>
+                    <li>Where necessary to protect the safety of a person or respond to an immediate and serious threat</li>
+                </ul>
+            </section>
+
+            <!-- SECTION 12 -->
+            <section class="policy-section">
+                <h2>12. INFORMATION ABOUT OTHER PEOPLE</h2>
+                <p>If you provide MOCW with personal information about another person, such as a family member or person you are arranging a companion visit for, you should have the appropriate authority or permission to provide that information.</p>
+                <p>Please only provide information that is reasonably necessary for the requested service.</p>
+            </section>
+
+            <!-- SECTION 13 -->
+            <section class="policy-section">
+                <h2>13. OVERSEAS SERVICE PROVIDERS</h2>
+                <p>Some third-party service providers used by MOCW may store or process information outside Singapore.</p>
+                <p>Where personal information is transferred outside Singapore, MOCW will take reasonable steps to ensure that the information receives a standard of protection that is comparable to the protection required under applicable Singapore data protection requirements.</p>
+            </section>
+
+            <!-- SECTION 14 -->
+            <section class="policy-section">
+                <h2>14. YOUR RIGHTS AND REQUESTS</h2>
+                <p>Subject to applicable law, you may contact MOCW to:</p>
+                <ul class="policy-list">
+                    <li>Ask whether we hold personal information about you</li>
+                    <li>Request access to personal information we hold about you</li>
+                    <li>Request correction of inaccurate or incomplete personal information</li>
+                    <li>Ask questions about how your information is collected or used</li>
+                    <li>Withdraw consent where applicable</li>
+                </ul>
+                <p>Some requests may be subject to legal or practical limitations.</p>
+                <p>We may need to verify your identity before responding to certain requests.</p>
+            </section>
+
+            <!-- SECTION 15 -->
+            <section class="policy-section">
+                <h2>15. WITHDRAWING CONSENT</h2>
+                <p>Where we rely on your consent to collect, use, or disclose personal information, you may withdraw that consent by contacting us.</p>
+                <p>Please understand that withdrawing consent may affect our ability to provide certain services or respond to certain requests.</p>
+                <p>We will explain any relevant consequences where appropriate.</p>
+            </section>
+
+            <!-- SECTION 16 -->
+            <section class="policy-section">
+                <h2>16. CHILDREN</h2>
+                <p>MOCW's services are intended primarily for adults.</p>
+                <p>We do not knowingly collect personal information from children for the purpose of providing services without appropriate consent or involvement from a parent, guardian, or other authorised person.</p>
+                <p>If you believe that personal information relating to a child has been provided to us improperly, please contact us.</p>
+            </section>
+
+            <!-- SECTION 17 -->
+            <section class="policy-section">
+                <h2>17. CHANGES TO THIS PRIVACY POLICY</h2>
+                <p>MOCW may update this Privacy Policy from time to time to reflect changes to our services, website, technology, legal requirements, or business practices.</p>
+                <p>The latest version will be published on this page with the updated date.</p>
+                <p>We encourage you to review this page periodically.</p>
+            </section>
+
+            <!-- SECTION 18 -->
+            <section class="policy-section">
+                <h2>18. CONTACT US</h2>
+                <p>If you have any questions about this Privacy Policy, how we handle personal information, or wish to make a privacy-related request, please contact us.</p>
+                <div class="policy-contact-card">
+                    <p><strong>My One Cent Worth (MOCW)</strong></p>
+                    <p>Founder: Tashi Khoo</p>
+                    <p>Singapore</p>
+                    <p>Website: <a href="https://myonecentworth.com">myonecentworth.com</a></p>
+                    <p>WhatsApp: <a href="https://wa.me/6583186776" target="_blank" rel="noopener">+65 8318 6776</a></p>
+                </div>
+            </section>
+
+            <!-- SECTION 19 -->
+            <section class="policy-section">
+                <h2>19. IMPORTANT NOTE</h2>
+                <p>My One Cent Worth is a personal perspective, conversation, and companion service.</p>
+                <p>Our services are not medical care, nursing care, psychological therapy, psychiatric treatment, counselling, or emergency services.</p>
+                <p>Our in-person companion services are not dating, escort, intimate, or sexual services.</p>
+                <p>Nothing on this website or provided through our services should be interpreted as professional medical, legal, financial, or mental-health advice.</p>
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer class="main-footer">
+        <div class="footer-container">
+
+            <!-- BRAND STORY & LOGO SECTION -->
+            <div class="footer-brand-story">
+                <!-- Brand Item 1: Full Name -->
+                <div class="brand-item">
+                    <div class="brand-item-header">
+                        <img src="images/my-one-cent-worth-logo.webp" alt="My One Cent Worth Logo" class="footer-logo-img">
+                        <span class="brand-item-title">MY ONE CENT WORTH</span>
+                    </div>
+                    <p class="brand-item-desc">
+                        My One Cent Worth is the full name behind everything we do — a place for perspectives, meaningful conversations, thoughtful questions, and a willingness to see things from different angles.
+                    </p>
+                </div>
+
+                <!-- Brand Item 2: Short Form -->
+                <div class="brand-item">
+                    <div class="brand-item-header">
+                        <img src="images/mocw-monogram-logo.webp" alt="MOCW Monogram Logo" class="footer-logo-img">
+                        <span class="brand-item-title">MOCW</span>
+                    </div>
+                    <p class="brand-item-desc">
+                        MOCW is simply the short-form expression of My One Cent Worth — the name you may see across our logo, website, content, and future community.
+                    </p>
+                </div>
+
+                <!-- Summary Line -->
+                <div class="brand-summary-text">
+                    <p>One name. Two expressions. One philosophy.</p>
+                    <p class="brand-tagline">My One Cent Worth (MOCW) — Someone Who Listens.</p>
+                </div>
+            </div>
+
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="sitemap.html">HTML Sitemap</a></li>
+                <li><a href="sitemap.xml" target="_blank">XML Sitemap</a></li>
+            </ul>
+
+            <p class="copyright-text">&copy; 2026 My One Cent Worth by Tashi Khoo. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOATING BUTTON -->
+    <a id="my-one-cent-chat" href="https://wa.me/6583186776?text=Hello%2C%20Tashi.%20I%20have%20a%20question%20regarding%20the%20Privacy%20Policy." target="_blank" rel="noopener" title="WhatsApp Tashi" aria-label="WhatsApp Tashi">
+        <div class="bubble"></div>
+    </a>
+
+    <!-- PWA & SCRIPT REGISTRATION -->
+    <script>
+        let deferredPrompt;
+        const installBtn = document.getElementById('pwa-install-btn');
+
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(reg => console.log('Service Worker registered successfully.'))
+                    .catch(err => console.log('Service Worker registration failed:', err));
+            });
+        }
+
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            if (installBtn) installBtn.style.display = 'inline-flex';
+        });
+
+        if (installBtn) {
+            installBtn.addEventListener('click', () => {
+                if (deferredPrompt) {
+                    deferredPrompt.prompt();
+                    deferredPrompt.userChoice.then((choiceResult) => {
+                        if (choiceResult.outcome === 'accepted') {
+                            installBtn.style.display = 'none';
+                        }
+                        deferredPrompt = null;
+                    });
+                }
+            });
+        }
+    </script>
+</body>
+</html>

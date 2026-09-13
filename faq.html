@@ -1,0 +1,1677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions | My One Cent Worth by Tashi Khoo</title>
+    <meta name="description" content="Find answers to common questions about session formats, scheduling, confidentiality, payments, and how Tashi Khoo can support you.">
+    <link rel="canonical" href="https://myonecentworth.com/faq.html">
+    
+    <!-- Favicon Links -->
+    <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+   
+    <style>
+        :root {
+            --bg-color: #0A0A0A;
+            --card-bg: #121212;
+            --card-border: #222222;
+            --text-gold: #D4AF37;
+            --text-gold-light: #F3E5AB;
+            --text-main: #E0E0E0;
+            --text-muted: #A0A0A0;
+            --accent-glow: rgba(212, 175, 55, 0.15);
+            --font-heading: 'Cinzel', serif;
+            --font-body: 'Inter', sans-serif;
+            --max-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
+
+        /* HEADER & NAVIGATION STYLES */
+        .main-header {
+            background-color: #050505;
+            border-bottom: 1px solid #1f1f1f;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 0.75rem 1rem;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            flex-shrink: 0;
+        }
+
+        .coin-logo {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .brand-title {
+            font-family: var(--font-heading);
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            display: block;
+            white-space: nowrap;
+        }
+
+        .brand-subtitle {
+            font-family: var(--font-body);
+            color: var(--text-gold);
+            font-size: 0.6rem;
+            letter-spacing: 1.5px;
+            display: block;
+            white-space: nowrap;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.25rem;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 400;
+            transition: color 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .nav-links a:hover, 
+        .nav-links a.active {
+            color: var(--text-gold);
+        }
+
+        /* Dropdown Menu */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            list-style: none;
+            padding: 0.5rem 0;
+            min-width: 160px;
+            border-radius: 6px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+            z-index: 1001;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu a {
+            padding: 0.6rem 1rem;
+            display: block;
+            color: var(--text-main);
+            text-align: center;
+        }
+
+        /* PWA Install Button */
+        .btn-pwa-install {
+            background: transparent;
+            border: 1px solid var(--text-gold);
+            color: var(--text-gold);
+            padding: 0.35rem 0.85rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-pwa-install:hover {
+            background: var(--text-gold);
+            color: #000000;
+        }
+
+        /* LAYOUT CONTAINER */
+        .container {
+            width: 90%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 3rem 0;
+        }
+
+        /* FAQ HEADER SECTION */
+        .faq-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .faq-kicker {
+            color: var(--text-gold);
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 0.75rem;
+        }
+
+        .faq-title {
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            color: #FFFFFF;
+            line-height: 1.2;
+            letter-spacing: 1px;
+            margin-bottom: 1.25rem;
+            text-transform: uppercase;
+        }
+
+        .faq-subtitle-divider {
+            width: 50px;
+            height: 2px;
+            background-color: var(--text-gold);
+            margin: 0 auto 1.5rem auto;
+        }
+
+        .faq-lead {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        /* FAQ BANNER CARD */
+        .faq-banner-wrapper {
+            max-width: 750px;
+            margin: 0 auto 4rem auto;
+        }
+
+        .faq-banner-card {
+            border: 1px solid #332a15;
+            border-radius: 12px;
+            overflow: hidden;
+            background-color: #0d0d0d;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+        }
+
+        /* SEARCH AND FILTERS */
+        .faq-controls-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 10px;
+            padding: 1.5rem;
+            max-width: 850px;
+            margin: 0 auto 3rem auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .search-box {
+            position: relative;
+            width: 100%;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 0.75rem 1rem 0.75rem 2.75rem;
+            background-color: #080808;
+            border: 1px solid var(--card-border);
+            border-radius: 6px;
+            color: var(--text-main);
+            font-size: 0.95rem;
+            font-family: var(--font-body);
+            outline: none;
+            transition: border-color 0.2s ease;
+        }
+
+        .search-box input:focus {
+            border-color: var(--text-gold);
+        }
+
+        .search-box svg {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 18px;
+            height: 18px;
+            fill: var(--text-muted);
+        }
+
+        .filter-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            justify-content: center;
+        }
+
+        .filter-tag {
+            background-color: #1a1a1a;
+            border: 1px solid var(--card-border);
+            color: var(--text-muted);
+            padding: 0.4rem 0.9rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: all 0.2s ease;
+        }
+
+        .filter-tag:hover {
+            color: #FFFFFF;
+            border-color: #444444;
+        }
+
+        .filter-tag.active {
+            background-color: var(--text-gold);
+            color: #000000;
+            border-color: var(--text-gold);
+        }
+
+        /* ACCORDION STYLES */
+        .faq-accordion-container {
+            max-width: 850px;
+            margin: 0 auto 5rem auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .faq-item {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: border-color 0.25s ease;
+        }
+
+        .faq-item.active {
+            border-color: #3d3419;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 1.25rem 1.5rem;
+            background: none;
+            border: none;
+            color: #FFFFFF;
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            transition: color 0.2s ease;
+        }
+
+        .faq-question:hover {
+            color: var(--text-gold);
+        }
+
+        .chevron-icon {
+            width: 16px;
+            height: 16px;
+            fill: none;
+            stroke: var(--text-muted);
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            transition: transform 0.3s ease, stroke 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .faq-item.active .chevron-icon {
+            transform: rotate(180deg);
+            stroke: var(--text-gold);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s cubic-bezier(0, 1, 0, 1), padding 0.35s ease;
+            padding: 0 1.5rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 2000px;
+            transition: max-height 0.35s cubic-bezier(1, 0, 1, 0), padding 0.35s ease;
+            padding: 0 1.5rem 1.5rem 1.5rem;
+            border-top: 1px solid #1a1a1a;
+        }
+
+        .faq-answer p {
+            margin-top: 0.75rem;
+        }
+
+        .faq-answer ul {
+            margin: 0.75rem 0 0.75rem 1.5rem;
+        }
+
+        .faq-answer li {
+            margin-bottom: 0.4rem;
+        }
+
+        /* CALLOUT & CTA BOXES */
+        .callout-box {
+            max-width: 850px;
+            margin: 0 auto 3rem auto;
+            border: 1px solid #332a15;
+            border-radius: 10px;
+            background-color: #0c0c0c;
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+        }
+
+        .callout-title {
+            color: var(--text-gold);
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 1.25rem;
+        }
+
+        .callout-quote {
+            font-size: 1.05rem;
+            color: #E0E0E0;
+            max-width: 600px;
+            margin: 0 auto 1.25rem auto;
+        }
+
+        .callout-bold {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            color: #FFFFFF;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .callout-gold-italic {
+            color: var(--text-gold);
+            font-style: italic;
+            font-size: 0.95rem;
+        }
+
+        .still-questions-card {
+            max-width: 850px;
+            margin: 0 auto 4rem auto;
+            border: 1px solid #282315;
+            border-radius: 10px;
+            background-color: var(--card-bg);
+            padding: 3rem 1.5rem;
+            text-align: center;
+        }
+
+        .help-icon {
+            width: 36px;
+            height: 36px;
+            border: 2px solid var(--text-gold);
+            border-radius: 50%;
+            color: var(--text-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0 auto 1.25rem auto;
+            font-family: var(--font-body);
+        }
+
+        .still-questions-card h2 {
+            font-family: var(--font-heading);
+            font-size: 1.6rem;
+            color: #FFFFFF;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .still-questions-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            max-width: 550px;
+            margin: 0 auto 1.75rem auto;
+        }
+
+        .cta-btn-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-gold-action {
+            background-color: var(--text-gold);
+            color: #000000;
+            font-weight: 600;
+            font-size: 0.85rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .btn-gold-action:hover {
+            background-color: #c29f2e;
+        }
+
+        .btn-outline-action {
+            background: transparent;
+            border: 1px solid var(--card-border);
+            color: #FFFFFF;
+            font-weight: 600;
+            font-size: 0.85rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            transition: all 0.2s ease;
+        }
+
+        .btn-outline-action:hover {
+            border-color: var(--text-gold);
+            color: var(--text-gold);
+        }
+
+        /* FOOTER STYLES */
+        .main-footer {
+            background-color: #050505;
+            border-top: 1px solid var(--card-border);
+            padding: 3rem 1.5rem 2rem;
+            text-align: center;
+            margin-top: 5rem;
+        }
+
+        .footer-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        /* TWO-BRAND FOOTER */
+        .footer-brand-story {
+            width: 100%;
+            max-width: 900px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .brand-item {
+            text-align: center;
+        }
+
+        .brand-item-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-logo-img {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .brand-item-title {
+            font-family: var(--font-heading);
+            color: #FFFFFF;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        .brand-item-desc {
+            color: var(--text-muted);
+            font-size: 0.82rem;
+            line-height: 1.6;
+            max-width: 380px;
+            margin: 0 auto;
+        }
+
+        .brand-summary-text {
+            color: var(--text-gold-light);
+            font-family: var(--font-heading);
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            margin-top: 0.5rem;
+        }
+
+        .brand-tagline {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            margin-top: 0.25rem;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--text-gold);
+        }
+
+        .copyright-text {
+            color: #666666;
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+        }
+
+        #my-one-cent-chat {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 9999;
+            width: 60px;
+            height: 60px;
+            background: #D4AF37;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease;
+        }
+
+        #my-one-cent-chat:hover {
+            transform: scale(1.1);
+        }
+
+        #my-one-cent-chat .bubble {
+            width: 28px;
+            height: 28px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23000' d='M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3 18.6-68.1-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.9-186.6 184.9zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        /* BACK TO TOP BUTTON */
+        #backToTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 95px;
+            right: 25px;
+            z-index: 9998;
+            width: 50px;
+            height: 50px;
+            border: 1px solid var(--text-gold);
+            border-radius: 50%;
+            background: var(--card-bg);
+            color: var(--text-gold);
+            font-size: 1.2rem;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        #backToTopBtn:hover {
+            background: var(--text-gold);
+            color: #000000;
+            transform: translateY(-3px);
+        }
+
+        #backToTopBtn svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        @media (max-width: 600px) {
+            #backToTopBtn {
+                bottom: 90px;
+                right: 18px;
+                width: 45px;
+                height: 45px;
+            }
+        }
+
+        /* Mobile Footer */
+        @media (max-width: 767px) {
+            .footer-brand-story {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .main-footer {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            .footer-links {
+                gap: 1rem;
+            }
+        }
+
+        /* Desktop Media Query Adjustments */
+        @media (min-width: 768px) {
+            .main-header {
+                padding: 0.75rem 2rem;
+            }
+
+            .nav-container {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .brand-title {
+                font-size: 1.1rem;
+            }
+
+            .brand-subtitle {
+                font-size: 0.65rem;
+            }
+
+            .nav-links {
+                gap: 1.75rem;
+            }
+
+            .nav-links a {
+                font-size: 0.9rem;
+            }
+
+            .dropdown-menu {
+                left: 0;
+                transform: none;
+            }
+
+            .dropdown-menu a {
+                text-align: left;
+            }
+
+            .faq-controls-card {
+                padding: 1.75rem 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- SINGLE MAIN HEADER NAVIGATION -->
+    <header class="main-header">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">
+                <img src="images/my-one-cent-worth-logo.webp" alt="My One Cent Worth Logo" class="coin-logo">
+                <div class="logo-text">
+                    <span class="brand-title">MY ONE CENT WORTH</span>
+                    <span class="brand-subtitle">BY TASHI KHOO</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="services.html">Services ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="services.html">All Services</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                    </ul>
+                </li>
+                <li><a href="faq.html" class="active">FAQ</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><button id="pwa-install-btn" class="btn-pwa-install">Install App</button></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- FAQ HERO TITLE SECTION -->
+        <section class="faq-header">
+            <div class="faq-kicker">FREQUENTLY ASKED QUESTIONS</div>
+            <h1 class="faq-title">COMMON QUESTIONS &amp;<br>ANSWERS</h1>
+            <div class="faq-subtitle-divider"></div>
+            <p class="faq-lead">Find details on what to expect, session formats, scheduling details, and how I can support you.</p>
+        </section>
+
+        <!-- FAQ BANNER IMAGE CARD -->
+        <div class="faq-banner-wrapper">
+            <div class="faq-banner-card">
+                <img src="images/faq-mocw.webp" alt="Tashi Khoo - FAQ Frequently Asked Questions banner">
+            </div>
+        </div>
+
+        <!-- SEARCH AND CATEGORY FILTERS -->
+        <div class="faq-controls-card">
+            <div class="search-box">
+                <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                <input type="text" id="faqSearchInput" placeholder="Search questions...">
+            </div>
+            <div class="filter-tags" id="filterContainer">
+                <button class="filter-tag active" data-category="all">ALL</button>
+                <button class="filter-tag" data-category="about-mocw">ABOUT MOCW</button>
+                <button class="filter-tag" data-category="about-tashi">ABOUT TASHI</button>
+                <button class="filter-tag" data-category="conversation">THE CONVERSATION</button>
+                <button class="filter-tag" data-category="life-change">LIFE &amp; CHANGE</button>
+                <button class="filter-tag" data-category="advice">ADVICE &amp; PERSPECTIVE</button>
+                <button class="filter-tag" data-category="trust">TRUST &amp; PRIVACY</button>
+                <button class="filter-tag" data-category="what-is">WHAT MOCW IS/NOT</button>
+                <button class="filter-tag" data-category="who-for">WHO IT'S FOR</button>
+                <button class="filter-tag" data-category="sessions">SESSIONS &amp; BOOKING</button>
+                <button class="filter-tag" data-category="pricing">PRICING &amp; PAYMENT</button>
+                <button class="filter-tag" data-category="after">AFTER SESSION</button>
+            </div>
+        </div>
+
+        <!-- ACCORDION LIST -->
+        <div class="faq-accordion-container" id="faqAccordion">
+
+            <!-- ABOUT MY ONE CENT WORTH -->
+            <div class="faq-item" data-category="about-mocw">
+                <button class="faq-question">
+                    <span>What is My One Cent Worth?</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>My One Cent Worth is a place for real conversations, thoughtful listening and honest perspectives.</p>
+                    <p>Sometimes you don't need another person telling you what to do. You need somewhere to slow down, say what's really on your mind and look at things from another angle.</p>
+                    <p>That's what I offer.</p>
+                    <p>I listen first. When you want my perspective, I'll give you my honest one cent worth — respectfully, without pretending that I have all the answers.</p>
+                    <p>Nothing is absolute.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="about-mocw">
+                <button class="faq-question">
+                    <span>Why is it called My One Cent Worth?</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Most people have heard the expression, "I'd like to give my two cents."</p>
+                    <p>I turned that idea around.</p>
+                    <p>My One Cent Worth isn't about having the loudest opinion or believing my view is worth more than yours.</p>
+                    <p>It's simply one perspective offered for your consideration.</p>
+                    <p>You can agree with it, disagree with it, question it or ignore it.</p>
+                    <p>It's still your life and your decision.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="about-mocw">
+                <button class="faq-question">
+                    <span>What makes a conversation with My One Cent Worth different?</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>My One Cent Worth isn't about telling you how to live your life, giving you a lecture, or pretending that there is a perfect answer to every problem.</p>
+                    <p>It is about having a real conversation with another human being who is willing to listen, think things through with you, and offer an honest perspective when you want one.</p>
+                    <p>You can come with a problem, a decision, a worry, a frustration, a change in your life — or something you can't quite put into words.</p>
+                    <p>You don't have to prepare a speech. You don't have to have everything figured out. And you don't have to agree with what I say.</p>
+                    <p>Sometimes you need advice.</p>
+                    <p>Sometimes you need someone to challenge the way you're looking at something.</p>
+                    <p>Sometimes you simply need to say things out loud to someone who will actually listen.</p>
+                    <p>That's what makes the conversation different.</p>
+                    <p>It isn't about having all the answers.</p>
+                    <p>It's about helping you find a little more clarity in your own.</p>
+                </div>
+            </div>
+
+            <!-- ABOUT TASHI -->
+            <div class="faq-item" data-category="about-tashi">
+                <button class="faq-question">
+                    <span>Who is Tashi Khoo?</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>I'm Tashi Khoo, the person behind My One Cent Worth.</p>
+                    <p>My journey has taken me through business, success, failure, family responsibilities, difficult periods and many of the ordinary ups and downs that come with being human.</p>
+                    <p>I've learned that experience doesn't give any of us all the answers.</p>
+                    <p>What it can give us is perspective.</p>
+                    <p>I've also learned the value of having someone who will listen without immediately judging, correcting or trying to fix you.</p>
+                    <p>That's the kind of person I try to be.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="about-tashi">
+                <button class="faq-question">
+                    <span>Why did you create My One Cent Worth?</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>The idea came from something I've experienced throughout life: people often have plenty of people around them, but surprisingly few people they can really talk to.</p>
+                    <p>Friends and family may care deeply, but they are also emotionally involved.</p>
+                    <p>Sometimes we need someone outside the situation — someone who can listen without having a personal stake in the outcome.</p>
+                    <p>My One Cent Worth was created to provide that space.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="about-tashi">
+                <button class="faq-question">
+                    <span>Are you an expert who has all the answers?</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>No.</p>
+                    <p>And I don't pretend to be.</p>
+                    <p>I've made good decisions and bad ones. I've succeeded at some things and failed at others.</p>
+                    <p>Those experiences have taught me that life rarely comes with simple answers.</p>
+                    <p>What I can offer is my attention, my experience, my questions and my honest perspective.</p>
+                    <p>You decide what is useful to you.</p>
+                </div>
+            </div>
+
+            <!-- THE CONVERSATION -->
+            <div class="faq-item" data-category="conversation">
+                <button class="faq-question">
+                    <span>What can we talk about?</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>There isn't a fixed list.</p>
+                    <p>You might want to talk about a difficult decision, family, relationships, work, business, retirement, ageing, loneliness, a change in your life, or something you've been carrying around for years.</p>
+                    <p>You might want another perspective.</p>
+                    <p>You might want to work through a problem.</p>
+                    <p>Or perhaps you don't want advice at all — you simply want someone to listen.</p>
+                    <p>You can talk about the things that matter to you.</p>
+                    <p>And if you don't know where to begin, that's perfectly okay.</p>
+                    <p>Sometimes the easiest place to start is simply:</p>
+                    <p><em>"There's something I've been thinking about..."</em></p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="conversation">
+                <button class="faq-question">
+                    <span>What if I don't know what I want to talk about?</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>That's completely fine.</p>
+                    <p>You don't need to arrive with a perfectly organised story.</p>
+                    <p>Sometimes we know that something is bothering us without knowing exactly what it is.</p>
+                    <p>Start wherever you feel comfortable.</p>
+                    <p>We can let the conversation unfold naturally.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="conversation">
+                <button class="faq-question">
+                    <span>What if I just want someone to listen?</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>That's okay.</p>
+                    <p>Not every conversation needs a solution.</p>
+                    <p>Sometimes you don't want advice, analysis or someone trying to fix things.</p>
+                    <p>You simply want to say what's on your mind to another human being who is prepared to listen.</p>
+                    <p>If that's what you need, I'll listen.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="conversation">
+                <button class="faq-question">
+                    <span>Do I have to prepare anything before our conversation?</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>No.</p>
+                    <p>You don't need notes, a list of questions or a carefully prepared explanation.</p>
+                    <p>If you know what you want to discuss, that's great.</p>
+                    <p>If you don't, that's fine too.</p>
+                    <p>Come as you are.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="conversation">
+                <button class="faq-question">
+                    <span>What happens during a conversation?</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>There is no script and no performance expected from you.</p>
+                    <p>You tell me what's on your mind.</p>
+                    <p>I listen.</p>
+                    <p>Sometimes I'll ask a question because I think it may help you look at something differently.</p>
+                    <p>Sometimes I'll simply let you talk.</p>
+                    <p>And if you want my perspective, I'll give you my honest one cent worth.</p>
+                    <p>The conversation belongs to you.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="conversation">
+                <button class="faq-question">
+                    <span>What if I become emotional?</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>That's okay.</p>
+                    <p>Life isn't always neat and tidy, and neither are conversations about things that matter.</p>
+                    <p>You don't have to apologise for becoming emotional.</p>
+                    <p>Take your time.</p>
+                    <p>There's no need to pretend that everything is fine when it isn't.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="conversation">
+                <button class="faq-question">
+                    <span>What if I don't know what to say?</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>You can simply say that.</p>
+                    <p>You might start with:</p>
+                    <p><em>"I don't really know where to begin."</em></p>
+                    <p>That's a perfectly good beginning.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="conversation">
+                <button class="faq-question">
+                    <span>Can I disagree with you?</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Absolutely.</p>
+                    <p>My perspective is not the truth simply because I've offered it.</p>
+                    <p>You are free to question me, disagree with me or see things completely differently.</p>
+                    <p>A meaningful conversation doesn't require two people to agree.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="conversation">
+                <button class="faq-question">
+                    <span>Can I change the subject during a conversation?</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Of course.</p>
+                    <p>You are in control of what you choose to discuss.</p>
+                    <p>If something doesn't feel right to talk about, we can move on.</p>
+                </div>
+            </div>
+
+            <!-- LIFE, CHANGE & DIFFICULT TIMES -->
+            <div class="faq-item" data-category="life-change">
+                <button class="faq-question">
+                    <span>Can I talk about loneliness?</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes.</p>
+                    <p>Loneliness isn't always about being physically alone.</p>
+                    <p>You can have family, friends and people around you and still feel that nobody really understands you.</p>
+                    <p>If loneliness is something you're experiencing, it's something we can talk about.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="life-change">
+                <button class="faq-question">
+                    <span>Can I talk about retirement?</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Absolutely.</p>
+                    <p>Retirement can bring freedom, but it can also bring unexpected questions.</p>
+                    <p>Who are you when work is no longer part of your everyday life?</p>
+                    <p>What gives your days meaning?</p>
+                    <p>What happens to your routine, relationships and sense of purpose?</p>
+                    <p>There isn't one right way to retire.</p>
+                    <p>Sometimes it helps simply to talk about what this new chapter means to you.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="life-change">
+                <button class="faq-question">
+                    <span>Can I talk about ageing?</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes.</p>
+                    <p>Ageing brings changes that aren't always easy to discuss.</p>
+                    <p>Our bodies change. Relationships change. Priorities change.</p>
+                    <p>Sometimes our concerns aren't really about age itself but about independence, purpose, family, loneliness or what lies ahead.</p>
+                    <p>Those are worthwhile conversations.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="life-change">
+                <button class="faq-question">
+                    <span>Can I talk about family problems?</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes.</p>
+                    <p>Family can be one of the most rewarding — and most complicated — parts of life.</p>
+                    <p>You can love someone deeply and still struggle with them.</p>
+                    <p>You may be dealing with disagreements, expectations, responsibilities or difficult choices.</p>
+                    <p>You can talk about what is happening and look at it from another perspective.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="life-change">
+                <button class="faq-question">
+                    <span>Can I talk about relationships?</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes.</p>
+                    <p>Relationships can raise questions that aren't always easy to discuss with the people involved.</p>
+                    <p>You can talk about what you're experiencing, what you're thinking and what you're unsure about.</p>
+                    <p>I'll listen and, if you want it, offer another perspective.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="life-change">
+                <button class="faq-question">
+                    <span>Can I talk about work or career?</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes.</p>
+                    <p>Work can affect far more than our income.</p>
+                    <p>It can affect identity, confidence, relationships, purpose and our sense of where we're heading.</p>
+                    <p>If something about your working life is troubling you, we can talk about it.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="life-change">
+                <button class="faq-question">
+                    <span>Can I talk about business?</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes.</p>
+                    <p>Business brings decisions, risks, successes, failures and plenty of uncertainty.</p>
+                    <p>I've experienced some of those things myself.</p>
+                    <p>I can share what I've learned and offer another perspective, but I won't pretend that my experience automatically makes my answer right for your situation.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="life-change">
+                <button class="faq-question">
+                    <span>Can I talk about something I've never told anyone?</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>You decide what you are comfortable sharing.</p>
+                    <p>You don't owe me your entire story.</p>
+                    <p>Trust develops over time.</p>
+                    <p>If there is something you want to talk about, you can take the conversation at your own pace.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="life-change">
+                <button class="faq-question">
+                    <span>What if I'm embarrassed about what I want to discuss?</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>You wouldn't be the first person to feel that way.</p>
+                    <p>We all have things we regret, things we question and parts of our lives that aren't easy to explain.</p>
+                    <p>You don't need to make your story sound better than it is.</p>
+                    <p>Just tell it as you see it.</p>
+                </div>
+            </div>
+
+            <!-- ADVICE & PERSPECTIVE -->
+            <div class="faq-item" data-category="advice">
+                <button class="faq-question">
+                    <span>Will you give me advice?</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>If you want my perspective, I'll give it.</p>
+                    <p>But there is a difference between offering an opinion and telling someone what to do.</p>
+                    <p>I won't take over your decision-making.</p>
+                    <p>I'll give you my honest one cent worth and let you decide what, if anything, is useful.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="advice">
+                <button class="faq-question">
+                    <span>Do I have to follow your advice?</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>No.</p>
+                    <p>You don't have to agree with me, and you certainly don't have to follow anything I suggest.</p>
+                    <p>My role is to offer another perspective.</p>
+                    <p>Your life remains yours.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="advice">
+                <button class="faq-question">
+                    <span>What if I disagree with your perspective?</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>That's perfectly okay.</p>
+                    <p>I'd rather you think about what I've said and reach your own conclusion than agree with me simply because you asked for my opinion.</p>
+                    <p>Sometimes a different viewpoint is useful precisely because it gives you something to question.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="advice">
+                <button class="faq-question">
+                    <span>Will you tell me if you think I'm making a mistake?</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>If you ask me for my honest opinion, I won't deliberately tell you what I think you want to hear.</p>
+                    <p>I'll be honest.</p>
+                    <p>But I'll also be respectful.</p>
+                    <p>My job isn't to win an argument.</p>
+                    <p>It's to give you a perspective you can consider.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="advice">
+                <button class="faq-question">
+                    <span>Can you help me make a decision?</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>I can help you think through a decision.</p>
+                    <p>We can look at the situation, consider different possibilities and examine assumptions that may be influencing you.</p>
+                    <p>But I won't make the decision for you.</p>
+                    <p>There is an important difference.</p>
+                </div>
+            </div>
+
+            <!-- TRUST, PRIVACY & RESPECT -->
+            <div class="faq-item" data-category="trust">
+                <button class="faq-question">
+                    <span>Will you judge me?</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>I don't come into a conversation expecting you to be perfect.</p>
+                    <p>Everyone has made mistakes.</p>
+                    <p>Everyone has regrets.</p>
+                    <p>Everyone has moments they wish they had handled differently.</p>
+                    <p>My job is to listen and understand your situation, not sit in judgement of you.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="trust">
+                <button class="faq-question">
+                    <span>What does confidentiality mean at My One Cent Worth?</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Privacy and discretion are important to me.</p>
+                    <p>I treat what you share with care and respect.</p>
+                    <p>However, My One Cent Worth is a private conversation service rather than a regulated medical or therapeutic practice, so I don't want to make misleading promises about legal or professional privilege.</p>
+                    <p>If you have particular privacy concerns, please raise them before our conversation.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="trust">
+                <button class="faq-question">
+                    <span>Are conversations recorded?</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Unless specifically stated otherwise for a particular service, conversations are not intended to be recorded.</p>
+                    <p>If recording were ever required for a specific purpose, you would be informed beforehand.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="trust">
+                <button class="faq-question">
+                    <span>Do I have to tell you everything?</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>No.</p>
+                    <p>You decide what you share.</p>
+                    <p>You can keep something private, change the subject or simply say that you don't want to discuss something.</p>
+                    <p>Trust isn't something I expect from you immediately. It's something we build.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="trust">
+                <button class="faq-question">
+                    <span>What if I don't feel comfortable continuing?</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>You can say so.</p>
+                    <p>You can pause, change the subject or end the conversation.</p>
+                    <p>There should never be pressure to continue a conversation that doesn't feel right for you.</p>
+                </div>
+            </div>
+
+            <!-- WHAT MOCW IS — AND IS NOT -->
+            <div class="faq-item" data-category="what-is">
+                <button class="faq-question">
+                    <span>Is My One Cent Worth therapy or counselling?</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>No.</p>
+                    <p>My One Cent Worth is not a therapy or counselling service.</p>
+                    <p>It is a listening and conversation service offering companionship, reflection and another perspective.</p>
+                    <p>If you need professional psychological or therapeutic care, you should speak with an appropriately qualified professional.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="what-is">
+                <button class="faq-question">
+                    <span>Can you diagnose me?</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>No.</p>
+                    <p>I don't provide medical, psychiatric or psychological diagnosis.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="what-is">
+                <button class="faq-question">
+                    <span>Can you prescribe medication?</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>No.</p>
+                    <p>I am not a medical practitioner and do not prescribe medication.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="what-is">
+                <button class="faq-question">
+                    <span>Can you provide medical advice?</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>No.</p>
+                    <p>Medical concerns should be discussed with a qualified healthcare professional.</p>
+                    <p>I can listen to what you're going through, but listening should never be confused with medical care.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="what-is">
+                <button class="faq-question">
+                    <span>What if my situation requires professional help?</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>I'll be honest about the limits of what I can offer.</p>
+                    <p>Sometimes a conversation is useful.</p>
+                    <p>Sometimes you need a doctor, therapist, lawyer, financial professional or another specialist.</p>
+                    <p>Knowing when something needs a different kind of help is part of being responsible.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="what-is">
+                <button class="faq-question">
+                    <span>What if I'm experiencing an emergency?</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>My One Cent Worth is not an emergency or crisis service.</p>
+                    <p>If you are in immediate danger or believe you may harm yourself or someone else, contact your local emergency service or an appropriate crisis service immediately.</p>
+                </div>
+            </div>
+
+            <!-- WHO MOCW IS FOR -->
+            <div class="faq-item" data-category="who-for">
+                <button class="faq-question">
+                    <span>Who is My One Cent Worth for?</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>My One Cent Worth is for people who value a genuine conversation and feel they could benefit from having someone listen.</p>
+                    <p>You may be facing change, uncertainty, loneliness, a difficult decision or a situation that you simply want to talk through.</p>
+                    <p>You don't need to fit into a particular category.</p>
+                    <p>If something matters to you, it is worth talking about.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="who-for">
+                <button class="faq-question">
+                    <span>Do I need to have a serious problem?</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>No.</p>
+                    <p>You don't need to be in crisis.</p>
+                    <p>You don't even need to have a problem.</p>
+                    <p>Sometimes you simply want another person to talk to.</p>
+                    <p>That's reason enough.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="who-for">
+                <button class="faq-question">
+                    <span>Can family members or caregivers use MOCW?</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes.</p>
+                    <p>Caring for someone can bring love, responsibility, frustration, exhaustion and difficult decisions.</p>
+                    <p>Caregivers also need somewhere to put their own thoughts.</p>
+                    <p>A conversation can give you space to talk about what you're experiencing.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="who-for">
+                <button class="faq-question">
+                    <span>Is MOCW suitable for older adults?</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>It can be.</p>
+                    <p>Older adults may be dealing with retirement, changing relationships, independence, loneliness, purpose, family responsibilities or simply wanting meaningful conversation.</p>
+                    <p>The important thing is that the person feels comfortable with the service and understands what it is.</p>
+                </div>
+            </div>
+
+            <!-- SESSIONS & BOOKING -->
+            <div class="faq-item" data-category="sessions">
+                <button class="faq-question">
+                    <span>How long does a conversation last?</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Session lengths and prices are shown on the Pricing page.</p>
+                    <p>The important thing is that your time isn't about rushing through a checklist.</p>
+                    <p>It's about having a meaningful conversation within the time you've chosen.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="sessions">
+                <button class="faq-question">
+                    <span>How do I arrange a conversation?</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>You can contact me through the website or use the available booking option for the service you're interested in.</p>
+                    <p>If you're unsure which service is appropriate, feel free to send a message first.</p>
+                </div>
+            </div>
+
+            <!-- PRICING & PAYMENT -->
+            <div class="faq-item" data-category="pricing">
+                <button class="faq-question">
+                    <span>How much does a session cost?</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Please refer to our dedicated Pricing page for full details on current session rates and transparent package options.</p>
+                </div>
+            </div>
+
+            <!-- AFTER SESSION -->
+            <div class="faq-item" data-category="after">
+                <button class="faq-question">
+                    <span>Can I book follow-up sessions?</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes. You are welcome to book follow-up conversations whenever you feel another perspective or chat would be helpful.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- STILL HAVE QUESTIONS CTA -->
+        <div class="still-questions-card">
+            <div class="help-icon">?</div>
+            <h2>STILL HAVE QUESTIONS?</h2>
+            <p>If you couldn't find the answer you were looking for, please feel free to reach out directly. I'm always happy to clarify any details before we speak.</p>
+            <div class="cta-btn-group">
+                <a href="https://wa.me/6583186776?text=Hello%2C%20Tashi.%20I%20have%20a%20question%20about%20your%20services." class="btn-gold-action" target="_blank" rel="noopener">Chat via WhatsApp</a>
+                <a href="contact.html" class="btn-outline-action">Contact Form</a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-brand-story">
+                <!-- Left Side: Full Brand -->
+                <div class="brand-item">
+                    <div class="brand-item-header">
+                        <img src="images/one-cent-worth-logo.webp" alt="My One Cent Worth Logo" class="footer-logo-img">
+                        <span class="brand-item-title">MY ONE CENT WORTH</span>
+                    </div>
+                    <p class="brand-item-desc">
+                        My One Cent Worth is the full name behind everything we do — a place for perspectives, meaningful conversations, thoughtful questions, and a willingness to see things from different angles.
+                    </p>
+                </div>
+
+                <!-- Right Side: MOCW Short-Form -->
+                <div class="brand-item">
+                    <div class="brand-item-header">
+                        <img src="images/mocw-monogram-logo.webp" alt="MOCW Monogram Logo" class="footer-logo-img">
+                        <span class="brand-item-title">MOCW</span>
+                    </div>
+                    <p class="brand-item-desc">
+                        MOCW is simply the short-form expression of My One Cent Worth — the name you may see across our logo, website, content, and future community.
+                    </p>
+                </div>
+            </div>
+
+            <div class="brand-summary-text">
+                One name. Two expressions. One philosophy.
+            </div>
+            <div class="brand-tagline">
+                MY ONE CENT WORTH (MOCW) — SOMEONE WHO LISTENS.
+            </div>
+
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="sitemap.html">HTML Sitemap</a></li>
+                <li><a href="sitemap.xml" target="_blank">XML Sitemap</a></li>
+            </ul>
+
+            <p class="copyright-text">&copy; 2026 My One Cent Worth by Tashi Khoo. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOATING BUTTON -->
+    <a id="my-one-cent-chat" 
+       href="https://wa.me/6583186776?text=Hello%2C%20Tashi.%20I%20want%20more%20info%20about%20the%20services." 
+       target="_blank" 
+       rel="noopener" 
+       title="WhatsApp Tashi"
+       aria-label="WhatsApp Tashi">
+        <div class="bubble"></div>
+    </a>
+
+    <!-- BACK TO TOP BUTTON -->
+    <button onclick="scrollToTop()" id="backToTopBtn" title="Go to top" aria-label="Back to Top">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 4l-8 8h5v8h6v-8h5z"/>
+        </svg>
+    </button>
+
+    <!-- SCRIPTS -->
+    <script>
+        // BACK TO TOP BUTTON TOGGLE
+        const backToTopBtn = document.getElementById("backToTopBtn");
+
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 300) {
+                backToTopBtn.style.display = "flex";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+
+        // ACCORDION & SEARCH & FILTER FUNCTIONALITY
+        const faqItems = document.querySelectorAll('.faq-item');
+        const questions = document.querySelectorAll('.faq-question');
+        const filterButtons = document.querySelectorAll('.filter-tag');
+        const searchInput = document.getElementById('faqSearchInput');
+
+        questions.forEach(question => {
+            question.addEventListener('click', () => {
+                const parent = question.parentElement;
+                parent.classList.toggle('active');
+            });
+        });
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                
+                const category = button.getAttribute('data-category');
+                
+                faqItems.forEach(item => {
+                    if (category === 'all' || item.getAttribute('data-category') === category) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        if (searchInput) {
+            searchInput.addEventListener('input', (e) => {
+                const searchTerm = e.target.value.toLowerCase();
+                faqItems.forEach(item => {
+                    const text = item.textContent.toLowerCase();
+                    if (text.includes(searchTerm)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        }
+
+        // PWA SERVICE WORKER REGISTRATION & INSTALL PROMPT
+        let deferredPrompt;
+        const installBtn = document.getElementById('pwa-install-btn');
+
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(reg => console.log('Service Worker registered successfully.'))
+                    .catch(err => console.log('Service Worker registration failed:', err));
+            });
+        }
+
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            if (installBtn) installBtn.style.display = 'inline-flex';
+        });
+
+        if (installBtn) {
+            installBtn.addEventListener('click', () => {
+                if (deferredPrompt) {
+                    deferredPrompt.prompt();
+                    deferredPrompt.userChoice.then((choiceResult) => {
+                        if (choiceResult.outcome === 'accepted') {
+                            installBtn.style.display = 'none';
+                        }
+                        deferredPrompt = null;
+                    });
+                }
+            });
+        }
+    </script>
+</body>
+</html>

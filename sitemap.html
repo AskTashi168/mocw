@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitemap - My One Cent Worth</title>
+    <link rel="icon" type="image/png" href="images/my-one-cent-worth-logo.webp">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #0d0d0d;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        /* HEADER STYLES */
+        .main-header {
+            background-color: #141414;
+            border-bottom: 1px solid #222;
+            padding: 15px 30px;
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .brand-logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        .brand-logo-container img {
+            max-height: 45px;
+            width: auto;
+            display: block;
+        }
+        .brand-text-block {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+        .brand-title {
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+            line-height: 1.1;
+        }
+        .brand-subtitle {
+            color: #d4af37;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-top: 2px;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+        .nav-links a:hover {
+            color: #d4af37;
+        }
+
+        /* CONTENT STYLES */
+        main {
+            flex: 1;
+            padding: 60px 20px;
+        }
+        .sitemap-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .sitemap-container h1 {
+            color: #d4af37;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .sitemap-list {
+            list-style-type: none;
+        }
+        .sitemap-list li {
+            margin-bottom: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #222;
+        }
+        .sitemap-list a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.05rem;
+            transition: color 0.3s ease;
+        }
+        .sitemap-list a:hover {
+            color: #d4af37;
+        }
+
+        /* FOOTER STYLES */
+        footer {
+            background-color: #141414;
+            border-top: 1px solid #222;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .brand-summary-text p {
+            color: #aaa;
+            font-size: 0.95rem;
+            margin-bottom: 6px;
+        }
+        .brand-tagline {
+            color: #d4af37 !important;
+            font-weight: bold;
+        }
+        .footer-links {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 25px 0 15px 0;
+            padding: 0;
+        }
+        .footer-links a {
+            color: #888;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+        .footer-links a:hover {
+            color: #d4af37;
+        }
+        .copyright-text {
+            color: #555;
+            font-size: 0.85rem;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- SITE HEADER -->
+    <header class="main-header">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo-container">
+                <img src="images/my-one-cent-worth-logo.webp" alt="My One Cent Worth Logo">
+                <div class="brand-text-block">
+                    <span class="brand-title">MY ONE CENT WORTH</span>
+                    <span class="brand-subtitle">BY TASHI KHOO</span>
+                </div>
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SITEMAP MAIN CONTENT -->
+    <main>
+        <div class="sitemap-container">
+            <h1>HTML Sitemap</h1>
+            <ul class="sitemap-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
+                <li><a href="disclaimer.html">Disclaimer</a></li>
+            </ul>
+        </div>
+    </main>
+
+    <!-- STANDARD SITE FOOTER -->
+    <footer>
+        <div class="brand-summary-text">
+            <p>One name. Two expressions. One philosophy.</p>
+            <p class="brand-tagline">MY ONE CENT WORTH (MOCW) – SOMEONE WHO LISTENS.</p>
+        </div>
+
+        <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="sitemap.html">HTML Sitemap</a></li>
+            <li><a href="blog/wp-sitemap.xml" target="_blank">XML Sitemap</a></li>
+        </ul>
+
+        <p class="copyright-text">&copy; 2026 My One Cent Worth by Tashi Khoo. All rights reserved.</p>
+    </footer>
+
+    <!-- WHATSAPP FLOATING BUTTON -->
+    <a id="my-one-cent-chat" href="https://wa.me/6583186776?text=Hello%20Tashi.%20I%20want%20more%20info" target="_blank" aria-label="Chat on WhatsApp">
+        <div class="bubble"></div>
+    </a>
+
+</body>
+</html>

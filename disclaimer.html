@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disclaimer | My One Cent Worth</title>
+    <meta name="description" content="Read the Disclaimer for My One Cent Worth. Understand our scope of service, personal perspectives, and companion guidelines.">
+    <link rel="canonical" href="https://myonecentworth.com/disclaimer.html">
+    
+    <!-- Favicon Links -->
+    <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+   
+    <style>
+        :root {
+            --bg-color: #0A0A0A;
+            --card-bg: #121212;
+            --card-border: #222222;
+            --text-gold: #D4AF37;
+            --text-gold-light: #F3E5AB;
+            --text-main: #E0E0E0;
+            --text-muted: #A0A0A0;
+            --accent-glow: rgba(212, 175, 55, 0.15);
+            --font-heading: 'Cinzel', serif;
+            --font-body: 'Inter', sans-serif;
+            --max-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
+
+        /* HEADER & NAVIGATION STYLES */
+        .main-header {
+            background-color: #050505;
+            border-bottom: 1px solid #1f1f1f;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 0.75rem 1rem;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            flex-shrink: 0;
+        }
+
+        .coin-logo {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .brand-title {
+            font-family: var(--font-heading);
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            display: block;
+            white-space: nowrap;
+        }
+
+        .brand-subtitle {
+            font-family: var(--font-body);
+            color: var(--text-gold);
+            font-size: 0.6rem;
+            letter-spacing: 1.5px;
+            display: block;
+            white-space: nowrap;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.25rem;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 400;
+            transition: color 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .nav-links a:hover, 
+        .nav-links a.active {
+            color: var(--text-gold);
+        }
+
+        /* Dropdown Menu */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            list-style: none;
+            padding: 0.5rem 0;
+            min-width: 160px;
+            border-radius: 6px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+            z-index: 1001;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu a {
+            padding: 0.6rem 1rem;
+            display: block;
+            color: var(--text-main);
+            text-align: center;
+        }
+
+        /* PWA Install Button */
+        .btn-pwa-install {
+            background: transparent;
+            border: 1px solid var(--text-gold);
+            color: var(--text-gold);
+            padding: 0.35rem 0.85rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-pwa-install:hover {
+            background: var(--text-gold);
+            color: #000000;
+        }
+
+        /* LAYOUT & SECTIONS */
+        .container {
+            width: 90%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 3rem 0 5rem;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-heading);
+            color: #FFFFFF;
+            letter-spacing: 0.5px;
+        }
+
+        .hero {
+            text-align: center;
+            padding-top: 1rem;
+            padding-bottom: 2.5rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 0.5rem;
+            color: var(--text-gold-light);
+        }
+
+        .hero-img-wrapper {
+            margin: 2rem 0;
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+        }
+
+        .hero-img-wrapper img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .last-updated {
+            color: var(--text-gold);
+            font-size: 0.95rem;
+            font-weight: 500;
+            margin-top: 0.25rem;
+        }
+
+        /* LEGAL CONTENT STYLES */
+        .legal-content {
+            max-width: 860px;
+            margin: 0 auto;
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 2.5rem 1.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .legal-intro {
+            font-size: 1.05rem;
+            color: var(--text-main);
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .legal-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .legal-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .legal-section h2 {
+            font-size: 1.25rem;
+            color: var(--text-gold);
+            text-align: left;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            padding-bottom: 0.4rem;
+        }
+
+        .legal-section p {
+            color: var(--text-main);
+            margin-bottom: 0.85rem;
+            font-size: 0.98rem;
+        }
+
+        .legal-section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .legal-list {
+            list-style: none;
+            margin: 1rem 0 1.25rem 0;
+            padding-left: 0;
+        }
+
+        .legal-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.6rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .legal-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0.3rem;
+            color: var(--text-gold);
+            font-weight: bold;
+        }
+
+        .legal-section strong {
+            color: #FFFFFF;
+        }
+
+        .closing-thoughts {
+            background-color: rgba(212, 175, 55, 0.05);
+            border: 1px solid var(--text-gold);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        .closing-thoughts p {
+            color: var(--text-gold-light);
+            font-size: 1.05rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .closing-thoughts p.signature {
+            font-family: var(--font-heading);
+            color: var(--text-gold);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0;
+        }
+
+        /* FOOTER STYLES */
+        .main-footer {
+            background-color: #050505;
+            border-top: 1px solid var(--card-border);
+            padding: 3rem 1.5rem 2rem;
+            text-align: center;
+            margin-top: 5rem;
+        }
+
+        .footer-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .footer-brand-story {
+            width: 100%;
+            max-width: 900px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            text-align: left;
+        }
+
+        .brand-item {
+            padding: 0 0.5rem;
+        }
+
+        .brand-item-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.85rem;
+        }
+
+        .footer-logo-img {
+            width: 52px;
+            height: 52px;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .brand-item-title {
+            font-family: var(--font-heading);
+            color: var(--text-gold);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .brand-item-desc {
+            color: var(--text-muted);
+            font-size: 0.82rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .brand-summary-text {
+            grid-column: 1 / -1;
+            text-align: center;
+            border-top: 1px solid var(--card-border);
+            padding-top: 1.5rem;
+        }
+
+        .brand-summary-text p {
+            color: var(--text-main);
+            font-size: 0.9rem;
+            margin: 0 0 0.45rem;
+        }
+
+        .brand-summary-text .brand-tagline {
+            color: var(--text-gold);
+            font-family: var(--font-heading);
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+
+        .footer-coin-logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover,
+        .footer-links a.active {
+            color: var(--text-gold);
+        }
+
+        .copyright-text {
+            color: #666666;
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+        }
+
+        #my-one-cent-chat {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 9999;
+            width: 60px;
+            height: 60px;
+            background: #D4AF37;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease;
+        }
+
+        #my-one-cent-chat:hover {
+            transform: scale(1.1);
+        }
+
+        #my-one-cent-chat .bubble {
+            width: 28px;
+            height: 28px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23000' d='M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3 18.6-68.1-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.9-186.6 184.9zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        @media (max-width: 767px) {
+            .footer-brand-story {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .brand-summary-text {
+                grid-column: auto;
+            }
+
+            .brand-item {
+                text-align: center;
+            }
+
+            .brand-item-header {
+                justify-content: center;
+            }
+        }
+
+        /* Desktop Media Query Adjustments */
+        @media (min-width: 768px) {
+            .main-header {
+                padding: 0.75rem 2rem;
+            }
+
+            .nav-container {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .brand-title {
+                font-size: 1.1rem;
+            }
+
+            .brand-subtitle {
+                font-size: 0.65rem;
+            }
+
+            .nav-links {
+                gap: 1.75rem;
+            }
+
+            .nav-links a {
+                font-size: 0.9rem;
+            }
+
+            .dropdown-menu {
+                left: 0;
+                transform: none;
+            }
+
+            .dropdown-menu a {
+                text-align: left;
+            }
+
+            .legal-content {
+                padding: 3.5rem 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- SINGLE MAIN HEADER NAVIGATION -->
+    <header class="main-header">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">
+                <img src="images/one-cent-worth-logo.webp" alt="My One Cent Worth Logo" class="coin-logo">
+                <div class="logo-text">
+                    <span class="brand-title">MY ONE CENT WORTH</span>
+                    <span class="brand-subtitle">BY TASHI KHOO</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="services.html">Services ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="services.html">All Services</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                    </ul>
+                </li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><button id="pwa-install-btn" class="btn-pwa-install">Install App</button></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- HERO BANNER SECTION -->
+        <section class="hero">
+            <h1>DISCLAIMER</h1>
+            <p class="last-updated">Last Updated: August 2026</p>
+            
+            <div class="hero-img-wrapper">
+                <img src="images/my-one-cent-worth-mocw.webp" alt="My One Cent Worth Disclaimer Banner">
+            </div>
+        </section>
+
+        <!-- MAIN LEGAL CONTENT -->
+        <article class="legal-content">
+            
+            <div class="legal-intro">
+                <p><strong>Welcome to My One Cent Worth.</strong></p>
+                <p>My One Cent Worth exists to provide something simple but valuable: a listening ear, an independent perspective, thoughtful conversation, and companionship when someone may benefit from having another human being present.</p>
+                <p>Before using this website, booking a session, or engaging in any of our services, please read this Disclaimer carefully.</p>
+            </div>
+
+            <section class="legal-section">
+                <h2>1. WHAT MY ONE CENT WORTH PROVIDES</h2>
+                <p>My One Cent Worth provides:</p>
+                <ul class="legal-list">
+                    <li>Personal perspectives</li>
+                    <li>Life experiences and observations</li>
+                    <li>Thoughtful conversation</li>
+                    <li>General guidance based on personal experience</li>
+                    <li>An independent perspective on situations and decisions</li>
+                    <li>Online voice and video conversations</li>
+                    <li>In-person conversation and companion services</li>
+                    <li>Hospital companion visits</li>
+                    <li>Nursing home companion visits</li>
+                    <li>Retirement companion services</li>
+                </ul>
+                <p>The purpose is to listen, understand, discuss, and offer another perspective.</p>
+                <p>My One Cent Worth is not intended to tell you what you must do.</p>
+                <p>What I share is my "one cent worth" — a personal perspective based on experience, observation, reasoning, and conversation.</p>
+            </section>
+
+            <section class="legal-section">
+                <h2>2. MY ONE CENT WORTH IS NOT PROFESSIONAL ADVICE</h2>
+                <p>Unless expressly stated otherwise, My One Cent Worth does not provide professional advice or professional services.</p>
+                <p>I am not acting as a:</p>
+                <ul class="legal-list">
+                    <li>Medical doctor</li>
+                    <li>Psychiatrist</li>
+                    <li>Psychologist</li>
+                    <li>Licensed therapist</li>
+                    <li>Counselor</li>
+                    <li>Social worker</li>
+                    <li>Lawyer</li>
+                    <li>Financial advisor</li>
+                    <li>Accountant</li>
+                    <li>Investment professional</li>
+                    <li>Insurance professional</li>
+                    <li>Healthcare professional</li>
+                </ul>
+                <p>Any opinions, observations, suggestions, perspectives, or information shared through My One Cent Worth should not be interpreted as medical, psychological, psychiatric, legal, financial, investment, insurance, accounting, or other professional advice.</p>
+                <p>If your situation requires professional advice, diagnosis, treatment, assessment, or intervention, you should consult an appropriately qualified professional.</p>
+            </section>
+
+            <section class="legal-section">
+                <h2>3. CONVERSATION IS NOT THERAPY</h2>
+                <p>My One Cent Worth is not a therapy service.</p>
+                <p>Our conversations may involve personal matters, difficult experiences, relationships, life decisions, worries, uncertainty, or emotional situations.</p>
+                <p>Listening and having a thoughtful conversation can sometimes be helpful, but a conversation with My One Cent Worth is not a substitute for professional mental health care, counseling, psychotherapy, psychiatric treatment, or medical care.</p>
+                <p>You should seek qualified professional assistance whenever your circumstances require it.</p>
+            </section>
+
+            <section class="legal-section">
+                <h2>4. YOU REMAIN RESPONSIBLE FOR YOUR DECISIONS</h2>
+                <p>Every person's circumstances are different.</p>
+                <p>During a conversation, I may offer questions, observations, alternative perspectives, personal experiences, or possible ways of looking at a situation.</p>
+                <p>You are free to agree, disagree, question, ignore, or consider anything discussed.</p>
+                <p>Ultimately, you are responsible for your own decisions, choices, actions, and consequences.</p>
+                <p>My One Cent Worth does not make decisions on your behalf.</p>
+                <p>You should independently consider your circumstances and obtain professional advice where appropriate before making important decisions.</p>
+            </section>
+
+            <section class="legal-section">
+                <h2>5. NO GUARANTEE OF RESULTS</h2>
+                <p>My One Cent Worth makes no guarantee that a conversation, perspective, suggestion, or companion service will produce a particular result.</p>
+                <p>There is no guarantee of:</p>
+                <ul class="legal-list">
+                    <li>A specific outcome</li>
+                    <li>A particular decision</li>
+                    <li>Personal improvement</li>
+                    <li>Resolution of a problem</li>
+                    <li>Relationship improvement</li>
+                    <li>Financial improvement</li>
+                    <li>Emotional improvement</li>
+                    <li>Medical improvement</li>
+                    <li>Any other specific result</li>
+                </ul>
+                <p>People are different, circumstances change, and the usefulness of a particular perspective will vary from person to person.</p>
+            </section>
+
+            <section class="legal-section">
+                <h2>6. HOSPITAL COMPANION SERVICES</h2>
+                <p>Hospital Companion Services are intended to provide companionship, conversation, and a reassuring human presence during hospital visits.</p>
+                <p>These services are not medical services.</p>
+                <p>A hospital companion does not:</p>
+                <ul class="legal-list">
+                    <li>Diagnose medical conditions</li>
+                    <li>Provide medical treatment</li>
+                    <li>Administer medication</li>
+                    <li>Provide nursing care</li>
+                    <li>Make medical decisions</li>
+                    <li>Replace doctors, nurses, or other healthcare professionals</li>
+                    <li>Provide emergency medical assistance</li>
+                    <li>Act as a healthcare professional</li>
+                </ul>
+                <p>Hospital Companion Services are intended to complement, not replace, professional medical care and the role of family members, caregivers, nurses, doctors, or other healthcare professionals.</p>
+                <p>Any medical questions or concerns should be directed to the appropriate healthcare professional.</p>
+            </section>
+
+            <section class="legal-section">
+                <h2>7. NURSING HOME COMPANION SERVICES</h2>
+                <p>Nursing Home Companion Services provide companionship, conversation, and human connection for residents who may appreciate someone to talk with, spend time with, or share experiences with.</p>
+                <p>These services are not nursing, medical, caregiving, or personal care services.</p>
+                <p>A companion does not replace:</p>
+                <ul class="legal-list">
+                    <li>Nursing staff</li>
+                    <li>Doctors</li>
+                    <li>Healthcare professionals</li>
+                    <li>Professional caregivers</li>
+                    <li>Family caregivers</li>
+                    <li>Other qualified care providers</li>
+                </ul>
+                <p>Any medical, nursing, personal-care, or safety-related needs should be handled by the appropriate qualified personnel.</p>
+            </section>
+
+            <section class="legal-section">
+                <h2>8. RETIREMENT COMPANION SERVICES</h2>
+                <p>Retirement Companion Services are designed for people who may simply appreciate conversation, companionship, another perspective, or someone with whom to share experiences and thoughts.</p>
+                <p>Retirement can bring changes in routine, identity, relationships, purpose, and social connection.</p>
+                <p>A conversation can sometimes make a difference.</p>
+                <p>However, this service is not therapy, medical care, financial planning, legal advice, or professional counseling.</p>
+            </section>
+
+            <section class="legal-section">
+                <h2>9. CONVERSATION COMPANION SERVICES</h2>
+                <p>Conversation Companion Services provide a comfortable opportunity to talk, share thoughts, discuss experiences, explore ideas, or simply have another person listen.</p>
+                <p>Conversations may cover many subjects, including:</p>
+                <ul class="legal-list">
+                    <li>Life</li>
+                    <li>Relationships</li>
+                    <li>Family</li>
+                    <li>Work</li>
+                    <li>Retirement</li>
+                    <li>Personal decisions</li>
+                    <li>Experiences</li>
+                    <li>Challenges</li>
+                    <li>Goals</li>
+                    <li>Ideas</li>
+                    <li>Current concerns</li>
+                    <li>Everyday matters</li>
+                </ul>
+                <p>There is no requirement to have a crisis or major problem before having a conversation.</p>
+                <p>Sometimes people simply want someone who will listen.</p>
+            </section>
+
+            <section class="legal-section">
+                <h2>10. COMPANION SERVICES ARE NOT ESCORT SERVICES</h2>
+                <p>My One Cent Worth Companion Services are strictly non-sexual and non-romantic.</p>
+                <p>They are NOT:</p>
+                <ul class="legal-list">
+                    <li>Dating services</li>
+                    <li>Escort services</li>
+                    <li>Intimate services</li>
+                    <li>Sexual services</li>
+                    <li>Romantic companionship</li>
+                    <li>Any form of sexual or intimate arrangement</li>
+                </ul>
+                <p>The purpose of companion services is conversation, companionship, listening, and human connection.</p>
+                <p>Any inappropriate request or behaviour may result in the service being declined or terminated.</p>
+            </section>
+
+            <section class="legal-section">
+                <h2>11. NOT A CRISIS OR EMERGENCY SERVICE</h2>
+                <p>My One Cent Worth is not an emergency or crisis service.</p>
+                <p>Please do not rely on this website or any My One Cent Worth service in an emergency.</p>
+                <p>If you are experiencing:</p>
+                <ul class="legal-list">
+                    <li>A medical emergency</li>
+                    <li>A mental health crisis</li>
+                    <li>Immediate danger</li>
+                    <li>Thoughts of self-harm</li>
+                    <li>Thoughts of harming another person</li>
+                    <li>A situation requiring immediate professional intervention</li>
+                </ul>
+                <p>Please contact your local emergency services, healthcare provider, crisis service, or another appropriately qualified professional immediately.</p>
+            </section>
+
+            <section class="legal-section">
+                <h2>12. PERSONAL INFORMATION AND CONFIDENTIALITY</h2>
+                <p>Many conversations may involve personal, private, sensitive, or emotional matters.</p>
+                <p>Information shared with My One Cent Worth will be treated with respect and discretion.</p>
+                <p>However, no method of communication or transmission of information can be guaranteed to be completely secure or confidential in every circumstance.</p>
+                <p>Please refer to the My One Cent Worth Privacy Policy for information about how personal information may be collected, used, stored, and handled.</p>
+            </section>
+
+            <section class="legal-section">
+                <h2>13. WEBSITE CONTENT</h2>
+                <p>Articles, blog posts, perspectives, FAQs, comments, videos, images, and other content published by My One Cent Worth are provided primarily for general informational, educational, and reflective purposes.</p>
+                <p>Such content may be based on personal experience, observation, opinion, research, or discussion.</p>
+                <p>Website content should not be treated as professional advice or as a substitute for professional services.</p>
+                <p>Information may also change over time, and My One Cent Worth does not guarantee that every piece of website content will always remain current or applicable to every individual situation.</p>
+            </section>
+
+            <section class="legal-section">
+                <h2>14. THIRD-PARTY INFORMATION</h2>
+                <p>My One Cent Worth may sometimes refer to, link to, or discuss information provided by third parties.</p>
+                <p>Such information belongs to its respective sources.</p>
+                <p>My One Cent Worth does not necessarily endorse or guarantee the accuracy, completeness, reliability, or suitability of third-party information.</p>
+                <p>You should independently evaluate third-party information and obtain professional advice where appropriate.</p>
+            </section>
+
+            <section class="legal-section">
+                <h2>15. TESTIMONIALS AND PERSONAL EXPERIENCES</h2>
+                <p>Testimonials, reviews, comments, stories, or other experiences shared on this website represent the experiences and opinions of the individuals who provided them.</p>
+                <p>Individual experiences vary.</p>
+                <p>A testimonial should never be interpreted as a promise, guarantee, or representation that another person will achieve the same experience or result.</p>
+            </section>
+
+            <section class="legal-section">
+                <h2>16. USE OF AI AND TECHNOLOGY</h2>
+                <p>My One Cent Worth may use technology, software, artificial intelligence tools, communication platforms, payment providers, scheduling systems, website services, or other third-party services in operating the website and delivering certain services.</p>
+                <p>Technology can occasionally experience errors, interruptions, delays, outages, or unexpected behaviour.</p>
+                <p>Where applicable, third-party services are also subject to their own terms, conditions, privacy policies, and limitations.</p>
+            </section>
+
+            <section class="legal-section">
+                <h2>17. CHANGES TO THIS DISCLAIMER</h2>
+                <p>My One Cent Worth may update or change this Disclaimer from time to time as the website, services, technology, or business develops.</p>
+                <p>The latest version published on this website will apply from its stated "Last Updated" date.</p>
+                <p>You should review this page periodically if you continue to use the website or services.</p>
+            </section>
+
+            <section class="legal-section">
+                <h2>18. BY USING MY ONE CENT WORTH</h2>
+                <p>By accessing this website, contacting My One Cent Worth, booking a session, purchasing a service, participating in an online conversation, or using an in-person companion service, you acknowledge that:</p>
+                <ul class="legal-list">
+                    <li>You have read and understood this Disclaimer.</li>
+                    <li>You understand that My One Cent Worth provides perspectives, conversation, listening, and companionship rather than professional advice or professional services.</li>
+                    <li>You understand that companion services are not medical, nursing, caregiving, therapy, dating, escort, intimate, or sexual services.</li>
+                    <li>You understand that you remain responsible for your own decisions and actions.</li>
+                    <li>You understand that My One Cent Worth does not guarantee any particular outcome.</li>
+                    <li>You understand that emergency and crisis situations require appropriate emergency or professional assistance.</li>
+                </ul>
+            </section>
+
+            <div class="closing-thoughts">
+                <h2>19. THE PURPOSE OF MY ONE CENT WORTH</h2>
+                <p>Life can be complicated.</p>
+                <p>Sometimes we need an expert.</p>
+                <p>Sometimes we need professional help.</p>
+                <p>And sometimes, before either of those things, we simply need another person to listen.</p>
+                <p>My One Cent Worth is built around that simple idea.</p>
+                <p>I am not here to tell you what to think.</p>
+                <p>I am here to listen, think with you, share my perspective, and help you look at things from another angle.</p>
+                <p>You may agree with me.</p>
+                <p>You may disagree with me.</p>
+                <p>That's perfectly fine.</p>
+                <p>After all:</p>
+                <p><strong>Nothing is absolute.</strong></p>
+                <p><strong>Your life remains yours.</strong></p>
+                <p><strong>Your decisions remain yours.</strong></p>
+                <p><strong>Your future remains yours.</strong></p>
+                <p class="signature">This is simply my one cent worth.</p>
+            </div>
+
+        </article>
+
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer class="main-footer">
+        <div class="footer-container">
+
+            <!-- Brand Story & Logo Section -->
+            <div class="footer-brand-story">
+
+                <div class="brand-item">
+                    <div class="brand-item-header">
+                        <img src="images/my-one-cent-worth-logo.webp"
+                             alt="My One Cent Worth Logo"
+                             class="footer-logo-img">
+                        <span class="brand-item-title">MY ONE CENT WORTH</span>
+                    </div>
+
+                    <p class="brand-item-desc">
+                        My One Cent Worth is the full name behind everything we do — a place for perspectives, meaningful conversations, thoughtful questions, and a willingness to see things from different angles.
+                    </p>
+                </div>
+
+                <div class="brand-item">
+                    <div class="brand-item-header">
+                        <img src="images/mocw-monogram-logo.webp"
+                             alt="MOCW Monogram Logo"
+                             class="footer-logo-img">
+                        <span class="brand-item-title">MOCW</span>
+                    </div>
+
+                    <p class="brand-item-desc">
+                        MOCW is simply the short-form expression of My One Cent Worth — the name you may see across our logo, website, content, and future community.
+                    </p>
+                </div>
+
+                <div class="brand-summary-text">
+                    <p>One name. Two expressions. One philosophy.</p>
+                    <p class="brand-tagline">My One Cent Worth (MOCW) — Someone Who Listens.</p>
+                </div>
+
+            </div>
+
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="disclaimer.html" class="active">Disclaimer</a></li>
+                <li><a href="sitemap.html">HTML Sitemap</a></li>
+                <li><a href="sitemap.xml" target="_blank">XML Sitemap</a></li>
+            </ul>
+
+            <p class="copyright-text">&copy; 2026 My One Cent Worth by Tashi Khoo. All rights reserved.</p>
+
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOATING BUTTON -->
+    <a id="my-one-cent-chat" href="https://wa.me/6583186776?text=Hello%2C%20Tashi.%20I%20want%20more%20info%20about%20the%20services." target="_blank" rel="noopener" title="WhatsApp Tashi" aria-label="WhatsApp Tashi">
+        <div class="bubble"></div>
+    </a>
+
+    <!-- PWA & SCRIPT REGISTRATION -->
+    <script>
+        let deferredPrompt;
+        const installBtn = document.getElementById('pwa-install-btn');
+
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(reg => console.log('Service Worker registered successfully.'))
+                    .catch(err => console.log('Service Worker registration failed:', err));
+            });
+        }
+
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            if (installBtn) installBtn.style.display = 'inline-flex';
+        });
+
+        if (installBtn) {
+            installBtn.addEventListener('click', () => {
+                if (deferredPrompt) {
+                    deferredPrompt.prompt();
+                    deferredPrompt.userChoice.then((choiceResult) => {
+                        if (choiceResult.outcome === 'accepted') {
+                            installBtn.style.display = 'none';
+                        }
+                        deferredPrompt = null;
+                    });
+                }
+            });
+        }
+    </script>
+</body>
+</html>
