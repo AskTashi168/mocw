@@ -7,6 +7,7 @@
     <meta name="description" content="Simple, fair, transparent pricing for online consultations and in-person companion services.">
     <link rel="manifest" href="/manifest.json">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="mocw.css">
     
     <style>
         :root {
@@ -919,11 +920,9 @@
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js').then(reg => {
-                    console.log('Service Worker registered successfully.', reg);
-                }).catch(err => {
-                    console.error('Service Worker registration failed:', err);
-                });
+                navigator.serviceWorker.register('/sw.js')
+                    .then(reg => console.log('MOCW Service Worker registered successfully.'))
+                    .catch(err => console.error('Service Worker registration failed:', err));
             });
         }
 

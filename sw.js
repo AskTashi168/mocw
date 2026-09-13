@@ -1,62 +1,59 @@
-const CACHE_NAME = 'mocw-cache-v4';
-
+const CACHE_NAME = 'mocw-v4';
 const ASSETS_TO_CACHE = [
   '/',
-  '/manifest.json',
-  '/favicon/favicon-192x192.png',
-  '/favicon/favicon-512x512.png',
-  '/images/my-one-cent-worth-logo.webp'
+  '/index.html',
+  '/about.html',
+  '/services.html',
+  '/pricing.html',
+  '/contact.html',
+  '/faq.html',
+  '/quiz.html',
+  '/disclaimer.html',
+  '/privacy-policy.html',
+  '/sitemap.html',
+  '/terms-and-conditions.html',
+  '/mocw.css',
+  '/manifest.webmanifest',
+  '/apple-touch-icon.png',
+  '/favicon_extracted/favicon.ico'
 ];
 
+// Install Event
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
       return cache.addAll(ASSETS_TO_CACHE);
     })
   );
-  self.skipWaiting();
 });
 
+// Activate Event
 self.addEventListener('activate', (event) => {
   event.waitUntil(
-    caches.keys().then((cacheNames) => {
+    caches.keys().then((keys) => {
       return Promise.all(
-        cacheNames.map((cache) => {
-          if (cache !== CACHE_NAME) {
-            return caches.delete(cache);
+        keys.map((key) => {
+          if (key !== CACHE_NAME) {
+            return caches.delete(key);
           }
         })
       );
     })
   );
-  self.clients.claim();
 });
 
+// Fetch Event
 self.addEventListener('fetch', (event) => {
-  // Always fetch fresh HTML from the server first
-  if (event.request.mode === 'navigate' || event.request.headers.get('accept')?.includes('text/html')) {
-    event.respondWith(
-      fetch(event.request)
-        .then((networkResponse) => {
-          return caches.open(CACHE_NAME).then((cache) => {
-            cache.put(event.request, networkResponse.clone());
-            return networkResponse;
-          });
-        })
-        .catch(() => caches.match(event.request))
-    );
+  const url = new URL(event.request.url);
+
+  // Never cache, intercept, or override WordPress blog (/blog) hosted on SiteGround
+  if (url.pathname.startsWith('/blog')) {
     return;
   }
 
-  // Serve static assets from cache first
   event.respondWith(
     caches.match(event.request).then((cachedResponse) => {
-      return cachedResponse || fetch(event.request).then((networkResponse) => {
-        return caches.open(CACHE_NAME).then((cache) => {
-          cache.put(event.request, networkResponse.clone());
-          return networkResponse;
-        });
-      });
+      return cachedResponse || fetch(event.request);
     })
   );
 });

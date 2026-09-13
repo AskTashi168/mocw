@@ -6,6 +6,7 @@
     <title>Pricing & Packages - My One Cent Worth</title>
     <meta name="description" content="Simple, fair, transparent pricing for online consultations and in-person companion services.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="mocw.css">
     
     <style>
         :root {
@@ -915,6 +916,17 @@
                 btn90.setAttribute('data-cal-namespace', '90-min-chat-sgd');
             }
         }
+    </script>
+
+    <!-- SERVICE WORKER REGISTRATION -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then(reg => console.log('MOCW Service Worker registered successfully.'))
+            .catch(err => console.error('Service Worker registration failed:', err));
+        });
+      }
     </script>
 </body>
 </html>

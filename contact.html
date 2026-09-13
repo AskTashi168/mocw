@@ -21,6 +21,7 @@
     
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="mocw.css">
    
     <style>
         :root {
@@ -731,7 +732,7 @@
                     </ul>
                 </li>
                 <li><a href="faq.html">FAQ</a></li>
-                <li><a href="blog.html">Blog</a></li>
+                <li><a href="/blog">All MOCW</a></li>
                 <li><a href="contact.html" class="active">Contact</a></li>
                 <li><button id="pwa-install-btn" class="btn-pwa-install">Install App</button></li>
             </ul>
@@ -880,8 +881,9 @@
                 <li><a href="services.html">Services</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="faq.html">FAQ</a></li>
-                <li><a href="blog.html">Blog</a></li>
+                <li><a href="/blog">All MOCW</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="/quiz.html">Quiz</a></li>
                 <li><a href="sitemap.html">HTML Sitemap</a></li>
                 <li><a href="sitemap.xml" target="_blank">XML Sitemap</a></li>
             </ul>
@@ -902,8 +904,8 @@
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('/sw.js')
-                    .then(reg => console.log('Service Worker registered successfully.'))
-                    .catch(err => console.log('Service Worker registration failed:', err));
+                    .then(reg => console.log('MOCW Service Worker registered successfully.'))
+                    .catch(err => console.error('Service Worker registration failed:', err));
             });
         }
 

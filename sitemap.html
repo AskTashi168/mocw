@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sitemap - My One Cent Worth</title>
     <link rel="icon" type="image/png" href="images/my-one-cent-worth-logo.webp">
+    <link rel="stylesheet" href="mocw.css">
     <style>
         * {
             box-sizing: border-box;
@@ -171,7 +172,7 @@
                     <li><a href="services.html">Services</a></li>
                     <li><a href="pricing.html">Pricing</a></li>
                     <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="/blog">All MOCW</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
@@ -188,11 +189,12 @@
                 <li><a href="services.html">Services</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="faq.html">FAQ</a></li>
-                <li><a href="blog.html">Blog</a></li>
+                <li><a href="/blog">All MOCW</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="privacy-policy.html">Privacy Policy</a></li>
                 <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
                 <li><a href="disclaimer.html">Disclaimer</a></li>
+                <li><a href="/quiz.html">Quiz</a></li>
             </ul>
         </div>
     </main>
@@ -210,10 +212,11 @@
             <li><a href="services.html">Services</a></li>
             <li><a href="pricing.html">Pricing</a></li>
             <li><a href="faq.html">FAQ</a></li>
-            <li><a href="blog.html">Blog</a></li>
+            <li><a href="/blog">All MOCW</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li><a href="/quiz.html">Quiz</a></li>
             <li><a href="sitemap.html">HTML Sitemap</a></li>
-            <li><a href="blog/wp-sitemap.xml" target="_blank">XML Sitemap</a></li>
+            <li><a href="/blog/wp-sitemap.xml" target="_blank">XML Sitemap</a></li>
         </ul>
 
         <p class="copyright-text">&copy; 2026 My One Cent Worth by Tashi Khoo. All rights reserved.</p>
@@ -224,5 +227,15 @@
         <div class="bubble"></div>
     </a>
 
+    <!-- SERVICE WORKER REGISTRATION -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then(reg => console.log('MOCW Service Worker registered successfully.'))
+            .catch(err => console.error('Service Worker registration failed:', err));
+        });
+      }
+    </script>
 </body>
 </html>

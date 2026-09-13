@@ -18,6 +18,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mocw.css">
 
     <style>
         :root {
@@ -771,7 +772,7 @@
                         </ul>
                     </li>
                     <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="blog.html">All MOCW</a></li>
+                    <li><a href="/blog">All MOCW</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><button id="pwa-install-btn" class="btn-pwa-install">Install App</button></li>
                 </ul>
@@ -990,8 +991,9 @@
                 <li><a href="services.html">Services</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="faq.html">FAQ</a></li>
-                <li><a href="blog.html">Blog</a></li>
+                <li><a href="/blog">All MOCW</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="/quiz.html">Quiz</a></li>
                 <li><a href="sitemap.html">HTML Sitemap</a></li>
                 <li><a href="sitemap.xml" target="_blank">XML Sitemap</a></li>
             </ul>
@@ -1044,8 +1046,8 @@
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('/sw.js')
-                    .then(reg => console.log('Service Worker registered successfully.'))
-                    .catch(err => console.log('Service Worker registration failed:', err));
+                    .then(reg => console.log('MOCW Service Worker registered successfully.'))
+                    .catch(err => console.error('Service Worker registration failed:', err));
             });
         }
 
