@@ -1,122 +1,106 @@
+
 # MOCW Agent Working Rules
 
-## 1. Read the Rules
+## 1. Work Carefully
 
-Before starting work, read all relevant files inside `.agents/rules`.
+Before making changes:
 
-The rules must be followed throughout the task.
+1. Understand the request.
+2. Read the relevant MOCW rules.
+3. Inspect the existing files.
+4. Identify exactly what needs to change.
+5. Protect working content.
+6. Avoid unrelated changes.
 
-## 2. Inspect Before Changing
-
-Before changing anything:
-
-* Inspect the existing files.
-* Understand the current structure.
-* Check existing links, images, styles, scripts, and navigation.
-* Check whether the requested file already exists.
-* Do not make assumptions.
-
-## 3. Protect Existing Work
-
-The agent must:
-
-* Preserve working pages.
-* Preserve working links.
-* Preserve existing content unless changes are requested.
-* Avoid changing unrelated files.
-* Avoid deleting files without approval.
-* Avoid rebuilding the website unnecessarily.
-* Avoid replacing working pages with incomplete versions.
-
-## 4. Give Clear Instructions
+## 2. Give One Clear Recommendation
 
 Tashi is not technical and may become overwhelmed by too many choices.
 
-The agent should:
+Use:
 
-* Give one clear recommendation.
-* Use plain English.
-* Explain what to do next.
-* Avoid unnecessary theory.
-* Avoid unnecessary options.
-* Provide complete copy-and-paste files when requested.
-* State the exact filename and location.
+- Plain English.
+- Short explanations.
+- One clear recommendation.
+- Exact filenames.
+- Exact locations.
+- Complete copy-and-paste files when requested.
 
-## 5. Review Before Applying Changes
+Avoid unnecessary theory, jargon and multiple complicated options.
 
-Before making major changes to HTML, CSS, JavaScript, manifests, or service-worker files:
+## 3. Approval Before Major Changes
 
-* Explain what will change.
-* Show the important differences or provide the complete replacement.
-* Wait for approval when the change may affect structure, design, navigation, or functionality.
+Before changing major parts of:
+
+- HTML.
+- CSS.
+- JavaScript.
+- Navigation.
+- Forms.
+- Manifests.
+- Service workers.
+- Page structure.
+
+Explain:
+
+- What will change.
+- Which files will change.
+- Why the change is needed.
+- Any possible effect on the website.
+
+Wait for approval when the change may affect design, structure, navigation or functionality.
 
 Do not apply major changes silently.
 
-## 6. Test Changes
+## 4. Protect Existing Work
+
+Do not:
+
+- Delete files without approval.
+- Replace working pages with incomplete pages.
+- Rewrite approved content without approval.
+- Remove working features without approval.
+- Change unrelated files.
+- Rebuild the website unnecessarily.
+
+## 5. Test Changes
 
 After making changes, check:
 
-* The page opens.
-* Navigation works.
-* Images appear.
-* Buttons work.
-* Forms work where applicable.
-* Mobile layout works.
-* The banner displays correctly.
-* Navigation is readable over the banner.
-* The Back to Top button works on long pages.
-* Important content has not disappeared.
-* Important links have not broken.
-* No obvious JavaScript errors were introduced.
-* The service-worker cache is considered when relevant.
+- The page opens.
+- Navigation works.
+- Images appear.
+- Buttons work.
+- Forms work where applicable.
+- Mobile layout works.
+- Desktop layout works.
+- The banner displays correctly.
+- Navigation is readable over the banner.
+- The Back to Top button works on long pages.
+- Important content has not disappeared.
+- Important links have not broken.
+- No obvious JavaScript errors were introduced.
+- The service-worker cache is considered where relevant.
 
 If something cannot be tested, say so honestly.
 
-## 7. Keep the Project Simple
-
-Do not introduce unnecessary:
-
-* Frameworks.
-* Plugins.
-* Page builders.
-* Dependencies.
-* Folder systems.
-* Hosting systems.
-* Technical complexity.
+## 6. Keep the Project Simple
 
 Simple and working is better than complicated and impressive.
 
-## 8. Follow the Website Requirements
+Do not add technology merely because it is fashionable.
 
-Every page must follow the current MOCW website rules, including:
+The website should remain easy to understand, maintain and update.
 
-* Mobile-first design.
-* A hero or banner on every page.
-* Main navigation overlaid on the hero or banner image.
-* A Back to Top button on long pages.
-* Clear and readable content.
-* Consistent MOCW identity.
-
-## 9. Respect the Project Stage
+## 7. Current Priority
 
 The current priority is:
 
-**Launch first. Improve later.**
+> Launch first. Improve later.
 
-Do not allow endless redesign, perfectionism, or unnecessary experimentation to prevent useful progress.
+Do not allow endless redesign, perfectionism or unnecessary experimentation to prevent useful progress.
 
-## 10. Be Honest
-
-The agent must not:
-
-* Invent information.
-* Invent qualifications.
-* Pretend work was tested when it was not.
-* Claim a page is complete when important work remains.
-* Hide errors or limitations.
-
-## 11. Final Quality Check
+## 8. Final Check
 
 Before completing a task, ask:
 
-**Does this help MOCW become clearer, more useful, more trustworthy, or closer to launch?**
+> Does this help MOCW become clearer, more useful, more trustworthy or closer to launch?

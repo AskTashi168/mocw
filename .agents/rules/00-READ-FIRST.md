@@ -2,32 +2,41 @@
 trigger: always_on
 ---
 
-# READ FIRST — MOCW Rules and Instructions
+# READ FIRST — MOCW Rules
 
-Before starting any MOCW task, the AI agent must read and follow all available rule and instruction files inside `.agents/rules`.
+Before making any change to the MOCW project:
 
-These files are official project rules, not optional suggestions.
+1. Read this file.
+2. Read the MOCW Bible.
+3. Read the website and design rules.
+4. Read the agent working rules.
+5. Read the technical workspace rules when working on files or code.
 
-The agent must read all relevant files, including:
+These rules are mandatory.
 
-* `MOCW-Master-Rules.md`
-* `MOCW-Brand-and-Philosophy.md`
-* `MOCW-Website-and-Design-Rules.md`
-* `MOCW-Agent-Working-Rules.md`
-* `mocw-rules.md`
-* Any newer MOCW rule or instruction files.
+If two instructions appear to conflict, stop and ask Tashi before making changes.
 
-The agent must follow the rules throughout the entire task.
+The purpose is simple:
 
-If instructions appear to conflict, the agent must stop, explain the conflict clearly, and ask Tashi before making changes.
+> Understand MOCW. Build the agreed website. Keep it consistent. Make every page useful. Improve carefully. Move forward.
 
-The agent must not:
+Do not:
 
-* Ignore applicable rules.
-* Guess when important information is missing.
-* Delete files without approval.
-* Replace working pages unnecessarily.
-* Make major changes silently.
-* Claim that work is complete without checking it.
+- Invent a new MOCW identity.
+- Make major changes without approval.
+- Change unrelated files.
+- Delete working files without approval.
+- Replace working pages with incomplete pages.
+- Add unnecessary technical complexity.
+- Pretend that something was tested when it was not.
 
-Read all rules first. Follow all applicable rules throughout the project.
+Tashi prefers:
+
+- Plain English.
+- One clear recommendation.
+- Complete copy-and-paste files when requested.
+- Exact filenames and locations.
+- Short explanations.
+- Straightforward progress.
+
+Always protect working content and explain important changes before applying them.

@@ -1,146 +1,316 @@
-# MOCW Website and Design Rules
+\# MOCW Website and Design Rules
 
-## 1. Mobile-First Requirement
 
-The MOCW website must be designed **mobile-first**.
 
-Most people are expected to browse using mobile phones. Mobile usability is therefore a basic requirement.
+\## 1. Overall Direction
 
-Every page must:
 
-* Work properly on small phone screens.
-* Use readable text.
-* Have comfortable spacing.
-* Use buttons large enough to tap.
-* Keep navigation simple.
-* Resize images correctly.
-* Avoid horizontal scrolling.
-* Make forms easy to complete.
-* Work properly on desktop as well as mobile.
 
-Do not design for desktop first and repair mobile later.
+The MOCW website must have one consistent visual identity.
 
-## 2. Banner and Navigation Requirement
 
-Every MOCW page must have a clear hero or banner section.
 
-The main navigation must appear **overlaid on the hero or banner image**.
+All pages should feel connected, but each page must remain unique in its purpose, content and layout.
 
-The agent must ensure that:
 
-* Every page has a suitable hero or banner.
-* The logo is visible.
-* Navigation links are readable.
-* Navigation does not disappear into the image.
-* The image does not overpower the navigation.
-* Important text is not hidden behind the navigation.
-* The banner works properly on mobile.
-* The banner is not excessively tall on mobile.
-* Pages without a traditional hero image still have a suitable banner design.
 
-The navigation should feel consistent across the website, while each page may use its own suitable image and message.
+The design should feel:
 
-## 3. Back-to-Top Requirement
 
-Long pages must include a clear **Back to Top** button.
 
-This applies especially to:
+\- Dark.
 
-* About pages.
-* Mission and Vision pages.
-* FAQ pages.
-* Service pages.
-* Long articles.
-* Knowledge Hub pages.
-* Long quizzes.
-* Long interactive tools.
+\- Warm.
 
-The button must:
+\- Refined.
 
-* Work on mobile and desktop.
-* Be easy to find and use.
-* Have a clear label or accessible description.
-* Not cover important content.
-* Return the visitor to the top smoothly where appropriate.
+\- Modern.
 
-Short pages do not need this button unless it improves usability.
+\- Calm.
 
-## 4. Visual Direction
+\- Thoughtful.
 
-MOCW’s design should feel:
+\- Human.
 
-* Dark.
-* Warm.
-* Refined.
-* Modern.
-* Calm.
-* Thoughtful.
-* Human.
-* Trustworthy.
+\- Trustworthy.
 
-Preferred design elements may include:
+\- Easy to use.
 
-* Dark backgrounds.
-* Warm gold accents.
-* Clear typography.
-* Strong contrast.
-* Comfortable spacing.
-* Meaningful images.
-* Restrained animation.
 
-Avoid designs that are:
-
-* Noisy.
-* Crowded.
-* Childish.
-* Overly corporate.
-* Excessively luxurious.
-* Aggressive.
-* Full of unnecessary effects.
 
 The design must support the message, not compete with it.
 
-## 5. Page Structure
 
-Each page should have:
 
-* Clear navigation.
-* A suitable hero or banner.
-* A clear main heading.
-* Well-organised sections.
-* Readable content.
-* Useful internal links where appropriate.
-* A clear next step when useful.
-* A footer consistent with MOCW.
+Avoid designs that are:
 
-Pages may have different layouts. They do not need to look identical.
+
+
+\- Noisy.
+
+\- Crowded.
+
+\- Childish.
+
+\- Overly corporate.
+
+\- Excessively luxurious.
+
+\- Aggressive.
+
+\- Full of unnecessary effects.
+
+
+
+\## 2. Shared Stylesheet
+
+
+
+Use a shared `mocw.css` stylesheet for common design elements, including:
+
+
+
+\- Colours.
+
+\- Typography.
+
+\- Spacing.
+
+\- Navigation.
+
+\- Buttons.
+
+\- Banners.
+
+\- Cards.
+
+\- Forms.
+
+\- Footer.
+
+\- Responsive behaviour.
+
+\- Repeated page elements.
+
+
+
+Each page may have page-specific styling when necessary.
+
+
+
+Do not create unrelated designs for different pages.
+
+
+
+\## 3. Mobile-First Design
+
+
+
+Every page must work properly on:
+
+
+
+\- Mobile phones.
+
+\- Tablets.
+
+\- Desktop screens.
+
+
+
+Every page must have:
+
+
+
+\- Readable text.
+
+\- Comfortable spacing.
+
+\- Buttons large enough to tap.
+
+\- Simple navigation.
+
+\- Correctly sized images.
+
+\- No unnecessary horizontal scrolling.
+
+\- Easy-to-use forms.
+
+\- Clear content hierarchy.
+
+
+
+Do not design for desktop first and repair mobile later.
+
+
+
+\## 4. Banner and Navigation
+
+
+
+Every page must have a suitable hero or banner.
+
+
+
+The main navigation should appear overlaid on the hero or banner image where appropriate.
+
+
+
+The agent must ensure:
+
+
+
+\- The logo is visible.
+
+\- Navigation links are readable.
+
+\- The image does not overpower the navigation.
+
+\- Important text is not hidden.
+
+\- The banner works on mobile.
+
+\- The banner is not excessively tall on mobile.
+
+\- Pages without a traditional image still have a suitable banner treatment.
+
+
+
+Navigation must remain consistent throughout the website.
+
+
+
+\## 5. Page Structure
+
+
+
+Each page should include:
+
+
+
+\- Clear navigation.
+
+\- A suitable hero or banner.
+
+\- One clear main heading.
+
+\- Well-organised sections.
+
+\- Readable content.
+
+\- Useful internal links.
+
+\- A clear next step where appropriate.
+
+\- A consistent footer.
+
+
 
 The rule is:
 
-**Consistent identity. Different experiences.**
 
-## 6. Search and AI-Friendly Content
 
-Every important page should have:
+> Consistent identity. Different experiences.
 
-* A clear page title.
-* A useful meta description.
-* One clear main heading.
-* Descriptive section headings.
-* Natural language.
-* Helpful internal links.
-* Answers to real user questions.
+
+
+\## 6. Back-to-Top Button
+
+
+
+Long pages should include a clear Back to Top button.
+
+
+
+This is especially important for:
+
+
+
+\- About pages.
+
+\- Mission and Vision pages.
+
+\- FAQ pages.
+
+\- Service pages.
+
+\- Long articles.
+
+\- Knowledge pages.
+
+\- Long quizzes.
+
+\- Interactive tools.
+
+
+
+The button must work on mobile and desktop, remain easy to use, and not cover important content.
+
+
+
+\## 7. Search and AI-Friendly Content
+
+
+
+Important pages should have:
+
+
+
+\- A clear page title.
+
+\- A useful meta description.
+
+\- One clear main heading.
+
+\- Descriptive section headings.
+
+\- Natural language.
+
+\- Helpful internal links.
+
+\- Answers to real visitor questions.
+
+
 
 Do not use keyword stuffing or repetitive wording.
 
-## 7. Website Simplicity
 
-Use the existing project direction:
 
-* HTML.
-* CSS.
-* Vanilla JavaScript.
-* Existing PWA structure where already used.
-* Existing folders and assets.
+\## 8. Website Simplicity
 
-Do not introduce unnecessary frameworks, plugins, page builders, dependencies, or complicated systems.
+
+
+Use:
+
+
+
+\- HTML.
+
+\- CSS.
+
+\- Vanilla JavaScript.
+
+\- The existing PWA structure where applicable.
+
+\- Existing folders and assets.
+
+
+
+Do not introduce unnecessary:
+
+
+
+\- Frameworks.
+
+\- Plugins.
+
+\- Page builders.
+
+\- Dependencies.
+
+\- Folder systems.
+
+\- Hosting systems.
+
+\- Technical complexity.
+
