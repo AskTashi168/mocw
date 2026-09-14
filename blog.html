@@ -47,14 +47,50 @@
         a { color: inherit; text-decoration: none; }
         img { max-width: 100%; height: auto; display: block; border-radius: 8px; }
 
-        /* HEADER & NAVIGATION STYLES */
+        /* HEADER & NAVIGATION STYLES OVERLAY */
         .main-header {
-            background-color: #050505;
-            border-bottom: 1px solid #1f1f1f;
-            position: sticky;
+            position: absolute;
             top: 0;
+            left: 0;
+            width: 100%;
             z-index: 1000;
+            background: linear-gradient(180deg, rgba(11, 11, 11, 0.95) 0%, rgba(11, 11, 11, 0.6) 60%, transparent 100%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
             padding: 0.75rem 1rem;
+        }
+
+        /* Banner Container & Image */
+        .blog-hero-wrapper {
+            position: relative;
+            width: 100%;
+        }
+
+        .blog-hero-banner-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .blog-hero-banner-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+        }
+
+        @media (max-width: 850px) {
+            .main-header {
+                position: relative;
+                background: rgba(11, 11, 11, 0.98);
+            }
+            .blog-hero-banner-container {
+                padding: 10px 15px 0;
+            }
         }
 
         .nav-container {
@@ -201,26 +237,122 @@
         .main-footer {
             background-color: #050505;
             border-top: 1px solid var(--card-border);
-            padding: 3.5rem 1.5rem 2rem;
+            padding: 3rem 1.5rem 2rem;
             text-align: center;
             margin-top: 5rem;
         }
 
-        .footer-container { max-width: var(--max-width); margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 2rem; }
-        .footer-brand-story { max-width: var(--max-width); margin: 0 auto; display: flex; flex-direction: column; gap: 2rem; align-items: center; width: 100%; }
-        .footer-brand-grid { display: flex; flex-direction: column; gap: 2rem; width: 100%; justify-content: center; }
-        .brand-item { display: flex; flex-direction: column; align-items: center; gap: 0.75rem; flex: 1; text-align: center; }
-        .brand-item-header { display: flex; align-items: center; justify-content: center; gap: 0.75rem; }
-        .footer-logo-img { width: 42px; height: 42px; border-radius: 50%; object-fit: cover; }
-        .brand-item-title { font-family: var(--font-heading); color: var(--text-gold); font-size: 1.1rem; font-weight: 700; letter-spacing: 0.5px; }
-        .brand-item-desc { color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; margin: 0; max-width: 500px; }
-        .brand-summary-text { border-top: 1px solid #1a1a1a; padding-top: 1.25rem; margin-top: 0.5rem; width: 100%; }
-        .brand-summary-text p { color: var(--text-main); font-size: 0.95rem; margin-bottom: 0.4rem; }
-        .brand-tagline { color: var(--text-gold) !important; font-weight: 600; font-family: var(--font-heading); letter-spacing: 0.5px; }
-        .footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; list-style: none; padding: 0; margin: 0; }
-        .footer-links a { color: var(--text-muted); font-size: 0.85rem; transition: color 0.2s ease; }
-        .footer-links a:hover { color: var(--text-gold); }
-        .copyright-text { color: #666666; font-size: 0.8rem; margin-top: 0.5rem; }
+        .footer-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .footer-brand-story {
+            width: 100%;
+            max-width: 900px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            text-align: left;
+        }
+
+        .brand-item {
+            padding: 0.5rem 0;
+        }
+
+        .brand-item-header {
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
+            margin-bottom: 0.85rem;
+        }
+
+        .footer-logo-img {
+            width: 52px;
+            height: 52px;
+            object-fit: contain;
+            border-radius: 8px;
+            flex-shrink: 0;
+        }
+
+        .brand-item-title {
+            font-family: var(--font-heading);
+            color: var(--text-gold);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .brand-item-desc {
+            color: var(--text-muted);
+            font-size: 0.82rem;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .brand-summary-text {
+            grid-column: 1 / -1;
+            text-align: center;
+            border-top: 1px solid var(--card-border);
+            padding-top: 1.5rem;
+            margin-top: 0.25rem;
+        }
+
+        .brand-summary-text p {
+            color: var(--text-muted);
+            font-size: 0.82rem;
+            margin: 0 0 0.35rem;
+        }
+
+        .brand-summary-text .brand-tagline {
+            color: var(--text-gold-light);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--text-gold);
+        }
+
+        .copyright-text {
+            color: #666666;
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+        }
+
+        @media (max-width: 767px) {
+            .footer-brand-story {
+                grid-template-columns: 1fr;
+                gap: 1.25rem;
+                text-align: center;
+            }
+            .brand-item-header {
+                justify-content: center;
+            }
+            .brand-summary-text {
+                grid-column: auto;
+            }
+        }
 
         /* FLOATING WHATSAPP CHAT */
         #my-one-cent-chat {
@@ -258,38 +390,45 @@
             .dropdown-menu { left: 0; transform: none; }
             .dropdown-menu a { text-align: left; }
             .blog-grid { grid-template-columns: repeat(2, 1fr); }
-            .footer-brand-grid { flex-direction: row !important; align-items: flex-start !important; gap: 3rem !important; }
         }
     </style>
 </head>
 <body>
 
-    <header class="main-header">
-        <div class="nav-container">
-            <a href="index.html" class="brand-logo">
-                <img src="my-one-cent-worth-logo.webp" alt="My One Cent Worth Logo" class="coin-logo">
-                <div class="logo-text">
-                    <span class="brand-title">MY ONE CENT WORTH</span>
-                    <span class="brand-subtitle">BY TASHI KHOO</span>
-                </div>
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li class="dropdown">
-                    <a href="services.html">Services ▾</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="services.html">All Services</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                    </ul>
-                </li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="https://myonecentworth.com/blog" class="active">All MOCW</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><button id="pwa-install-btn" class="btn-pwa-install">Install App</button></li>
-            </ul>
+    <!-- HERO BANNER WRAPPER WITH OVERLAY NAVIGATION -->
+    <div class="blog-hero-wrapper">
+        <header class="main-header">
+            <div class="nav-container">
+                <a href="index.html" class="brand-logo">
+                    <img src="my-one-cent-worth-logo.webp" alt="My One Cent Worth Logo" class="coin-logo">
+                    <div class="logo-text">
+                        <span class="brand-title">MY ONE CENT WORTH</span>
+                        <span class="brand-subtitle">BY TASHI KHOO</span>
+                    </div>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Services ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="services.html">All Services</a></li>
+                            <li><a href="pricing.html">Pricing</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="https://myonecentworth.com/blog" class="active">All MOCW</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><button id="pwa-install-btn" class="btn-pwa-install">Install App</button></li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- Blog Hero Banner Image -->
+        <div class="blog-hero-banner-container">
+            <img src="my-one-cent-worth-blog.webp" alt="All MOCW — My One Cent Worth Banner" class="blog-hero-banner-img">
         </div>
-    </header>
+    </div>
 
     <main class="container">
         <h1>PERSPECTIVES & INSIGHTS</h1>
@@ -304,31 +443,29 @@
     <footer class="main-footer">
         <div class="footer-container">
             <div class="footer-brand-story">
-                <div class="footer-brand-grid">
-                    <div class="brand-item">
-                        <div class="brand-item-header">
-                            <img src="my-one-cent-worth-logo.webp" alt="My One Cent Worth Logo" class="footer-logo-img">
-                            <span class="brand-item-title">MY ONE CENT WORTH</span>
-                        </div>
-                        <p class="brand-item-desc">
-                            My One Cent Worth is the full name behind everything we do — a place for perspectives, meaningful conversations, thoughtful questions, and a willingness to see things from different angles.
-                        </p>
+                <div class="brand-item">
+                    <div class="brand-item-header">
+                        <img src="my-one-cent-worth-logo.webp" alt="My One Cent Worth Logo" class="footer-logo-img">
+                        <span class="brand-item-title">MY ONE CENT WORTH</span>
                     </div>
+                    <p class="brand-item-desc">
+                        My One Cent Worth is the full name behind everything we do — a place for perspectives, meaningful conversations, thoughtful questions, and a willingness to see things from different angles.
+                    </p>
+                </div>
 
-                    <div class="brand-item">
-                        <div class="brand-item-header">
-                            <img src="mocw-monogram-logo.webp" alt="MOCW Monogram Logo" class="footer-logo-img">
-                            <span class="brand-item-title">MOCW</span>
-                        </div>
-                        <p class="brand-item-desc">
-                            MOCW is simply the short-form expression of My One Cent Worth — the name you may see across our logo, website, content, and future community.
-                        </p>
+                <div class="brand-item">
+                    <div class="brand-item-header">
+                        <img src="mocw-monogram-logo.webp" alt="MOCW Monogram Logo" class="footer-logo-img">
+                        <span class="brand-item-title">MOCW</span>
                     </div>
+                    <p class="brand-item-desc">
+                        MOCW is simply the short-form expression of My One Cent Worth — the name you may see across our logo, website, content, and future community.
+                    </p>
                 </div>
 
                 <div class="brand-summary-text">
                     <p>One name. Two expressions. One philosophy.</p>
-                    <p class="brand-tagline">MY ONE CENT WORTH (MOCW) — SOMEONE WHO LISTENS.</p>
+                    <p class="brand-tagline">My One Cent Worth (MOCW) — Someone Who Listens.</p>
                 </div>
             </div>
 

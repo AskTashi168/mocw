@@ -60,14 +60,82 @@
             border-radius: 8px;
         }
 
-        /* HEADER & NAVIGATION STYLES */
+        /* HEADER & NAVIGATION STYLES OVERLAY */
         .main-header {
-            background-color: #050505;
-            border-bottom: 1px solid #1f1f1f;
-            position: sticky;
+            position: absolute;
             top: 0;
+            left: 0;
+            width: 100%;
             z-index: 1000;
+            background: linear-gradient(180deg, rgba(11, 11, 11, 0.95) 0%, rgba(11, 11, 11, 0.6) 60%, transparent 100%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
             padding: 0.75rem 1rem;
+        }
+
+        /* Banner Container & Image */
+        .privacy-hero-wrapper {
+            position: relative;
+            width: 100%;
+        }
+
+        .privacy-hero-banner-container {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .privacy-hero-banner-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Banner Overlay Text */
+        .banner-overlay-text {
+            position: absolute;
+            bottom: 7%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 700px;
+            text-align: center;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .banner-overlay-text h1.banner-title {
+            font-family: var(--font-heading);
+            font-size: clamp(1.4rem, 3vw, 2.4rem);
+            color: var(--text-gold-light);
+            letter-spacing: 2px;
+            margin-bottom: 0.2rem;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95), 0 0 20px rgba(0, 0, 0, 0.9);
+        }
+
+        .banner-overlay-text .banner-last-updated {
+            font-family: var(--font-body);
+            color: var(--text-gold);
+            font-size: clamp(0.75rem, 1.4vw, 0.95rem);
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
+        }
+
+        @media (max-width: 850px) {
+            .main-header {
+                position: relative;
+                background: rgba(11, 11, 11, 0.98);
+            }
+            .privacy-hero-banner-container {
+                padding: 10px 15px 0;
+            }
         }
 
         .nav-container {
@@ -195,35 +263,13 @@
             width: 90%;
             max-width: var(--max-width);
             margin: 0 auto;
-            padding: 3rem 0 4rem;
+            padding: 2rem 0 4rem;
         }
 
         h1, h2, h3, h4 {
             font-family: var(--font-heading);
             color: #FFFFFF;
             letter-spacing: 0.5px;
-        }
-
-        h1 {
-            font-size: clamp(1.8rem, 4vw, 2.8rem);
-            color: var(--text-gold-light);
-            text-align: center;
-            margin-bottom: 0.5rem;
-        }
-
-        .policy-meta {
-            text-align: center;
-            color: var(--text-gold);
-            font-size: 0.9rem;
-            font-weight: 500;
-            margin-bottom: 2.5rem;
-        }
-
-        .policy-hero-img {
-            max-width: 1200px;
-            margin: 0 auto 3rem;
-            border: 1px solid var(--card-border);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
         }
 
         .policy-content {
@@ -488,42 +534,46 @@
 </head>
 <body>
 
-    <!-- SINGLE MAIN HEADER NAVIGATION -->
-    <header class="main-header">
-        <div class="nav-container">
-            <a href="index.html" class="brand-logo">
-                <img src="my-one-cent-worth-logo.webp" alt="My One Cent Worth Logo" class="coin-logo">
-                <div class="logo-text">
-                    <span class="brand-title">MY ONE CENT WORTH</span>
-                    <span class="brand-subtitle">BY TASHI KHOO</span>
-                </div>
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li class="dropdown">
-                    <a href="services.html">Services ▾</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="services.html">All Services</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                    </ul>
-                </li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="https://myonecentworth.com/blog">All MOCW</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><button id="pwa-install-btn" class="btn-pwa-install">Install App</button></li>
-            </ul>
+    <!-- HERO BANNER WRAPPER WITH OVERLAY NAVIGATION -->
+    <div class="privacy-hero-wrapper">
+        <header class="main-header">
+            <div class="nav-container">
+                <a href="index.html" class="brand-logo">
+                    <img src="my-one-cent-worth-logo.webp" alt="My One Cent Worth Logo" class="coin-logo">
+                    <div class="logo-text">
+                        <span class="brand-title">MY ONE CENT WORTH</span>
+                        <span class="brand-subtitle">BY TASHI KHOO</span>
+                    </div>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Services ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="services.html">All Services</a></li>
+                            <li><a href="pricing.html">Pricing</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="https://myonecentworth.com/blog">All MOCW</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><button id="pwa-install-btn" class="btn-pwa-install">Install App</button></li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- Privacy Policy Hero Banner Image with Overlay Title -->
+        <div class="privacy-hero-banner-container">
+            <img src="my-one-cent-worth-mocw.webp" alt="My One Cent Worth Privacy Policy Banner" class="privacy-hero-banner-img">
+            <div class="banner-overlay-text">
+                <h1 class="banner-title">PRIVACY POLICY</h1>
+                <p class="banner-last-updated">Last Updated: September 2026</p>
+            </div>
         </div>
-    </header>
+    </div>
 
     <main class="container">
-
-        <h1>PRIVACY POLICY</h1>
-        <p class="policy-meta">Last Updated: August 2026</p>
-
-        <div class="policy-hero-img">
-            <img src="my-one-cent-worth-mocw.webp" alt="My One Cent Worth Privacy Policy Banner">
-        </div>
 
         <div class="policy-content">
 
