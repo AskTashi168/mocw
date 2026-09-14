@@ -643,6 +643,8 @@ nav a.active {
     text-align: left;
 }
 
+.footer-brand,
+.footer-logos,
 .footer-brand-grid {
     display: flex;
     flex-direction: row;
@@ -1359,6 +1361,11 @@ nav a.active {
     color: #0A0A0A;
 }
 
+#pricing-selected-text {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
 .page-services .card,
 .page-pricing .card {
     background: var(--card-bg);
@@ -1439,6 +1446,10 @@ nav a.active {
     font-weight: normal;
 }
 
+.price-usd {
+    display: none;
+}
+
 .card-desc {
     color: var(--text-muted);
     font-size: 0.95rem;
@@ -1485,10 +1496,22 @@ nav a.active {
     color: var(--gold-primary);
 }
 
+.companion-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .companion-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 .companion-card {
     background: var(--card-bg);
     border: 1px solid var(--card-border);
-    border-radius: 8px;
+    border-radius: 12px;
     padding: 1.75rem;
     overflow: hidden;
     transition: transform 0.3s ease, border-color 0.3s ease;
@@ -1631,6 +1654,20 @@ nav a.active {
     }
 }
 
+.companion-rate-card {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.companion-rate-img,
+.payment-card-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    margin-bottom: 1.25rem;
+}
+
 .payment-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -1641,11 +1678,20 @@ nav a.active {
 .payment-card {
     background: var(--card-bg);
     border: 1px solid var(--card-border);
-    border-radius: 8px;
+    border-radius: 12px;
     padding: 1.75rem;
 }
 
-.payment-card img {
+.payment-card img.payment-card-img {
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 12px;
+    margin-bottom: 1.25rem;
+    object-fit: contain;
+}
+
+.payment-card img:not(.payment-card-img) {
     height: 48px;
     width: auto;
     margin-bottom: 1rem;

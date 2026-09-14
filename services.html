@@ -82,7 +82,7 @@
                 <button class="toggle-btn" id="btn-worldwide" onclick="setCurrency('usd')">Worldwide</button>
                 <button class="toggle-btn active" id="btn-singapore" onclick="setCurrency('sgd')">Singapore</button>
             </div>
-            <div style="font-size:0.75rem; color:var(--text-muted);" id="pricing-selected-text">Singapore pricing selected.</div>
+            <div id="pricing-selected-text">Singapore pricing selected.</div>
         </section>
 
         <!-- Section 1: Online Conversations -->
@@ -102,7 +102,7 @@
                         <div class="card-subtitle">30 minutes</div>
                         
                         <div class="card-price price-sgd">SGD $48</div>
-                        <div class="card-price price-usd" style="display:none;">USD $36</div> <!--[cite: 1] -->
+                        <div class="card-price price-usd">USD $36</div> <!--[cite: 1] -->
 
                         <div class="card-desc">
                             For one question, one challenge, or one important conversation. Sometimes, it simply helps to talk to someone willing to listen and offer another perspective.
@@ -133,7 +133,7 @@
                         <div class="card-subtitle">60 minutes</div>
                         
                         <div class="card-price price-sgd">SGD $88</div> <!--[cite: 1] -->
-                        <div class="card-price price-usd" style="display:none;">USD $66</div> <!--[cite: 1] -->
+                        <div class="card-price price-usd">USD $66</div> <!--[cite: 1] -->
 
                         <div class="card-desc">
                             When life needs more time, more listening, and greater clarity. A full hour gives us room to explore what is really on your mind without rushing.
@@ -163,7 +163,7 @@
                         <div class="card-subtitle">90 minutes</div>
                         
                         <div class="card-price price-sgd">SGD $118</div>
-                        <div class="card-price price-usd" style="display:none;">USD $96</div> <!--[cite: 1] -->
+                        <div class="card-price price-usd">USD $96</div> <!--[cite: 1] -->
 
                         <div class="card-desc">
                             For life's bigger choices, multiple decisions, and conversations that shouldn't be rushed. More time means more space to think, explore, and look at the situation from different angles.
@@ -199,7 +199,7 @@
                 <p>Sometimes a conversation is better face-to-face. These services are for genuine human companionship, conversation and a reassuring presence.</p>
             </div>
 
-            <div class="grid-2">
+            <div class="companion-grid">
                 <!-- 1. Hospital Companion Services (Top-Left Image) -->
                 <div class="companion-card card-corner-tl">
                     <div class="companion-card-header tl">
@@ -250,61 +250,61 @@
 
                 <!-- 3. Retirement Companion Services (Bottom-Left Image) -->
                 <div class="companion-card card-corner-bl">
-                    <div class="companion-header-text">
-                        <h3 class="card-title">Retirement Companion Services</h3>
-                        <div class="card-subtitle">A thoughtful companion for this next chapter</div>
+                    <div class="companion-card-header tl">
+                        <img src="images/mocw-retirement-companion.webp" alt="Retirement Companion Services" class="companion-thumb" width="200" height="140">
+                        <div class="companion-header-text">
+                            <h3 class="card-title">Retirement Companion Services</h3>
+                            <div class="card-subtitle">A thoughtful companion for this next chapter</div>
+                        </div>
                     </div>
                     <div class="card-desc">
                         <p>Retirement brings new freedom, but it can also bring cellular changes, fewer daily routines and questions about what comes next.</p>
                         <p>Talk about life experiences, interests, plans, memories — or simply enjoy meaningful company with someone who is willing to listen.</p>
                     </div>
-                    <div class="companion-card-bottom bl">
-                        <img src="images/mocw-retirement-companion.webp" alt="Retirement Companion Services" class="companion-thumb" width="200" height="140">
-                        <div class="companion-footer">
-                            <div class="companion-price-tag">Same companion pricing: S$88 · S$168 · S$238</div>
-                            <button class="btn btn-outline" 
-                                    data-cal-link="myonecentworth/60-companionship-services-sgd"
-                                    data-cal-namespace="60-companionship-services-sgd"
-                                    data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
-                                Arrange a Retirement Visit →
-                            </button>
-                        </div>
+                    <div class="companion-footer">
+                        <div class="companion-price-tag">Same companion pricing: S$88 · S$168 · S$238</div>
+                        <button class="btn btn-outline" 
+                                data-cal-link="myonecentworth/60-companionship-services-sgd"
+                                data-cal-namespace="60-companionship-services-sgd"
+                                data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
+                            Arrange a Retirement Visit →
+                        </button>
                     </div>
                 </div>
 
                 <!-- 4. Conversation Companion Services (Bottom-Right Image) -->
                 <div class="companion-card card-corner-br">
-                    <div class="companion-header-text">
-                        <h3 class="card-title">Conversation Companion Services</h3>
-                        <div class="card-subtitle">Sometimes, you simply need someone to talk to</div>
+                    <div class="companion-card-header tr">
+                        <div class="companion-header-text">
+                            <h3 class="card-title">Conversation Companion Services</h3>
+                            <div class="card-subtitle">Sometimes, you simply need someone to talk to</div>
+                        </div>
+                        <img src="images/mocw-conversation-companion.webp" alt="Conversation Companion Services" class="companion-thumb" width="200" height="140">
                     </div>
                     <div class="card-desc">
                         <p>Not every conversation needs a problem to solve. You may simply want to talk, share what is on your mind, tell a story, laugh, or have someone listen without judgement or pressure.</p>
                         <p>A calm, respectful space for meaningful human connection — whether you have something important to discuss or simply don't want to spend the day alone.</p>
                     </div>
-                    <div class="companion-card-bottom br">
-                        <div class="companion-footer">
-                            <div class="companion-price-tag">Same companion pricing: S$88 · S$168 · S$238</div>
-                            <button class="btn btn-outline" 
-                                    data-cal-link="myonecentworth/60-companionship-services-sgd"
-                                    data-cal-namespace="60-companionship-services-sgd"
-                                    data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
-                                Arrange a Conversation Visit →
-                            </button>
-                        </div>
-                        <img src="images/mocw-conversation-companion.webp" alt="Conversation Companion Services" class="companion-thumb" width="200" height="140">
+                    <div class="companion-footer">
+                        <div class="companion-price-tag">Same companion pricing: S$88 · S$168 · S$238</div>
+                        <button class="btn btn-outline" 
+                                data-cal-link="myonecentworth/60-companionship-services-sgd"
+                                data-cal-namespace="60-companionship-services-sgd"
+                                data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
+                            Arrange a Conversation Visit →
+                        </button>
                     </div>
                 </div>
             </div>
 
             <!-- Companion Rate Duration Pricing Cards -->
-            <div class="section-header" style="margin-top:40px;">
+            <div class="section-header">
                 <h3>Singapore Companion Service Pricing</h3>
             </div>
 
             <div class="grid-3">
-                <div class="card" style="text-align: center; padding: 24px;">
-                    <img src="images/mocw-60-minute-companion-services.webp" alt="60 Min Companion Service" style="max-width: 100%; border-radius: 4px; margin-bottom:15px;"> <!--[cite: 1] -->
+                <div class="card companion-rate-card">
+                    <img src="images/mocw-60-minute-companion-services.webp" alt="60 Min Companion Service" class="companion-rate-img"> <!--[cite: 1] -->
                     <h3 class="card-title">S$88</h3>
                     <div class="card-subtitle">Up to 1 hour</div>
                     <button class="btn btn-outline" 
@@ -315,8 +315,8 @@
                     </button>
                 </div>
 
-                <div class="card" style="text-align: center; padding: 24px;">
-                    <img src="images/mocw-120-minute-companion-services.webp" alt="120 Min Companion Service" style="max-width: 100%; border-radius: 4px; margin-bottom:15px;"> <!--[cite: 1] -->
+                <div class="card companion-rate-card">
+                    <img src="images/mocw-120-minute-companion-services.webp" alt="120 Min Companion Service" class="companion-rate-img"> <!--[cite: 1] -->
                     <h3 class="card-title">S$168</h3>
                     <div class="card-subtitle">Up to 2 hours · Save S$8</div>
                     <button class="btn btn-outline" 
@@ -327,8 +327,8 @@
                     </button>
                 </div>
 
-                <div class="card" style="text-align: center; padding: 24px;">
-                    <img src="images/mocw-180-minute-companion-services.webp" alt="180 Min Companion Service" style="max-width: 100%; border-radius: 4px; margin-bottom:15px;"> <!--[cite: 1] -->
+                <div class="card companion-rate-card">
+                    <img src="images/mocw-180-minute-companion-services.webp" alt="180 Min Companion Service" class="companion-rate-img"> <!--[cite: 1] -->
                     <h3 class="card-title">S$238</h3>
                     <div class="card-subtitle">Up to 3 hours · Save S$26</div>
                     <button class="btn btn-outline" 
@@ -356,7 +356,7 @@
             <div class="payment-grid">
                 <!-- Card Payment -->
                 <div class="payment-card">
-                    <img src="images/secure-card-payment.webp" alt="Visa Mastercard Maestro American Express" width="300" height="300">
+                    <img src="images/secure-card-payment.webp" alt="Secure Card Payment - Visa, Mastercard, Maestro, American Express" class="payment-card-img" width="300" height="300">
                     <h3>Secure Card Payment</h3>
                     <p>For online services and other sessions where card payment is available, payment can be made securely by card.</p>
                     <ul>
@@ -368,7 +368,7 @@
 
                 <!-- PayNow Option -->
                 <div class="payment-card">
-                    <img src="images/paynow-mocw.webp" alt="PayNow Singapore Payment Options" width="300" height="300">
+                    <img src="images/paynow-mocw.webp" alt="PayNow Singapore Payment Options" class="payment-card-img" width="300" height="300">
                     <h3>Singapore Payment Options</h3>
                     <p>Singapore clients may also be offered local payment options when arranging in-person companion services.</p>
                     <ul>
@@ -396,7 +396,7 @@
     <footer class="main-footer">
         <div class="footer-container">
             <div class="footer-brand-story">
-                <div class="footer-brand-grid">
+                <div class="footer-brand-grid footer-logos">
                     <!-- Left Side: Full Brand -->
                     <div class="brand-item">
                         <div class="brand-item-header">
@@ -427,7 +427,7 @@
                 </div>
             </div>
 
-                        <nav aria-label="Footer navigation">
+            <nav aria-label="Footer navigation">
                 <ul class="footer-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
