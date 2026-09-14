@@ -1,15 +1,3 @@
-# Ignore heavy image assets to save AI tokens
-*.webp
-*.png
-*.jpg
-*.jpeg
-*.gif
-*.zip
-
-# Ignore specific image folders
+# Ignore temporary extracted folders or zip archives only
 favicon_extracted/
-favicon/
-images/
-
-# Ignore web manifests & non-code tracking files
-manifest.webmanifest
+*.zip
