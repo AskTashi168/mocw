@@ -866,7 +866,7 @@ nav a.active {
     position: relative;
     text-align: center;
     min-height: 100vh;
-    background: url('consultant-tashi-khoo.webp') center center / cover no-repeat;
+    background: url('images/consultant-tashi-khoo.webp') center center / cover no-repeat;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -1916,7 +1916,7 @@ nav a.active {
     margin-left: 50%;
     transform: translateX(-50%);
     box-sizing: border-box;
-    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65)), url('consultant-tashi-khoo.webp') no-repeat center center / cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65)), url('images/consultant-tashi-khoo.webp') no-repeat center center / cover;
     min-height: clamp(520px, 56.25vw, 880px);
     display: flex;
     flex-direction: column;
@@ -2199,7 +2199,7 @@ textarea.form-control {
     align-items: stretch;
     text-align: center;
     min-height: 72vh;
-    background: url('do-i-need-help.webp') center center / cover no-repeat;
+    background: url('images/do-i-need-help.webp') center center / cover no-repeat;
     padding: 0 1.5rem;
 }
 

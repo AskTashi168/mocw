@@ -1,4 +1,4 @@
-const CACHE_NAME = 'mocw-v29';
+const CACHE_NAME = 'mocw-v30';
 const ASSETS_TO_CACHE = [
   '/',
   '/index.html',
@@ -16,8 +16,8 @@ const ASSETS_TO_CACHE = [
   '/mocw.css',
   '/manifest.webmanifest',
   '/apple-touch-icon.png',
-  '/icons/favicon-32x32.png',
-  '/icons/favicon-16x16.png'
+  '/favicon/favicon-32x32.png',
+  '/favicon/favicon-16x16.png'
 ];
 
 // Install Event
