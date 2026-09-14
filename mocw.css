@@ -1703,9 +1703,10 @@ nav a.active {
 .payment-card img.payment-card-img {
     height: auto;
     width: 100%;
-    max-width: 100%;
+    max-width: 300px;
     border-radius: 12px;
-    margin-bottom: 1.25rem;
+    margin: 0 auto 1.25rem;
+    display: block;
     object-fit: contain;
 }
 
