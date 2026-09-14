@@ -639,21 +639,21 @@ nav a.active {
 .footer-brand-story {
     width: 100%;
     max-width: 900px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2.5rem;
     margin: 0 auto 2.5rem;
     text-align: left;
 }
 
 .footer-brand-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
     width: 100%;
 }
 
 .brand-item {
+    flex: 1 1 0;
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
@@ -2774,9 +2774,11 @@ textarea.form-control {
     }
 
     .footer-brand-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 3rem;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 2.5rem;
     }
 
     .stagger-row {
@@ -2875,19 +2877,21 @@ textarea.form-control {
     }
 
     .footer-brand-story {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 2rem;
+        text-align: left;
+        gap: 1.5rem;
     }
 
     .footer-brand-grid {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 2rem;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 1.5rem;
+        width: 100%;
     }
 
     .brand-item-header {
-        justify-content: center;
+        justify-content: flex-start;
     }
 
     .legal-content,
