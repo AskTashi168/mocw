@@ -1922,7 +1922,10 @@ nav a.active {
     left: 1rem;
     top: 50%;
     transform: translateY(-50%);
-    color: var(--text-muted);
+    width: 18px;
+    height: 18px;
+    fill: var(--text-muted);
+    pointer-events: none;
 }
 
 .filter-tags {
@@ -1969,6 +1972,11 @@ nav a.active {
 }
 
 .faq-question {
+    width: 100%;
+    background: transparent;
+    border: none;
+    text-align: left;
+    font-family: var(--font-body);
     padding: 1.25rem 1.5rem;
     cursor: pointer;
     display: flex;
@@ -1985,8 +1993,14 @@ nav a.active {
 }
 
 .chevron-icon {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: var(--text-gold);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
     transition: transform 0.3s ease;
-    color: var(--text-gold);
     flex-shrink: 0;
 }
 
