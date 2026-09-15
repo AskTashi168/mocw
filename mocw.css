@@ -968,6 +968,14 @@ nav a.active {
     margin-bottom: 5rem;
 }
 
+.stagger-section .stagger-row {
+    margin-bottom: 0;
+}
+
+.page-home .card-grid {
+    margin-top: 0;
+}
+
 .why-started-container {
     display: grid;
     grid-template-columns: 1fr;
