@@ -1175,12 +1175,17 @@ nav a.active {
     }
 }
 
+.intro-section p {
+    margin-bottom: 1.25rem;
+    line-height: 1.75;
+}
+
 .about-page-nav {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.75rem;
-    margin: 2.5rem 0 3rem;
+    margin: 2rem 0 1.25rem;
     padding: 1rem 1.5rem;
     background-color: var(--card-bg);
     border: 1px solid var(--card-border);
@@ -1248,9 +1253,9 @@ nav a.active {
 
 .timeline-wrapper {
     position: relative;
-    max-width: 800px;
-    margin: 3rem auto;
-    padding: 1rem 0;
+    max-width: 1050px;
+    margin: 1.5rem auto 1rem auto;
+    padding: 0.5rem 0;
 }
 
 .timeline-wrapper::before {
@@ -1265,7 +1270,7 @@ nav a.active {
 
 .timeline-item {
     position: relative;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2.25rem;
     padding-left: 50px;
 }
 
@@ -1285,8 +1290,9 @@ nav a.active {
     background-color: var(--card-bg);
     border: 1px solid var(--card-border);
     border-radius: 8px;
-    padding: 1.5rem;
+    padding: 1.5rem 1.75rem;
     transition: transform 0.3s ease;
+    text-align: left;
 }
 
 .timeline-card:hover {
@@ -1297,11 +1303,14 @@ nav a.active {
 .timeline-card h3 {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
+    text-align: left;
 }
 
 .timeline-card p {
     color: var(--text-muted);
     font-size: 0.95rem;
+    text-align: left;
+    margin-bottom: 0 !important;
 }
 
 #backToTopBtn {
@@ -2994,7 +3003,7 @@ textarea.form-control {
     .timeline-item:nth-child(odd) {
         left: 0;
         padding-right: 40px;
-        text-align: right;
+        text-align: left;
     }
 
     .timeline-item:nth-child(even) {
@@ -3129,4 +3138,101 @@ textarea.form-control {
         width: 52px;
         height: 52px;
     }
+}
+
+/* ==========================================================================
+   18. GLOBAL SECTION TITLE CENTERING & SPACING OVERRIDES
+   ========================================================================== */
+section, 
+.section-padding {
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+section > h2,
+section > h3,
+.section-title,
+.section-header h2,
+.section-header h3,
+.section-heading h2,
+.section-heading h3,
+.why-started-heading h2,
+.why-started-heading h3,
+.final-cta h2,
+.final-cta h3,
+.content-wrapper > h2,
+.content-wrapper > h3 {
+    text-align: center !important;
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 2rem !important;
+    display: block !important;
+}
+
+/* Maintain clean left-alignment for internal card and box titles */
+.grid-card h3,
+.card h3,
+.who-am-i-box h3,
+.companion-card h3,
+.timeline-card h3,
+.payment-card h3,
+.process-card h3,
+.post-card h3 {
+    text-align: left;
+}
+
+/* ==========================================================================
+   19. COMPACT SECTION SPACING & CONTINUITY
+   ========================================================================== */
+/* Reduce vertical padding across all section containers */
+section, 
+.section-padding,
+.hero-section,
+.content-wrapper {
+    padding-top: 1.75rem !important;
+    padding-bottom: 1.75rem !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Tighten top margin for headings inside sections */
+section > h2,
+section > h3,
+.section-title,
+.section-header,
+.section-heading {
+    margin-top: 0.5rem !important;
+    margin-bottom: 1.25rem !important;
+}
+
+/* Eliminate excessive vertical margins between stacked layout blocks */
+.grid-container,
+.cards-container,
+.content-block,
+.timeline-container,
+.process-steps {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+}
+
+/* Adjust spacing under paragraphs inside content areas */
+.content-wrapper p,
+section p {
+    margin-bottom: 1.25rem; /* Increase or decrease this value to match your design */
+}
+
+/* Force vertical spacing between consecutive paragraphs */
+.content-wrapper p + p,
+section p + p,
+body p + p {
+    margin-top: 1.25rem !important;
+}
+
+/* Base margin for paragraph elements */
+section p,
+.content-wrapper p {
+    margin-bottom: 1rem !important;
 }
