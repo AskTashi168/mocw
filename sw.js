@@ -1,4 +1,4 @@
-const CACHE_NAME = 'mocw-v43';
+const CACHE_NAME = 'mocw-v44';
 const ASSETS_TO_CACHE = [
   '/',
   '/index.html',
@@ -14,6 +14,7 @@ const ASSETS_TO_CACHE = [
   '/terms-and-conditions.html',
   '/sitemap.xml',
   '/mocw.css',
+  '/mocw.css?v=44',
   '/manifest.webmanifest',
   '/favicon/apple-touch-icon.png',
   '/favicon/favicon-32x32.png',
@@ -22,6 +23,7 @@ const ASSETS_TO_CACHE = [
 
 // Install Event
 self.addEventListener('install', (event) => {
+  self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
       return cache.addAll(ASSETS_TO_CACHE);
@@ -40,7 +42,7 @@ self.addEventListener('activate', (event) => {
           }
         })
       );
-    })
+    }).then(() => self.clients.claim())
   );
 });
 
