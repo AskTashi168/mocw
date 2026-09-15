@@ -44,7 +44,7 @@
 
     <!-- HERO BANNER WRAPPER WITH OVERLAY NAVIGATION -->
     <div class="services-hero-wrapper">
-        <header>
+        <header class="main-header">
             <div class="container nav-container">
                 <a href="index.html" class="logo">
                     <img src="images/my-one-cent-worth-logo.webp" alt="My One Cent Worth Logo"> <!--[cite: 1] -->
@@ -65,32 +65,29 @@
             </div>
         </header>
 
-        <!-- Services Banner Image -->
+        <!-- Services Banner Image with Overlay Text -->
         <div class="services-banner-container">
             <img src="images/my-one-cent-worth-services.webp" alt="My One Cent Worth - Real Conversations. Real Perspective. Real Change. Services Banner" class="services-banner-img">
+            <div class="banner-overlay-text">
+                <span class="tagline" style="text-shadow: 0 2px 4px rgba(0,0,0,0.9); margin-bottom: 0.35rem;">Pricing & Packages</span>
+                <h1 class="banner-title">Simple. Fair. Transparent.</h1>
+                <p class="banner-subtitle">Choose the conversation or companionship that feels right for you. No subscriptions. No complicated packages. Just meaningful time, clear pricing and a human conversation.</p>
+            </div>
         </div>
     </div>
 
     <div class="container">
-        <!-- Hero Title -->
-        <section class="hero">
-            <span class="tagline">Pricing & Packages</span>
-            <h1>Simple. Fair. Transparent.</h1>
-            <p>Choose the conversation or companionship that feels right for you. No subscriptions. No complicated packages. Just meaningful time, clear pricing and a human conversation.</p>
-            
-            <div class="currency-toggle">
-                <button class="toggle-btn" id="btn-worldwide" onclick="setCurrency('usd')">Worldwide</button>
-                <button class="toggle-btn active" id="btn-singapore" onclick="setCurrency('sgd')">Singapore</button>
-            </div>
-            <div id="pricing-selected-text">Singapore pricing selected.</div>
-        </section>
-
         <!-- Section 1: Online Conversations -->
         <section>
             <div class="section-header">
                 <span class="tagline">Online Conversations</span>
                 <h2>Choose Your Conversation</h2>
                 <p>Private voice or video conversations with Tashi. Choose the amount of time you need — from a short fresh perspective to a deeper conversation.</p>
+                <div class="currency-toggle">
+                    <button class="toggle-btn" id="btn-worldwide" onclick="setCurrency('usd')">Worldwide</button>
+                    <button class="toggle-btn active" id="btn-singapore" onclick="setCurrency('sgd')">Singapore</button>
+                </div>
+                <div id="pricing-selected-text">Singapore pricing selected.</div>
             </div>
 
             <div class="grid-3">
@@ -298,7 +295,7 @@
             </div>
 
             <!-- Companion Rate Duration Pricing Cards -->
-            <div class="section-header">
+            <div class="section-header" style="margin-top: 3.5rem !important;">
                 <h3>Singapore Companion Service Pricing</h3>
             </div>
 
@@ -340,14 +337,14 @@
                 </div>
             </div>
 
-            <div class="banner-note">
+            <div class="banner-note" style="margin-bottom: 0.5rem;">
                 <strong>Important:</strong> All companion services are genuine companionship and conversation services. They are <strong>NOT</strong> social escort, dating, intimate or sexual services.
             </div>
         </section>
 
         <!-- Section 3: Payment Section -->
-        <section>
-            <div class="section-header">
+        <section style="padding-top: 0.5rem !important;">
+            <div class="section-header" style="margin-top: 0 !important;">
                 <span class="tagline">Payment</span>
                 <h2>Simple Ways to Pay</h2>
                 <p>Choose the payment method offered when you arrange your session or visit.</p>
