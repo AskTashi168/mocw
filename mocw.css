@@ -555,7 +555,6 @@ nav a.active {
 .disclaimer-hero-banner-img,
 .terms-hero-banner-img,
 .sitemap-hero-banner-img,
-.blog-hero-banner-img,
 .faq-hero-banner-img,
 .services-banner-img,
 .pricing-banner-img {
@@ -566,6 +565,16 @@ nav a.active {
     object-position: center;
     display: block;
     filter: brightness(0.85);
+}
+
+/* Blog Banner - Full width uncropped display */
+.blog-hero-banner-img {
+    width: 100%;
+    height: auto;
+    min-height: unset;
+    object-fit: contain;
+    object-position: center;
+    display: block;
 }
 
 .banner-overlay-text {

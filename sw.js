@@ -1,4 +1,4 @@
-const CACHE_NAME = 'mocw-v44';
+const CACHE_NAME = 'mocw-v45';
 const ASSETS_TO_CACHE = [
   '/',
   '/index.html',
@@ -7,6 +7,7 @@ const ASSETS_TO_CACHE = [
   '/pricing.html',
   '/contact.html',
   '/faq.html',
+  '/blog.html',
   '/quiz.html',
   '/disclaimer.html',
   '/privacy-policy.html',
@@ -14,7 +15,7 @@ const ASSETS_TO_CACHE = [
   '/terms-and-conditions.html',
   '/sitemap.xml',
   '/mocw.css',
-  '/mocw.css?v=44',
+  '/mocw.css?v=45',
   '/manifest.webmanifest',
   '/favicon/apple-touch-icon.png',
   '/favicon/favicon-32x32.png',
